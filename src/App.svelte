@@ -244,11 +244,11 @@
 
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
-	<h1 style="margin-top: -25px;">The last days of the Black-veined white butterfly (<em>Aporia crataegi</em>) in Britain</h1>
-	<p class="text-big" style="margin-top: 5px; padding-left: -10px;">
+	<h1>The last days of the Black-veined white butterfly (<em>Aporia crataegi</em>) in Britain</h1>
+	<p class="text-big" style="margin-top: 5px;">
 		A genomic history of the life and times of the Black-veined white butterfly in Britian
 	</p><
-	<div style="margin-top: 80px;padding-left: -10px;">
+	<div style="margin-top: 80px;">
 		<Arrow color="black" {animation}>Scroll to begin</Arrow>
 	</div>
 </Header>
