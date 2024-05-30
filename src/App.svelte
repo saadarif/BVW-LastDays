@@ -243,7 +243,7 @@
 </script>
 
 
-<Header bgfixed={false} theme="light" center={false} short={true}>
+<Header bgfixed={true} theme="light" center={false} short={true}>
 	<h1>The last days of the Black-veined white butterfly (<em>Aporia crataegi</em>) in Britain</h1>
 	<p class="text-big" style="margin-top: 5px; padding-left: -10px;">
 		A genomic history of the life and times of the Black-veined white butterfly in Britian
