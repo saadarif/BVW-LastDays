@@ -12,7 +12,7 @@
   let style = '';
 
   if (bgimage) {
-    style += `background-image: url(${bgimage});background-size: cover`;
+    style += `background-image: url(${bgimage});`;
   } else {
     style += 'background-image: none;';
   }
