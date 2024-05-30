@@ -20,6 +20,8 @@
   if (bgfixed) {
     style += ' background-attachment: fixed;';
   }
+
+  // left: 100px; top: -50px
 </script>
 
 <style>
@@ -33,9 +35,10 @@
 </style>
 
 <header style="color: {themes[theme]['text']}; background-color: {bgcolor ? bgcolor : themes[theme]['background']}; {style}" class:short>
-	<div class="v-padded col-wide middle" style="position: absolute; left: 100px; top: -50px" class:short class:height-full={!short}>
+	<div class="v-padded col-wide middle" style="position: relative; " class:short class:height-full={!short}>
 		<div class:center>
 			<slot></slot>
     </div>
 	</div>
 </header>
+
