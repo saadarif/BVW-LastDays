@@ -12,7 +12,7 @@
   let style = '';
 
   if (bgimage) {
-    style += `background-image: url(${bgimage});background-size: cover`;
+    style += `background-image: url(${bgimage});`;
   } else {
     style += 'background-image: none;';
   }
@@ -26,7 +26,7 @@
 
 <style>
   .short {
-    min-height: 85vh;
+    min-height: 100vh;
   }
   .v-padded {
     box-sizing: border-box;
