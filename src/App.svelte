@@ -244,8 +244,8 @@
 
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
-	<h1 style="margin-top: -150px;">The last days of the Black-veined white butterfly in Britain</h1>
-	<p class="text-big" style="margin-top: 5px;">
+	<h1 style="margin-top: -175px;">The last days of the Black-veined white butterfly in Britain</h1>
+	<p class="text-big" style="margin-top: 25px;">
 		A genomic history of the life and times of the Black-veined white butterfly in Britian
 	</p>
 	<div style="margin-top: 80px;">
