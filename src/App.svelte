@@ -248,7 +248,7 @@
 	<p class="text-big" style="margin-top: 5px; padding-left: -10px;">
 		A genomic history of the life and times of the Black-veined white butterfly in Britian
 	</p><
-	<div style="margin-top: 70px;padding-left: -10px;">
+	<div style="margin-top: 80px;padding-left: -10px;">
 		<Arrow color="black" {animation}>Scroll to begin</Arrow>
 	</div>
 </Header>
