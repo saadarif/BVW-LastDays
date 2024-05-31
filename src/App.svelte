@@ -6,7 +6,8 @@
 	import ONSHeader from "./layout/ONSHeader.svelte";
 	import ONSFooter from "./layout/ONSFooter.svelte";
 	import Header from "./layout/Header.svelte";
-	import Section from "./layout/Section.svelte";
+	import Section from "./layout/BISection.svelte";
+	import BISection from "./layout/BISection.svelte";
 	import Media from "./layout/Media.svelte";
 	import Scroller from "./layout/Scroller.svelte";
 	import Filler from "./layout/Filler.svelte";
@@ -257,7 +258,7 @@
 </Header>
 
 
-<Section>
+<BISection>
 	<div slot="image">
 		<img src="./img/resized_BVW_pinned.png" alt="Left Image">
 	</div>
@@ -278,7 +279,7 @@
 	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
 	</p>
 	</div>
-</Section>	
+</BISection>	
 
 <Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
 

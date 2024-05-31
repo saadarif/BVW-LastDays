@@ -5,56 +5,8 @@
 	export let theme = getContext('theme');
 </script>
 
-
-<style>
-	.section-container {
-	  display: flex;
-	  justify-content: center;
-	  align-items: center;
-	  width: 100%;
-	  padding: .5rem;
-	  box-sizing: border-box;
-	  color: var(--text-color);
-	  background-color: var(--background-color);
-	}
-  
-	.image-slot {
-	  flex: 0 0 auto;
-	  margin-right: 2rem; /* Adjust the margin between image and text as needed */
-      margin-left: 0; /* Ensure there is no left margin */
-	}
-
-	.spacer {
-    flex: 0 0 auto;
-    width: 2rem; /* Adjust to ensure the same space as margin-right of image-slot */
-  	}
-
-	.text-slot {
-	  flex: 0 0 50%;
-	  text-align: left;
-      max-width: 600px; /* Optional: limit the maximum width of the text for better layout */
-  
-	}
-  
-	.image-slot img {
-	  max-width: 100%;
-	  height: auto;
-	}
-  </style>
-  
-  <section class="section-container" style="--text-color: {themes[theme].text}; --background-color: {themes[theme].background};">
-	<div class="image-slot">
-	  <slot name="image"></slot>
-	</div>
-	<div class="text-slot col-medium">
-	  <slot></slot>
-	</div>
-	<div class="spacer"></div>
-  </section>
-
-
-<!-- <section style="color: {themes[theme]['text']}; background-color: {themes[theme]['background']}">
+<section style="color: {themes[theme]['text']}; background-color: {themes[theme]['background']}">
 	<div class="col-medium">
 		<slot></slot>
 	</div>
-</section> -->
+</section>
