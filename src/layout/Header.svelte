@@ -3,7 +3,7 @@
 	import { getContext } from 'svelte';
 
 	export let theme = getContext('theme');
-  export let bgimage = './img/output_test.png';
+  export let bgimage = './img/output_test2.png';
   export let bgcolor = null;
   export let bgfixed = false;
   export let center = true;
