@@ -244,13 +244,13 @@
 
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
-	<h1 style="margin-top: -100px; margin-left: -150px"> The last days of the Black-veined white butterfly in Britain</h1>
-	<div style="margin-top: 5px;  background-color: #fff; opacity: 0.4; z-index: -1;margin-left: -150px"><p class="text-big" >
+	<h1 style="margin-top: -100px; margin-left: -100px"> The last days of the Black-veined white butterfly in Britain</h1>
+	<div style="margin-top: 5px;  background-color: #fff; opacity: 0.4; z-index: -1;margin-left: -100px"><p class="text-big" >
 		<strong>
 			A genomic history of the the Black-veined white butterfly in Britain from its arrival to its demise in the early twentieth century
 		</strong>
 		</p></div>
-	<div style="margin-top: 60px;margin-left: -150px">
+	<div style="margin-top: 60px;margin-left: -100px">
 		<Arrow color="black" {animation}>Scroll to begin</Arrow>
 	</div>
 </Header>
