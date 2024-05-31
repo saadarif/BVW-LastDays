@@ -258,6 +258,10 @@
 
 
 <Section>
+	<div slot="image">
+		<img src="./img/resized_BVW_pinned.png" alt="Left Image">
+	</div>
+	<div>
 	<h2>A butterfly disappearance, museums and genomics</h2>
 	<p>
 		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
@@ -273,6 +277,7 @@
 	   These result also give a snapshot of its "genomic health" around the time of its disappearance,
 	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
 	</p>
+	</div>
 </Section>	
 
 <Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
