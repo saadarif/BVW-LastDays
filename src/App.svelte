@@ -256,19 +256,29 @@
 	</div>
 </Header>
 
-<Divider/>
 
 <Section>
-	<h2>This is a section title</h2>
+	<h2>A butterfly disappearance, museums and genomics</h2>
 	<p>
-		This is a short paragraph of text to demonstrate the standard "medium" column width, font size and line spacing of the template.
+		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
+		to Japan. However, in some places it is in decline and has completely disappeared from the Netherlands, Czechia, and South Korea [Refs]. 
+		It had been recorded in Britain as early as 1667 [REF] but went extinct in the early twentieth century. Prior to its extirpation in Britain, it could be found in southern England and Wales.
+		Why did the Black-veined white disappear from Britain? Numerous hypothesis have been suggested, including a run of unsually "wet" Autumns, pathogen infection, and predation.
+		Given that this butterfly disappeared from Britain in the early twentieth century, it is difficult to pinpoint the exact cause of its disappearence. Over the years, there have been various attempts
+		to reintroduce this species to Britain but none have been successful thus far. 
 	</p>
-	<p>
-		This is a second short paragraph of text to demonstrate the size of the paragraph spacing in the template.
+	<p>Museums contains large collections of butterflies, some from as early as the 18th century, collected by scientists and butterfly enthusiasts.
+	   Modern advances in genomics now allow us to interrogate the genomes of these long-dead individuals. To peer into the history of the Black-veined white in Britian, we extracted DNA from musueum specimens dating from the mid-19<sup>th</sup> 
+	   to the early 20<sup>th</sup> century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. 
+	   These result also give a snapshot of its "genomic health" around the time of its disappearance,
+	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
 	</p>
 </Section>	
 
+<Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
+
 <Divider/>
+
 
 <Scroller {threshold} >
 		<div slot="background" >
