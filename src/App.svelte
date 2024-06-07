@@ -325,17 +325,15 @@
 	xKey="year"
 	yKey="Ne"
 	zKey="species"
-	xScale="log"
 	xTicks={[0, 10000, 50000, 100000, 150000]} 
-	xSuffix= ""
-	lineWidth={5}
-	yFormatTick={d => d}  ySuffix=" "
+	lineWidth={5}"
 	height={600}
-	
 	colors={['#003f5c', '#ffa600']}
 	colorHover='#bc5090'
+	colorSelect='#bc5090'
 	area={false} 
 	{hover} labels legend 
+	selected="OX16"
 	snapTicks={false}/>
 	</div>
 	</Media>
