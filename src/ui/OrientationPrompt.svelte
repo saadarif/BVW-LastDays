@@ -3,20 +3,20 @@
 
     let isPortrait = false;
 
+    // Function to check the orientation
     const checkOrientation = () => {
-        if (window.matchMedia("(orientation: portrait)").matches) {
-            isPortrait = true;
-        } else {
-            isPortrait = false;
-        }
+        isPortrait = window.matchMedia("(orientation: portrait)").matches;
     };
 
+    // Setting up event listeners on mount
     onMount(() => {
         checkOrientation();
         window.addEventListener('orientationchange', checkOrientation);
+        window.addEventListener('resize', checkOrientation);
 
         return () => {
             window.removeEventListener('orientationchange', checkOrientation);
+            window.removeEventListener('resize', checkOrientation);
         };
     });
 </script>
