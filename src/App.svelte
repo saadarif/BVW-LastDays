@@ -26,6 +26,7 @@
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
   	import { linear } from "svelte/easing";
+  import { claim_svg_element } from "svelte/internal";
 
 	// CORE CONFIG (COLOUR THEMES)
 	// Set theme globally (options are 'light', 'dark' or 'lightblue')
@@ -67,6 +68,7 @@
 	let map = null; // Bound to mapbox 'map' instance once initialised
 
 	// State
+	let hover = true;
 	let hovered; // Hovered district (chart or map)
 	let selected; // Selected district (chart or map)
 	$: region = selected && metadata.district.lookup ? metadata.district.lookup[selected].parent : null; // Gets region code for 'selected'
@@ -194,14 +196,14 @@
 		.then(arr => {
 			let Netimes = arr.map((d,i) => ({
 			species: d.ID,
-			year: d.Time,
-			Ne: d.Ne
+			year: parseFloat(d.Time),
+			Ne: parseFloat(d.Ne)
 		}));
 		data1[demo].Netimes = Netimes;
+		console.log(data1.psmc.Netimes)
 		});
 	});
-	console.log("hello");
-	console.log(data1.psmc.Netimes);
+	
 
 	
 	datasets.forEach(geo => {
@@ -331,19 +333,23 @@
 		caption="Source: "
 	>
 	<div class="chart-sml">
-	<PsmcPlot
+	<LineChart
 	data={data1.psmc.Netimes}
 	xKey="year"
 	yKey="Ne"
 	zKey="species"
 	xScale="log"
-	xTicks={[1000, 10000, 50000, 100000]} 
-	lineWidth={2}
-	snapTicks={false}
-	yFormatTick={d => d * 1e4} 
+	xTicks={[0, 10000, 50000, 100000, 150000]} 
+	xFormatTick={d => d/1e3} xSuffix= " Years Before Present"
+	lineWidth={4}
+	
+	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
 	height={600}
 	padding={{ top: 0, bottom: 35, left: 140, right: 0 }}
-	xDomain={[1000, 150000]}  />
+	area={false} 
+	{animation} labels
+	{hover}
+	snapTicks={false}/>
 	</div>
 	</Media>
 {/if}
