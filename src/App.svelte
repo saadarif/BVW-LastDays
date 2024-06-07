@@ -267,21 +267,6 @@
 		geo.features.sort((a, b) => a.properties.AREANM.localeCompare(b.properties.AREANM));
 		geojson = geo;
 	});
-
-	// let data1 = {
-    //     psmc: {
-    //         Netimes: [
-    //             { species: "species1", year: 1000, Ne: 2e6 },
-    //             { species: "species1", year: 10000, Ne: 3e6 },
-    //             { species: "species1", year: 50000, Ne: 1e6 },
-    //             { species: "species2", year: 1000, Ne: 1.5e6 },
-    //             { species: "species2", year: 10000, Ne: 2.5e6 },
-    //             { species: "species2", year: 50000, Ne: 2e6 },
-    //             // Add more data points as needed
-    //         ]
-    //     }
-    // };
-	// console.log(data1.psmc.Netimes)
 </script>
 
 <OrientationPrompt />
@@ -340,16 +325,17 @@
 	xKey="year"
 	yKey="Ne"
 	zKey="species"
+	xScale="log"
 	xTicks={[0, 10000, 50000, 100000, 150000]} 
-	xSuffix= " Years Before Present"
+	xSuffix= ""
 	lineWidth={5}
-	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
+	yFormatTick={d => d}  ySuffix=" "
 	height={600}
-	padding={{ top: 0, bottom: 35, left: 140, right: 0 }}
+	
 	colors={['#003f5c', '#ffa600']}
 	colorHover='#bc5090'
 	area={false} 
-	{hover} labels legend
+	{hover} labels legend 
 	snapTicks={false}/>
 	</div>
 	</Media>
