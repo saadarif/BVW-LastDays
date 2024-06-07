@@ -15,7 +15,8 @@
 	import Toggle from "./ui/Toggle.svelte";
 	import Arrow from "./ui/Arrow.svelte";
 	import Em from "./ui/Em.svelte";
-
+	import OrientationPrompt from './OrientationPrompt.svelte';	
+	
 	// DEMO-SPECIFIC IMPORTS
 	import bbox from "@turf/bbox";
 	import { getData, setColors, getTopo, getBreaks, getColor } from "./utils.js";
@@ -243,6 +244,7 @@
 	});
 </script>
 
+<OrientationPrompt />
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
 	<h1 style="margin-top: -100px; margin-left: 0px"> The last days of the Black-veined white butterfly in Britain</h1>
