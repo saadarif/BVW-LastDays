@@ -345,7 +345,7 @@
 	lineWidth={5}
 	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
 	height={600}
-	padding={{ top: 0, bottom: 35, left: 35, right: 60 }}
+	padding={{ top: 0, bottom: 35, left: 140, right: 0 }}
 	area={false} 
 	{hover} labels legend
 	snapTicks={false}/>
