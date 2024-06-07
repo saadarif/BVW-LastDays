@@ -67,8 +67,10 @@
 	// Element bindings
 	let map = null; // Bound to mapbox 'map' instance once initialised
 
+
 	// State
 	let hover = true;
+	let select = true;
 	let hovered; // Hovered district (chart or map)
 	let selected; // Selected district (chart or map)
 	$: region = selected && metadata.district.lookup ? metadata.district.lookup[selected].parent : null; // Gets region code for 'selected'
@@ -338,18 +340,15 @@
 	xKey="year"
 	yKey="Ne"
 	zKey="species"
-	xScale="log"
+	xGridlines={false}
 	xTicks={[0, 10000, 50000, 100000, 150000]} 
 	xFormatTick={d => d/1e3} xSuffix= " Years Before Present"
 	lineWidth={4}
-	
 	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
 	height={600}
-	padding={{ top: 0, bottom: 35, left: 140, right: 0 }}
+	padding={{ top: 0, bottom: 35, left: 140, right: 60 }}
 	area={false} 
-	{animation} labels
-	{hover}
-	snapTicks={false}/>
+	{hover} labels />
 	</div>
 	</Media>
 {/if}
