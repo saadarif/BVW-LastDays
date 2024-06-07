@@ -332,7 +332,7 @@
 {#if data1.psmc.Netimes}
 	<Media
 		col="medium"
-		caption="Source: "
+		caption="Source: Paper "
 	>
 	<div class="chart-sml">
 	<LineChart
@@ -342,13 +342,14 @@
 	zKey="species"
 	xGridlines={false}
 	xTicks={[0, 10000, 50000, 100000, 150000]} 
-	xFormatTick={d => d/1e3} xSuffix= " Years Before Present"
+	xSuffix= " Years Before Present"
 	lineWidth={4}
 	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
 	height={600}
-	padding={{ top: 0, bottom: 35, left: 140, right: 60 }}
+	padding={{ top: 0, bottom: 35, left: 35, right: 60 }}
 	area={false} 
-	{hover} labels />
+	{hover} labels legend
+	snapTicks={false}/>
 	</div>
 	</Media>
 {/if}
