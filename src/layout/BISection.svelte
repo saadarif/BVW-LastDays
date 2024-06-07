@@ -24,12 +24,13 @@
 	  flex: 0 0 auto;
 	  margin-right: 2rem; /* Adjust the margin between image and text as needed */
       margin-bottom: 1rem; /* Space between image and text on mobile */
+	 
 	}
 
 	.spacer {
-    flex: 0 0 auto;
-    width: 2rem; /* Adjust to ensure the same space as margin-right of image-slot */
+		display: none;
   	}
+	  
 
 	.text-slot {
 	  flex: 0 0 50%;
