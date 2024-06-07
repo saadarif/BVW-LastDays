@@ -346,6 +346,8 @@
 	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
 	height={600}
 	padding={{ top: 0, bottom: 35, left: 140, right: 0 }}
+	colors={['#003f5c', '#ffa600']}
+	colorHover='#bc5090'
 	area={false} 
 	{hover} labels legend
 	snapTicks={false}/>
