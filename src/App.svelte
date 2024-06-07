@@ -340,10 +340,9 @@
 	xKey="year"
 	yKey="Ne"
 	zKey="species"
-	xGridlines={false}
 	xTicks={[0, 10000, 50000, 100000, 150000]} 
 	xSuffix= " Years Before Present"
-	lineWidth={4}
+	lineWidth={5}
 	yFormatTick={d => d * 1e4 /1e3}  ySuffix=" k"
 	height={600}
 	padding={{ top: 0, bottom: 35, left: 35, right: 60 }}
