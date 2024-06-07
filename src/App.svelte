@@ -15,7 +15,7 @@
 	import Toggle from "./ui/Toggle.svelte";
 	import Arrow from "./ui/Arrow.svelte";
 	import Em from "./ui/Em.svelte";
-	import OrientationPrompt from './OrientationPrompt.svelte';	
+	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
 	
 	// DEMO-SPECIFIC IMPORTS
 	import bbox from "@turf/bbox";
