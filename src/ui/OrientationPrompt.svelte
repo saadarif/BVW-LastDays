@@ -31,9 +31,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.7);
         color: white;
         font-size: 1.5em;
+        font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
         text-align: center;
         z-index: 1000;
     }
