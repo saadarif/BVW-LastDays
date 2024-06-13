@@ -27,6 +27,7 @@
 	let theme = "light";
 	setContext("theme", theme);
 	setColors(themes, theme);
+	
 
 	// CONFIG FOR SCROLLER COMPONENTS
 	// Config
