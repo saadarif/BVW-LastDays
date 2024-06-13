@@ -25,7 +25,7 @@
 	import bbox from "@turf/bbox";
 	import { getData, setColors, getTopo, getBreaks, getColor } from "./utils.js";
 	import { colors, units } from "./config.js";
-	import { ScatterChart, LineChart, BarChart } from "@onsvisual/svelte-charts";
+	import { ScatterChart, LineChart, BarChart } from "@onsvisual/saadarif/svelte-charts";
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
   	import { linear } from "svelte/easing";
