@@ -30,7 +30,8 @@
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
   	import { linear } from "svelte/easing";
   	import { claim_svg_element } from "svelte/internal";
-	
+  import Annotations from "@onsvisual/svelte-charts/src/charts/shared/Annotations.svelte";
+
 
 	// CORE CONFIG (COLOUR THEMES)
 	// Set theme globally (options are 'light', 'dark' or 'lightblue')
@@ -70,6 +71,9 @@
 	let yKey = "Ne"; // yKey for scatter chart
 	let zKey = "species"; // zKey (color) for scatter chart
 
+	//annotation test
+ 
+
 	// Functions for chart and map on:select and on:hover events
 	function doSelect(e) {
 		console.log(e);
@@ -77,6 +81,7 @@
 		if (e.detail.feature) fitById(selected); // Fit map if select event comes from map
 	}
 	function doHover(e) {
+		console.log(e)
 		hovered = e.detail.id;
 	}
 	
@@ -89,12 +94,12 @@
 			
 			},
 			chart02: () => {
-				highlighted = ["OX16"]
+				highlighted = ["France"]
 				showColors = true;
 				
 			},
 			chart03: () => {
-				highlighted= ["NHM026"]
+				highlighted= ["Britain"]
 				showColors = true;
 				
 			},
@@ -308,9 +313,10 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							{xKey} {yKey} {zKey} labelKey="species"
 							xScale= "log"
 							xSuffix= "  years ago"
-							xTicks={[1000,10000, 50000, 100000, 500000]} 
+							xTicks={[1000,10000, 50000, 100000, 250000]} 
 							{highlighted} colorHighlight='#999'
 							labels
+							hover {hovered} on:hover={doHover} colorHover='pink'
 							{animation}/>
 					</div>
 				{/if}
@@ -356,9 +362,10 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 		<section data-id="chart04">
 			<div class="col-medium">
 				<p>
-					These demographic recontructions tell us two important things: <strong>(i)</strong> British Black-veined white have a distinct demographic history compared to Europeans ones. Hence, the British black-veined white were long
+					These demographic recontructions tell us two important things: <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined white have a 
+					distinct demographic history compared to <Em color='#ffa600'>European</Em>. Hence, the British black-veined white were long
 					term residents in the UK, rather than recent migrants
-				<strong>(ii)</strong> Black-veined white butterflies colonizing Britain, showed reduced genetic diversity,
+				<strong>(ii)</strong> Black-veined white colonizing <Em color='#003f5c'>Britain</Em>, showed reduced genetic diversity,
 						 presumably as a result of colonization by a small number of indviduals
 					
 				</p>
@@ -407,8 +414,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	</p>
 </Section>
 
-<ONSFooter />
-
+<Filler bgimage="./img/output.png"	theme="lightblue" short={true} wide={true} center={false}/>
 <style>
 	/* Styles specific to elements within the demo */
 	:global(svelte-scroller-foreground) {
