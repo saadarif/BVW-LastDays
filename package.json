@@ -6,8 +6,7 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public",
-    "deploy": "gh-pages -d public",
-    "postinstall": "ls -R node_modules/@scoped/package-name"
+    "deploy": "gh-pages -d public"
   },
   "author": "Ahmad Barclay",
   "license": "MIT",
