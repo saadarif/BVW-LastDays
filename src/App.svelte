@@ -60,7 +60,7 @@
 	// State
 	let hover = true;
 	let select = true;
-	let showColors = null;
+	let showColors = true;
 	let hovered; // Hovered district (chart or map)
 	let selected; // Selected district (chart or map)
 	let highlighted;
@@ -199,25 +199,24 @@
 	</div>
 </Header>
 
-<Section>
-	<p>
+
+<Filler theme="light" short={true} wide={true} center={false}>
+	<p class="text-small">
 		<strong>By</strong>: Saad Arif </p>
-		<p> <strong>Cover Illustration</strong>: Lizzie Harper
+		<p class="text-small"><strong>Cover Illustration</strong>: Lizzie Harper
 	</p>
-	<p>
-		
-	</p>
-	<p> <strong>Based on data from:</strong></p>
-	<p>
+	<p class="text-small"> <strong>Based on data from:</strong></p>
+	<p class="text-small">
 		<small>The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024.)
 Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif
 bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </small>
 	</p>
-</Section>
+</Filler>
+
+<Divider/>
 
 
-
-<BISection>
+<!--<BISection>
 	<div slot="image">
 		<img src="./img/resized_BVW_pinned.png" alt="Left Image">
 	</div>
@@ -238,7 +237,25 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
 	</p>
 	</div>
-</BISection>	
+</BISection>-->
+
+<Section>
+	<h2>A butterfly disappearance, museums and genomics</h2>
+	<p>
+		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
+		to Japan. However, in some places it is in decline and has completely disappeared from the Netherlands, Czechia, and South Korea [Refs]. 
+		It had been recorded in Britain as early as 1667 [REF] but went extinct in the early twentieth century. Prior to its extirpation in Britain, it could be found in southern England and Wales.
+		Why did the Black-veined white disappear from Britain? Numerous hypothesis have been suggested, including a run of unsually "wet" Autumns, pathogen infection, and predation.
+		Given that this butterfly disappeared from Britain in the early twentieth century, it is difficult to pinpoint the exact cause of its disappearence. Over the years, there have been various attempts
+		to reintroduce this species to Britain but none have been successful thus far. 
+	</p>
+	<p>Museums contains large collections of butterflies, some from as early as the 18th century, collected by scientists and butterfly enthusiasts.
+	   Modern advances in genomics now allow us to interrogate the genomes of these long-dead individuals. To peer into the history of the Black-veined white in Britian, we extracted DNA from musueum specimens dating from the mid-19<sup>th</sup> 
+	   to the early 20<sup>th</sup> century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. 
+	   These result also give a snapshot of its "genomic health" around the time of its disappearance,
+	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
+	</p>
+</Section>
 
 <Divider/>
 

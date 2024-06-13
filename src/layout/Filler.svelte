@@ -7,7 +7,7 @@
 	export let wide = false;
 	export let short = false;
 	//add image to filler
-	export let bgimage = './img/output.png';
+	export let bgimage = null;
 	export let bgfixed = false;
 
 	let style = '';
@@ -28,7 +28,7 @@
 		padding: 36px 0;
 	}
 	.short {
-		min-height: 70vh;
+		min-height: 30vh;
 	}
 </style>
 
