@@ -25,7 +25,7 @@
 	import bbox from "@turf/bbox";
 	import { getData, setColors, getTopo, getBreaks, getColor } from "./utils.js";
 	import { colors, units } from "./config.js";
-	import { ScatterChart, LineChart, BarChart } from "@onsvisual/saadarif/svelte-charts";
+	import { ScatterChart, LineChart, BarChart } from '@onsvisual/svelte-charts';
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
   	import { linear } from "svelte/easing";
@@ -200,7 +200,7 @@
 </Header>
 
 
-<Filler theme="light" short={true} wide={true} center={false}>
+<Filler theme="light" short={true} wide={true} center={true}>
 	<p class="text-small">
 		<strong>By</strong>: Saad Arif </p>
 		<p class="text-small"><strong>Cover Illustration</strong>: Lizzie Harper

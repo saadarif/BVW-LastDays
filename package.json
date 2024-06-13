@@ -16,6 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/runtime": "^7.12.1",
+    "@onsvisual/svelte-charts":  "git+https://github.com/saadarif/svelte-charts.git#dev",
     "@onsvisual/svelte-maps": "latest",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
@@ -35,7 +36,6 @@
     "topojson-client": "^3.1.0"
   },
   "dependencies": {
-    "@onsvisual/svelte-charts": "github:saadarif/svelte-charts",
     "chart.js": "^4.4.3",
     "chartjs-plugin-annotation": "^3.0.1",
     "d3": "^7.9.0",
