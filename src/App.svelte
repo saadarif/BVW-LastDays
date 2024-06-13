@@ -302,7 +302,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							colors={showColors ? ['lightgrey'] : ['#003f5c', '#ffa600']}
 							legend={showColors ? false : true}
 							lineWidth={5} 
-							padding ={ { top: 0, bottom: 20, left: 35, right: 0 }}
+							padding ={ { top: 0, bottom: 20, left: 0, right: 0 }}
 							area={false} 
 							{xKey} {yKey} {zKey} labelKey="species"
 							xScale= "log"
