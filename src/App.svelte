@@ -15,7 +15,10 @@
 	import Toggle from "./ui/Toggle.svelte";
 	import Arrow from "./ui/Arrow.svelte";
 	import Em from "./ui/Em.svelte";
+
 	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
+	import StepLinePlot from "./plots/StepLinePlot.svelte";
+	import * as d3 from 'd3';
 	
 	import PsmcPlot from "./plots/PsmcPlot.svelte";
 	// DEMO-SPECIFIC IMPORTS
@@ -26,7 +29,7 @@
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
   	import { linear } from "svelte/easing";
-  import { claim_svg_element } from "svelte/internal";
+  	import { claim_svg_element } from "svelte/internal";
 
 	// CORE CONFIG (COLOUR THEMES)
 	// Set theme globally (options are 'light', 'dark' or 'lightblue')
@@ -38,7 +41,7 @@
 	// Config
 	const threshold = 0.65;
 	// State
-	let animation = getMotion(); // Set animation preference depending on browser preference
+	let animation = true; // Set animation preference depending on browser preference
 	let id = {}; // Object to hold visible section IDs of Scroller components
 	let idPrev = {}; // Object to keep track of previous IDs, to compare for changes
 	onMount(() => {
@@ -47,44 +50,24 @@
 
 	// DEMO-SPECIFIC CONFIG
 	// Constants
-	const psmcDataSets= ["psmc"];
-	const datasets = ["region", "district"];
-	const topojson = "./data/geo_lad2021.json";
-	const mapstyle = "https://bothness.github.io/ons-basemaps/data/style-omt.json";
-	const mapbounds = {
-		uk: [
-			[-9, 49 ],
-			[ 2, 61 ]
-		]
-	};
+	const DataSets= ["psmc"];
+	
 
 	// Data
-	let data1 ={psmc: {}};
-	let data = {district: {}, region: {}};
-	let metadata = {district: {}, region: {}};
-	let geojson;
-
-	// Element bindings
-	let map = null; // Bound to mapbox 'map' instance once initialised
-
+	let data ={psmc: {}};
+	
 
 	// State
 	let hover = true;
 	let select = true;
+	let showColors = null;
 	let hovered; // Hovered district (chart or map)
 	let selected; // Selected district (chart or map)
-	$: region = selected && metadata.district.lookup ? metadata.district.lookup[selected].parent : null; // Gets region code for 'selected'
-	$: chartHighlighted = metadata.district.array && region ? metadata.district.array.filter(d => d.parent == region).map(d => d.code) : []; // Array of district codes in 'region'
+	let highlighted;
 	let mapHighlighted = []; // Highlighted district (map only)
-	let xKey = "area"; // xKey for scatter chart
-	let yKey = null; // yKey for scatter chart
-	let zKey = null; // zKey (color) for scatter chart
-	let rKey = null; // rKey (radius) for scatter chart
-	let mapKey = "density"; // Key for data to be displayed on map
-	let explore = false; // Allows chart/map interactivity to be toggled on/off
-
-
-	// FUNCTIONS (INCL. SCROLLER ACTIONS)
+	let xKey = "year"; // xKey for scatter chart
+	let yKey = "Ne"; // yKey for scatter chart
+	let zKey = "species"; // zKey (color) for scatter chart
 
 	// Functions for chart and map on:select and on:hover events
 	function doSelect(e) {
@@ -95,89 +78,33 @@
 	function doHover(e) {
 		hovered = e.detail.id;
 	}
-
-	// Functions for map component
-	function fitBounds(bounds) {
-		if (map) {
-			map.fitBounds(bounds, {animate: animation, padding: 30});
-		}
-	}
-	function fitById(id) {
-		if (geojson && id) {
-			let feature = geojson.features.find(d => d.properties.AREACD == id);
-			let bounds = bbox(feature.geometry);
-			fitBounds(bounds);
-		}
-	}
-
+	
 	// Actions for Scroller components
 	const actions = {
-		map: { // Actions for <Scroller/> with id="map"
-			map01: () => { // Action for <section/> with data-id="map01"
-				fitBounds(mapbounds.uk);
-				mapKey = "density";
-				mapHighlighted = [];
-				explore = false;
-			},
-			map02: () => {
-				fitBounds(mapbounds.uk);
-				mapKey = "age_med";
-				mapHighlighted = [];
-				explore = false;
-			},
-			map03: () => {
-				let hl = [...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0];
-				fitById(hl.code);
-				mapKey = "age_med";
-				mapHighlighted = [hl.code];
-				explore = false;
-			},
-			map04: () => {
-				fitBounds(mapbounds.uk);
-				mapKey = "age_med";
-				mapHighlighted = [];
-				explore = true;
-			}
-		},
 		chart: {
 			chart01: () => {
-				xKey = "area";
-				yKey = null;
-				zKey = null;
-				rKey = null;
-				explore = false;
+				highlighted = [];
+				showColors = true;
+			
 			},
 			chart02: () => {
-				xKey = "area";
-				yKey = null;
-				zKey = null;
-				rKey = "pop";
-				explore = false;
+				highlighted = ["OX16"]
+				showColors = true;
+				
 			},
 			chart03: () => {
-				xKey = "area";
-				yKey = "density";
-				zKey = null;
-				rKey = "pop";
-				explore = false;
+				highlighted= ["NHM026"]
+				showColors = true;
+				
 			},
 			chart04: () => {
-				xKey = "area";
-				yKey = "density";
-				zKey = "parent_name";
-				rKey = "pop";
-				explore = false;
-			},
-			chart05: () => {
-				xKey = "area";
-				yKey = "density";
-				zKey = null;
-				rKey = "pop";
-				explore = true;
+				highlighted = [];
+				showColors = false;
+				
 			}
 		}
+		
 	};
-
 	// Code to run Scroller actions when new caption IDs come into view
 	function runActions(codes = []) {
 		codes.forEach(code => {
@@ -191,9 +118,10 @@
 	}
 	$: id && runActions(Object.keys(actions)); // Run above code when 'id' object changes
 
+
 	//INITIALISATION CODE
 	//Read in the Datasets
-	psmcDataSets.forEach(demo => {
+	DataSets.forEach(demo => {
 		getData(`./data/data_${demo}.csv`)
 		.then(arr => {
 			let Netimes = arr.map((d,i) => ({
@@ -201,72 +129,59 @@
 			year: parseFloat(d.Time),
 			Ne: parseFloat(d.Ne)
 		}));
-		data1[demo].Netimes = Netimes;
-		console.log(data1.psmc.Netimes)
-		});
-	});
-	
+		data[demo].Netimes = Netimes;
 
-	
-	datasets.forEach(geo => {
-		getData(`./data/data_${geo}.csv`)
-		.then(arr => {
-			let meta = arr.map(d => ({
-				code: d.code,
-				name: d.name,
-				parent: d.parent ? d.parent : null
-			}));
-			let lookup = {};
-			meta.forEach(d => {
-				lookup[d.code] = d;
-			});
-			metadata[geo].array = meta;
-			metadata[geo].lookup = lookup;
-
-			let indicators = arr.map((d, i) => ({
-				...meta[i],
-				area: d.area,
-				pop: d['2020'],
-				density: d.density,
-				age_med: d.age_med
-			}));
-
-			if (geo == "district") {
-				['density', 'age_med'].forEach(key => {
-					let values = indicators.map(d => d[key]).sort((a, b) => a - b);
-					let breaks = getBreaks(values);
-					indicators.forEach((d, i) => indicators[i][key + '_color'] = getColor(d[key], breaks, colors.seq));
-				});
-			}
-			data[geo].indicators = indicators;
-
-			let years = [
-				2001, 2002, 2003, 2004, 2005,
-				2006, 2007, 2008, 2009, 2010,
-				2011, 2012, 2013, 2014, 2015,
-				2016, 2017, 2018, 2019, 2020
-			];
-
-			let timeseries = [];
-			arr.forEach(d => {
-				years.forEach(year => {
-					timeseries.push({
-						code: d.code,
-						name: d.name,
-						value: d[year],
-						year
-					});
-				});
-			});
-			data[geo].timeseries = timeseries;
 		});
 	});
 
-	getTopo(topojson, 'geog')
-	.then(geo => {
-		geo.features.sort((a, b) => a.properties.AREANM.localeCompare(b.properties.AREANM));
-		geojson = geo;
-	});
+	
+	
+	//loading data solution for chart.js . solution from ChatGPT
+	// let datasets1 = [];
+	// let labels = [];
+	// let annotationBox = {
+	// 	xMin: 18000,
+	// 	xMax: 22000,
+	// 	yMin: 0,
+	// 	yMax: 250
+	// };
+
+	// // Calculate or set xMin and xMax values
+	// let xMin = 10000;
+ 	// let xMax = 150000;
+	// // List of CSV files to load
+	// const psmcDataSets1 = ['data_psmc.csv'];
+	// let loading = true;
+
+	// async function loadData() {
+	// 	let chartData = {};
+
+	// 	for (let file of psmcDataSets1) {
+	// 	const data = await d3.csv(`./data/${file}`);
+	// 	data.forEach(d => {
+	// 		const category = d.ID;
+	// 		if (!chartData[category]) {
+	// 		chartData[category] = [];
+	// 		}
+	// 		chartData[category].push({ x: +d.Time, y: +d.Ne });
+	// 	});
+	// 	}
+
+	// 	// Process the data to create datasets and labels
+	// 	let categories = new Set(Object.keys(chartData));
+	// 	labels = Array.from(new Set(Object.values(chartData).flat().map(d => d.x)));
+	// 	datasets1 = Array.from(categories).map((category, index) => ({
+	// 	label: category,
+	// 	data: chartData[category],
+	// 	borderColor: `hsl(${index * 60}, 100%, 50%)`
+	// 	}));
+	// 	console.log(datasets1)
+	// 	loading = false;
+	// }
+
+	// onMount(loadData);
+		
+	
 </script>
 
 <OrientationPrompt />
@@ -283,6 +198,23 @@
 		<Arrow color="black" {animation}><strong>Scroll to begin</strong></Arrow>
 	</div>
 </Header>
+
+<Section>
+	<p>
+		<strong>By</strong>: Saad Arif </p>
+		<p> <strong>Cover Illustration</strong>: Lizzie Harper
+	</p>
+	<p>
+		
+	</p>
+	<p> <strong>Based on data from:</strong></p>
+	<p>
+		<small>The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024.)
+Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif
+bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </small>
+	</p>
+</Section>
+
 
 
 <BISection>
@@ -314,30 +246,126 @@
 
 <Divider/>
 
-{#if data1.psmc.Netimes}
+<!--{#if data.psmc.Netimes}
 	<Media
 		col="medium"
 		caption="Source: Paper "
 	>
-	<div class="chart-sml">
-	<LineChart
-	data={data1.psmc.Netimes}
-	xKey="year"
-	yKey="Ne"
-	zKey="species"
-	xTicks={[0, 10000, 50000, 100000, 150000]} 
-	lineWidth={5}"
-	height={600}
-	colors={['#003f5c', '#ffa600']}
-	colorHover='#bc5090'
-	colorSelect='#bc5090'
-	area={false} 
-	{hover} labels legend 
-	selected="OX16"
-	snapTicks={false}/>
-	</div>
+		<div class="chart-sml">
+			<LineChart
+			data={data.psmc.Netimes}
+			xKey="year"
+			yKey="Ne"
+			zKey="species"
+			xScale= "log"
+			xTicks={[1000,10000, 50000, 100000, 500000]} 
+			lineWidth={4}
+			height={500}
+			colors={['#003f5c', '#ffa600']}
+
+			area={false} 
+			padding={{ top: 0, bottom: 28, left: 35, right: 60 }}
+			{animation} labels
+			{hover} {select}
+			snapTicks={false} />
+		</div>
 	</Media>
+{/if} -->
+
+
+<Scroller {threshold} bind:id={id['chart']} splitscreen={true}>
+	<div slot="background">
+		<figure>
+			<div class="col-wide height-full">
+				{#if data.psmc.Netimes}
+					<div class="chart">
+						<LineChart
+							height="calc(100vh - 150px)"
+							data={data.psmc.Netimes} 
+							colors={showColors ? ['lightgrey'] : ['#003f5c', '#ffa600']}
+							legend={showColors ? false : true}
+							lineWidth={5} 
+							area={false} 
+							{xKey} {yKey} {zKey} labelKey="species"
+							xScale= "log"
+							xSuffix= "  years ago"
+							xTicks={[1000,10000, 50000, 100000, 500000]} 
+							{highlighted} colorHighlight='#999'
+							labels
+							{animation}/>
+					</div>
+				{/if}
+			</div>
+		</figure>
+	</div>
+
+	<div slot="foreground">
+		<section data-id="chart01">
+			<div class="col-medium">
+				<p>
+					This plot shows the <strong>effective population size </strong> (y-axis) over <strong>time</strong> in years (x-axis). 
+					Small values on the x-axis represent time <strong>closer to the present</strong>! Higher values on the x-axis represent 
+					higher <strong>genetic diversity</strong> and thus, higher<strong>population size</strong>
+				</p>
+			</div>
+		</section>
+		<section data-id="chart02">
+			<div class="col-medium">
+				<p>
+					The <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from northwestern
+					 <strong>France</strong> collected in the early 1900s. Its population size is low for most of the last 500,000 years but showing
+					 a small peak at roughly 125,000 years ago, corresponding to the penultimate interglacial period (the Eemian interglacial). The population
+					 then contracts up till around 12,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds
+					 expanded all over europe from their warm southern refugia and we find the signs of an exponential population increase in the genome of this 
+					 Black-veined white butterfly from France. 
+				</p>
+			</div>
+		</section>
+		<section data-id="chart03">
+			<div class="col-medium">
+				<p>
+					This <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from kent county in eastern
+					 <strong>Great Britain</strong> collected in the 1860s. For most of its history, it follows a similar trajectory to the French butterfly, however,
+					 it shows no signs of population increase but rather a population <strong>decrease </strong> at the end of the LGM.
+				</p>
+				<p>
+					What happened? This decrease in population size at the end of the LGM is exactly what we would expect to see if butterflies began colonizing the 
+					British Isles at this time. The British Isles would have been founded by a relatively small number of Black-veined white to those that lived on the mainland.
+				</p>
+			</div>
+		</section>
+		<section data-id="chart04">
+			<div class="col-medium">
+				<p>
+					These demographic recontructions tell us two important things: <strong>(i)</strong> British Black-veined white have a distinct demographic history compared to Europeans ones. Hence, the British black-veined white were long
+					term residents in the UK, rather than recent migrants
+				<strong>(ii)</strong> Black-veined white butterflies colonizing Britain, showed reduced genetic diversity,
+						 presumably as a result of colonization by a small number of indviduals
+					
+				</p>
+			</div>
+		</section>
+	</div>
+</Scroller>
+
+
+<!--<Media col="medium" caption="Source: Paper ">
+<h1>Step Line Chart</h1>
+<div class="chart-sml">
+
+{#if !loading}
+	<StepLinePlot 
+	datasets={datasets1}
+	{labels} 
+	{annotationBox}
+	xMin={xMin}
+	xMax={xMax}
+	yMax={250} 
+	borderWidth={3}/>
 {/if}
+</div>
+</Media> -->
+
 
 <Scroller {threshold} >
 		<div slot="background" >
