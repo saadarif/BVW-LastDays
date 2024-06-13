@@ -7,7 +7,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public",
     "deploy": "gh-pages -d public",
-    "postinstall": "npm ls @scoped/package-name"
+    "postinstall": "npm ls @onsvisual/svelte-charts"
   },
   "author": "Saad Arif",
   "license": "MIT",
