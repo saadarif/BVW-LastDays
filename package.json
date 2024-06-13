@@ -1,5 +1,5 @@
 {
-  "name": "@onsvisual/svelte-scrolly",
+  "name": "BVW-lastdayScrolly",
   "homepage": "http://onsvisual.github.io/svelte-scrolly",
   "version": "0.1.1",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "sirv public",
     "deploy": "gh-pages -d public"
   },
-  "author": "Ahmad Barclay",
+  "author": "Saad Arif",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -16,7 +16,7 @@
     "@babel/plugin-transform-runtime": "^7.12.1",
     "@babel/preset-env": "^7.12.1",
     "@babel/runtime": "^7.12.1",
-    "@onsvisual/svelte-charts":  "git+https://github.com/saadarif/svelte-charts.git#dev",
+    "@onsvisual/svelte-charts": "git+https://github.com/saadarif/svelte-charts.git#dev",
     "@onsvisual/svelte-maps": "latest",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
