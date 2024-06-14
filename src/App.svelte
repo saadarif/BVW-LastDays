@@ -17,8 +17,8 @@
 	import Em from "./ui/Em.svelte";
 
 	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
-	import StepLinePlot from "./plots/StepLinePlot.svelte";
-	import * as d3 from 'd3';
+	//import StepLinePlot from "./plots/StepLinePlot.svelte";
+	//import * as d3 from 'd3';
 	
 	import PsmcPlot from "./plots/PsmcPlot.svelte";
 	// DEMO-SPECIFIC IMPORTS
@@ -28,6 +28,7 @@
 	import { ScatterChart, LineChart, BarChart } from '@onsvisual/svelte-charts';
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
+	import AnnotationsData from "@onsvisual/svelte-charts/src/charts/shared/AnnotationsData.svelte";
   	import { linear } from "svelte/easing";
   	import { claim_svg_element } from "svelte/internal";
   import Annotations from "@onsvisual/svelte-charts/src/charts/shared/Annotations.svelte";
@@ -43,7 +44,7 @@
 	// Config
 	const threshold = 0.65;
 	// State
-	let animation = true; // Set animation preference depending on browser preference
+	let animation = getMotion(); // Set animation preference depending on browser preference
 	let id = {}; // Object to hold visible section IDs of Scroller components
 	let idPrev = {}; // Object to keep track of previous IDs, to compare for changes
 	onMount(() => {
@@ -60,9 +61,9 @@
 	
 
 	// State
-	let hover = true;
 	let select = true;
 	let showColors = true;
+	let showAnnotation = false;
 	let hovered; // Hovered district (chart or map)
 	let selected; // Selected district (chart or map)
 	let highlighted;
@@ -72,7 +73,48 @@
 	let zKey = "species"; // zKey (color) for scatter chart
 
 	//annotation test
- 
+	//let annotations = [{top: '15px', bottom: '100px', left: '100px', right: '25px', text: "hello!"}]
+    //testing annotations Data
+	let psmcAnnotations = [
+    {
+      text: 'Start of warm (interglacial) periods',
+      [xKey]: '40000',
+      [yKey]: 80,
+      dx: 15, // Optional pixel values
+      dy: -35,
+      arrows: [{
+        clockwise: false, // true or false, defaults to true
+        source: {
+          anchor: 'left-bottom',
+          dy: -7,
+          dx: -7
+        },
+        target: {
+           // These can be expressed in our data units if passed under the data keys
+		  [xKey]: '20000',
+          [yKey]: 22,
+          // Optional adjustments
+          dx: 2,
+          dy: 5
+        }
+      },
+       {  source: {
+          anchor: 'middle-bottom', // can be `{left, middle, right},{top-middle-bottom}`
+          dx: -2,
+          dy: -7
+        },
+        target: {
+          // These can be expressed in our data units if passed under the data keys
+          [xKey]: '130000',
+          [yKey]: 40,
+          // Optional adjustments
+          dx: 2,
+          dy: 5
+        }
+      }
+   ]}
+];
+    
 
 	// Functions for chart and map on:select and on:hover events
 	function doSelect(e) {
@@ -81,7 +123,7 @@
 		if (e.detail.feature) fitById(selected); // Fit map if select event comes from map
 	}
 	function doHover(e) {
-		console.log(e)
+		console.log(e.detail.id)
 		hovered = e.detail.id;
 	}
 	
@@ -96,16 +138,19 @@
 			chart02: () => {
 				highlighted = ["France"]
 				showColors = true;
+				showAnnotation = true;
 				
 			},
 			chart03: () => {
 				highlighted= ["Britain"]
 				showColors = true;
+				showAnnotation = true;
 				
 			},
 			chart04: () => {
 				highlighted = [];
 				showColors = false;
+				showAnnotation = true;
 				
 			}
 		}
@@ -279,7 +324,8 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 			data={data.psmc.Netimes}
 			xKey="year"
 			yKey="Ne"
-			zKey="species"
+			zKey="species"	  <slot name="front"/>
+
 			xScale= "log"
 			xTicks={[1000,10000, 50000, 100000, 500000]} 
 			lineWidth={4}
@@ -307,17 +353,17 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							data={data.psmc.Netimes} 
 							colors={showColors ? ['lightgrey'] : ['#003f5c', '#ffa600']}
 							legend={showColors ? false : true}
-							lineWidth={5} 
-							padding ={ { top: 0, bottom: 20, left: 0, right: 0 }}
+							lineWidth={5}  yScale="log"
 							area={false} 
-							{xKey} {yKey} {zKey} labelKey="species"
+							{xKey} {yKey} {zKey} 
 							xScale= "log"
 							xSuffix= "  years ago"
-							xTicks={[1000,10000, 50000, 100000, 250000]} 
+							xTicks={[1000,10000, 50000, 100000, 250000]}  xFormatTick={d => d.toLocaleString()}
+							yFormatTick={d => d.toLocaleString()}
 							{highlighted} colorHighlight='#999'
-							labels
-							hover {hovered} on:hover={doHover} colorHover='pink'
-							{animation}/>
+							hover {hovered} on:hover={doHover} colorHover='pink' annotations={psmcAnnotations}
+							labels labelKey="species"
+							{animation} />
 					</div>
 				{/if}
 			</div>
