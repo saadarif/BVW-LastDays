@@ -4,7 +4,7 @@
 	import { getMotion } from "./utils.js";
 	import { themes } from "./config.js";
 	import ONSHeader from "./layout/ONSHeader.svelte";
-	import ONSFooter from "./layout/ONSFooter.svelte";
+	import ONSFooter from "./layout/Footer.svelte";
 	import Header from "./layout/Header.svelte";
 	import Section from "./layout/Section.svelte";
 	import Media from "./layout/Media.svelte";

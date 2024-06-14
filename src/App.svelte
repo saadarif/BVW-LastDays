@@ -4,7 +4,7 @@
 	import { getMotion } from "./utils.js";
 	import { themes } from "./config.js";
 	import ONSHeader from "./layout/ONSHeader.svelte";
-	import ONSFooter from "./layout/ONSFooter.svelte";
+	import Footer from "./layout/Footer.svelte";
 	import Header from "./layout/Header.svelte";
 	import Section from "./layout/BISection.svelte";
 	import BISection from "./layout/BISection.svelte";
@@ -77,17 +77,17 @@
     //testing annotations Data
 	let psmcAnnotations = [
     {
-      text: 'Start of warm (interglacial) periods',
-      [xKey]: '40000',
+      text: 'End of last glacial period...',
+      [xKey]: '60000',
       [yKey]: 80,
       dx: 15, // Optional pixel values
-      dy: -35,
+      dy: -5,
       arrows: [{
         clockwise: false, // true or false, defaults to true
         source: {
-          anchor: 'left-bottom',
-          dy: -7,
-          dx: -7
+          anchor: 'left-middle',
+          dy: 5,
+          dx: -40
         },
         target: {
            // These can be expressed in our data units if passed under the data keys
@@ -97,21 +97,7 @@
           dx: 2,
           dy: 5
         }
-      },
-       {  source: {
-          anchor: 'middle-bottom', // can be `{left, middle, right},{top-middle-bottom}`
-          dx: -2,
-          dy: -7
-        },
-        target: {
-          // These can be expressed in our data units if passed under the data keys
-          [xKey]: '130000',
-          [yKey]: 40,
-          // Optional adjustments
-          dx: 2,
-          dy: 5
-        }
-      }
+      },     
    ]}
 ];
     
@@ -312,6 +298,10 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 
 <Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
 
+<Section>
+	<h2>Reconstructing the history of a Butterfly population</h2>
+</Section>
+
 <Divider/>
 
 <!--{#if data.psmc.Netimes}
@@ -361,7 +351,8 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							xTicks={[1000,10000, 50000, 100000, 250000]}  xFormatTick={d => d.toLocaleString()}
 							yFormatTick={d => d.toLocaleString()}
 							{highlighted} colorHighlight='#999'
-							hover {hovered} on:hover={doHover} colorHover='pink' annotations={psmcAnnotations}
+							hover {hovered} on:hover={doHover} colorHover='pink' 
+							annotations={psmcAnnotations}
 							labels labelKey="species"
 							{animation} />
 					</div>
@@ -460,7 +451,9 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	</p>
 </Section>
 
-<Filler bgimage="./img/output.png"	theme="lightblue" short={true} wide={true} center={false}/>
+
+<Footer />
+
 <style>
 	/* Styles specific to elements within the demo */
 	:global(svelte-scroller-foreground) {
