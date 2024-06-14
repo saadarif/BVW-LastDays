@@ -3,7 +3,7 @@
 	import { setContext, onMount } from "svelte";
 	import { getMotion } from "./utils.js";
 	import { themes } from "./config.js";
-	import ONSHeader from "./layout/ONSHeader.svelte";
+	import ONSHeader from "./layout/OBUHeader.svelte";
 	import ONSFooter from "./layout/Footer.svelte";
 	import Header from "./layout/Header.svelte";
 	import Section from "./layout/Section.svelte";

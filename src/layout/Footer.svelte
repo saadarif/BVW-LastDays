@@ -30,13 +30,13 @@
 				class="copr-img"
 				src="./img/Copyright.png"
 				alt="Copyright logog" />
-			All content is copyright of 
+			Copyright Info: All content is copyright of 
 			<a
 				href="http://www.brookes.ac.uk/"
 				class="link"
 				target="_blank"
 				rel="noopener"
-				style="color: {themes[theme]['text']}">Oxford Brookes University</a>, other than the header meadow illustration  which is copyright to
+				style="color: {themes[theme]['text']}">Oxford Brookes University</a>, other than the header meadow illustration which is copyright to
 				<a
 				href="https://lizzieharper.co.uk/"
 				class="link"

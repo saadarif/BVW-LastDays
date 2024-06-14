@@ -9,14 +9,14 @@
 
 <nav style="border-bottom-color: {themes[theme]['muted']}; {filled ? 'background-color: ' +  themes[theme]['background'] + ';' : ''}">
   <div class="col-wide middle" class:center>
-		<a href="https://www.ons.gov.uk/">
+		<a href="https://brookes.ac.uk/">
 			<picture>
 				{#if theme == 'dark'}
-				<img src="./img/ons-logo-neg-en.svg" alt="Office for National Statistics">
+				<img src="./img/brookes-logo-home.png" alt="Oxford Brookes University">
 				{:else if filled == true}
-				<img src="./img/ons-logo-pos-en.svg" alt="Office for National Statistics">
+				<img src="./img/brookes-logo-home.png" alt="Oxford Brookes University">
 				{:else}
-				<img src="./img/ons-logo-black-en.svg" alt="Office for National Statistics">
+				<img src="./img/brookes-logo-home.png" alt="Oxford Brookes University">
 				{/if}
 			</picture>
 		</a>
@@ -39,7 +39,7 @@
 		padding: 0 5px;
 	}
 	img {
-		width: 270px;
+		width: 75px;
 	}
 	a img:hover {
 		cursor: pointer;
