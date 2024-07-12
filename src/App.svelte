@@ -24,13 +24,13 @@
 	import bbox from "@turf/bbox";
 	import { getData, setColors, getTopo, getBreaks, getColor } from "./utils.js";
 	import { colors, units } from "./config.js";
-	import { ScatterChart, LineChart, BarChart } from '@onsvisual/svelte-charts';
+	import { ScatterChart, LineChart, ColumnChart } from '@onsvisual/svelte-charts';
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
   	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
 	import AnnotationsData from "@onsvisual/svelte-charts/src/charts/shared/AnnotationsData.svelte";
   	import { linear } from "svelte/easing";
   	import { claim_svg_element } from "svelte/internal";
-  import Annotations from "@onsvisual/svelte-charts/src/charts/shared/Annotations.svelte";
+
 
 
 	// CORE CONFIG (COLOUR THEMES)
@@ -50,15 +50,9 @@
 		idPrev = {...id};
 	});
 
-	// DEMO-SPECIFIC CONFIG
-	// Constants
-	const DataSets= ["psmc"];
+		// Data
+	let data ={psmc: {}, froh: {}};
 	
-
-	// Data
-	let data ={psmc: {}};
-	
-
 	// State
 	let select = true;
 	let showColors = true;
@@ -71,14 +65,12 @@
 	let yKey = "Ne"; // yKey for scatter chart
 	let zKey = "species"; // zKey (color) for scatter chart
 
-	//annotation test
-	//let annotations = [{top: '15px', bottom: '100px', left: '100px', right: '25px', text: "hello!"}]
-    //testing annotations Data
+	//Annotations
 	let psmcAnnotations = [
     {
       text: 'End of last glacial period...',
-      [xKey]: '60000',
-      [yKey]: 80,
+      [xKey]: '40000',
+      [yKey]: 60,
       dx: 15, // Optional pixel values
       dy: -5,
       arrows: [{
@@ -97,9 +89,13 @@
           dy: 5
         }
       },     
-   ]}
-];
-    
+   	]}
+	];
+
+
+	// Column/barchart options
+	let small = true;
+
 
 	// Functions for chart and map on:select and on:hover events
 	function doSelect(e) {
@@ -138,6 +134,15 @@
 				showAnnotation = true;
 				
 			}
+		}, 
+		froh_chart:{
+			frohchart01: () => {
+				small = true;
+			},
+			frohchart02: () => {
+				small = false;
+			},
+
 		}
 		
 	};
@@ -157,19 +162,32 @@
 
 	//INITIALISATION CODE
 	//Read in the Datasets
-	DataSets.forEach(demo => {
-		getData(`./data/data_${demo}.csv`)
+	//PSMC
+	getData(`./data/data_psmc.csv`)
 		.then(arr => {
 			let Netimes = arr.map((d,i) => ({
 			species: d.ID,
 			year: parseFloat(d.Time),
 			Ne: parseFloat(d.Ne)
 		}));
-		data[demo].Netimes = Netimes;
-
+		data.psmc.Netimes = Netimes;
+		//console.log(data.psmc.Netimes)
 		});
-	});
 
+	//FROH
+	getData(`./data/data_froh.csv`)
+		.then(arr => {
+			let froh = arr.map((d,i) => ({
+			pop: d.ID,
+			sample: d.sample,
+			interval: d.Interval,
+			freq: parseFloat(d.freq)
+		}));
+		data.froh.froh = froh;
+		console.log(data.froh)
+		});
+
+	
 	
 	
 	//loading data solution for chart.js . solution from ChatGPT
@@ -331,32 +349,31 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	</Media>
 {/if} -->
 
-
+{#if data.psmc.Netimes}
 <Scroller {threshold} bind:id={id['chart']} splitscreen={true}>
 	<div slot="background">
 		<figure>
 			<div class="col-wide height-full">
-				{#if data.psmc.Netimes}
 					<div class="chart">
 						<LineChart
 							height="calc(100vh - 150px)"
 							data={data.psmc.Netimes} 
+							title="Demographic history"
+							xKey="year" yKey="Ne" zKey="species" 
 							colors={showColors ? ['lightgrey'] : ['#003f5c', '#ffa600']}
 							legend={showColors ? false : true}
 							lineWidth={5}  yScale="log"
 							area={false} 
-							{xKey} {yKey} {zKey} 
 							xScale= "log"
 							xSuffix= "  years ago"
-							xTicks={[1000,10000, 50000, 100000, 250000]}  xFormatTick={d => d.toLocaleString()}
+							xTicks={[10000, 50000, 100000, 250000]}  xFormatTick={d => d.toLocaleString()}
 							yFormatTick={d => d.toLocaleString()}
-							{highlighted} colorHighlight='#999'
+							{highlighted} colorHighlight="#999" overlayFill
 							hover {hovered} on:hover={doHover} colorHover='pink' 
 							annotations={psmcAnnotations}
 							labels labelKey="species"
 							{animation} />
 					</div>
-				{/if}
 			</div>
 		</figure>
 	</div>
@@ -410,24 +427,63 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 		</section>
 	</div>
 </Scroller>
-
-
-<!--<Media col="medium" caption="Source: Paper ">
-<h1>Step Line Chart</h1>
-<div class="chart-sml">
-
-{#if !loading}
-	<StepLinePlot 
-	datasets={datasets1}
-	{labels} 
-	{annotationBox}
-	xMin={xMin}
-	xMax={xMax}
-	yMax={250} 
-	borderWidth={3}/>
 {/if}
-</div>
-</Media> -->
+
+<Section></Section>
+
+{#if data.froh.froh} 
+<Scroller {threshold} bind:id={id['froh_chart']} splitscreen={true}>
+	<div slot="background">
+		<figure>
+			<div class="col-wide height-full">
+					<div class="chart">
+					<ColumnChart
+							height="calc(100vh - 150px)"
+							data={small ? data.froh.froh.filter(d => d.interval == "Small") : data.froh.froh.filter(d => d.interval == "Big") }
+							xKey="pop" yKey="freq" zKey="pop"
+							colors={['#003f5c', '#ffa600']}
+							title="Inbreeding level"
+							<!-- mode="barcode" -->
+							hover {hovered} on:hover={doHover} colorHover='pink' 
+							{select} {selected} on:select={doSelect}
+							{animation}>
+							<!-- <div slot="options" class="controls small">
+								{#each barchart1.options as option}
+									<label><input type="radio" bind:group={barchart1.selected} value={option}/> {option}</label>
+								{/each}
+							</div> -->
+						</ColumnChart>
+					</div>
+				</div>
+			</figure>
+		</div>
+		<div slot="foreground">
+			<section data-id="frohchart01">
+				<div class="col-medium">
+					<p>
+						This plot shows the <strong>effective population size </strong> (y-axis) over <strong>time</strong> in years (x-axis). 
+						Small values on the x-axis represent time <strong>closer to the present</strong>! Higher values on the x-axis represent 
+						higher <strong>genetic diversity</strong> and thus, higher<strong>population size</strong>
+					</p>
+				</div>
+			</section>
+			<section data-id="frohchart02">
+				<div class="col-medium">
+					<p>
+						The <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from northwestern
+						 <strong>France</strong> collected in the early 1900s. Its population size is low for most of the last 500,000 years but showing
+						 a small peak at roughly 125,000 years ago, corresponding to the penultimate interglacial period (the Eemian interglacial). The population
+						 then contracts up till around 12,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds
+						 expanded all over europe from their warm southern refugia and we find the signs of an exponential population increase in the genome of this 
+						 Black-veined white butterfly from France. 
+					</p>
+				</div>
+			</section>
+			</div>
+</Scroller>			
+{/if}
+
+
 
 
 <Scroller {threshold} >

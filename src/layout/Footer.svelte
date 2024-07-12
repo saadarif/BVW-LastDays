@@ -30,7 +30,7 @@
 				class="copr-img"
 				src="./img/Copyright.png"
 				alt="Copyright logog" />
-			Copyright Info: All content is copyright of 
+			All content is copyright of 
 			<a
 				href="http://www.brookes.ac.uk/"
 				class="link"
@@ -89,8 +89,8 @@
 	}
 	.copr-img {
 		margin: 0 0.5rem 0.2rem 0;
-		width: 30px;
-		height: 30px;
+		width: 25px;
+		height: 25px;
 		vertical-align: middle;
 	}
 	.license {
