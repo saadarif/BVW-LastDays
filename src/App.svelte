@@ -39,6 +39,11 @@
 	setContext("theme", theme);
 	setColors(themes, theme);
 
+	const mapcolors = {
+		seq5: ['rgba(234, 236, 177,0)', 'rgb(169, 216, 145)', 'rgb(0, 167, 186)', 'rgb(0, 78, 166)', 'rgb(0, 13, 84)'],
+		div10: ['#67001f','#b2182b','#d6604d','#f4a582','#fddbc7','#d1e5f0','#92c5de','#4393c3','#2166ac','#053061']	
+	};
+
 	// CONFIG FOR SCROLLER COMPONENTS
 	// Config
 	const threshold = 0.65;
@@ -51,9 +56,31 @@
 	});
 
 		// Data
-	let data ={psmc: {}, froh: {}};
+	let data ={psmc: {}, froh: {}, occ:{}};
+	let geojson;
+	//Map constants
+
+	const occData = "./data/data_occ.csv";
+  const occDataBounds = {
+	  url: "./data/topo_lad.json",
+	  layer: "lad",
+	  code: "LAD13CD"
+	};
 	
+	const mapbounds = {
+		uk: [
+			[-9, 49 ],
+			[ 2, 61 ]
+		]
+	};
+
+  const mapstyle = "https://bothness.github.io/ons-basemaps/data/style-omt.json";
+	// Bindings
+	let map
+
 	// State
+	let zoom;
+	let center = {};
 	let select = true;
 	let showColors = true;
 	let showAnnotation = false;
@@ -64,6 +91,7 @@
 	let xKey = "year"; // xKey for scatter chart
 	let yKey = "Ne"; // yKey for scatter chart
 	let zKey = "species"; // zKey (color) for scatter chart
+	let mapKey = "Count"; // Key for data to be displayed on map
 
 	//Annotations
 	let psmcAnnotations = [
@@ -104,10 +132,25 @@
 		if (e.detail.feature) fitById(selected); // Fit map if select event comes from map
 	}
 	function doHover(e) {
-		console.log(e.detail.id)
+		console.log(e);
 		hovered = e.detail.id;
 	}
 	
+	// Functions for map component
+	function fitBounds(bounds) {
+		if (map) {
+			map.fitBounds(bounds, {animate: animation, padding: 30});
+		}
+	}
+	function fitById(id) {
+		if (geojson && id) {
+			let feature = geojson.features.find(d => d.properties.AREACD == id);
+			let bounds = bbox(feature.geometry);
+			fitBounds(bounds);
+		}
+	}
+
+
 	// Actions for Scroller components
 	const actions = {
 		chart: {
@@ -184,56 +227,28 @@
 			freq: parseFloat(d.freq)
 		}));
 		data.froh.froh = froh;
-		console.log(data.froh)
+		//console.log(data.froh)
 		});
 
 	
-	
-	
-	//loading data solution for chart.js . solution from ChatGPT
-	// let datasets1 = [];
-	// let labels = [];
-	// let annotationBox = {
-	// 	xMin: 18000,
-	// 	xMax: 22000,
-	// 	yMin: 0,
-	// 	yMax: 250
-	// };
-
-	// // Calculate or set xMin and xMax values
-	// let xMin = 10000;
- 	// let xMax = 150000;
-	// // List of CSV files to load
-	// const psmcDataSets1 = ['data_psmc.csv'];
-	// let loading = true;
-
-	// async function loadData() {
-	// 	let chartData = {};
-
-	// 	for (let file of psmcDataSets1) {
-	// 	const data = await d3.csv(`./data/${file}`);
-	// 	data.forEach(d => {
-	// 		const category = d.ID;
-	// 		if (!chartData[category]) {
-	// 		chartData[category] = [];
-	// 		}
-	// 		chartData[category].push({ x: +d.Time, y: +d.Ne });
-	// 	});
-	// 	}
-
-	// 	// Process the data to create datasets and labels
-	// 	let categories = new Set(Object.keys(chartData));
-	// 	labels = Array.from(new Set(Object.values(chartData).flat().map(d => d.x)));
-	// 	datasets1 = Array.from(categories).map((category, index) => ({
-	// 	label: category,
-	// 	data: chartData[category],
-	// 	borderColor: `hsl(${index * 60}, 100%, 50%)`
-	// 	}));
-	// 	console.log(datasets1)
-	// 	loading = false;
-	// }
-
-	// onMount(loadData);
+	// Get geometry for geojson maps
+	getTopo(occDataBounds.url, occDataBounds.layer)
+	.then(res => geojson = res);
+	// Get data for geojson maps
+	getData(occData)
+	.then(res => {
+		let vals = res.map(d => d.Count).sort((a, b) => a - b);
+		let len = vals.length;
+		let breaks = [
+			0,1,5,10,20,80
+		];
+		console.log(breaks); 
+		res.forEach(d => {
+			d.color = getColor(d.Count, breaks, mapcolors.seq5);
+		});
+		data.occ = res;
+		//console.log(data.occ);
+	});
 		
 	
 </script>
@@ -315,6 +330,42 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 <Divider/>
 
 <Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
+
+
+{#if geojson && data.occ}
+		<figure>
+			<div class="col-full height-full">
+		<Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} controls={true}>
+			<MapSource
+				id="lad"
+				type="geojson"
+				data={geojson}
+				promoteId="LAD13CD"
+				maxzoom={13}>
+				<MapLayer
+					id="lad-fill"
+					idKey="LAD13CD"
+					data={data.occ}
+					type="fill"
+					hover {hovered} on:hover={doHover} highlight
+					paint={{
+						'fill-color': ['case',
+							['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],
+							'rgba(255, 255, 255, 0)'
+						],
+						'fill-opacity': 0.7
+					}}>
+				<MapTooltip content={
+					hovered ? `${data.occ.find(d => d.LAD13CD == hovered)["LAD13NM"].toLocaleString()}<br/></strong>${data.occ.find(d => d.LAD13CD == hovered)[mapKey].toLocaleString()}</strong>` : ''
+				} />
+				</MapLayer>
+			</MapSource>
+		</Map>
+	</div>
+</figure>
+{/if}
+
+<Divider />
 
 <Section>
 	<h2>Reconstructing the history of a Butterfly population</h2>
@@ -443,7 +494,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							xKey="pop" yKey="freq" zKey="pop"
 							colors={['#003f5c', '#ffa600']}
 							title="Inbreeding level"
-							<!-- mode="barcode" -->
+							mode="barcode"
 							hover {hovered} on:hover={doHover} colorHover='pink' 
 							{select} {selected} on:select={doSelect}
 							{animation}>
