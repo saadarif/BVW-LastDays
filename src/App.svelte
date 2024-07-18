@@ -6,7 +6,7 @@
 	import Footer from "./layout/Footer.svelte";
 	import Header from "./layout/Header.svelte";
 	import Section from "./layout/BISection.svelte";
-	import BISection from "./layout/BISection.svelte";
+	//import BISection from "./layout/BISection.svelte";
 	import Media from "./layout/Media.svelte";
 	import Scroller from "./layout/Scroller.svelte";
 	import Filler from "./layout/Filler.svelte";
@@ -19,17 +19,17 @@
 	//import StepLinePlot from "./plots/StepLinePlot.svelte";
 	//import * as d3 from 'd3';
 	
-	import PsmcPlot from "./plots/PsmcPlot.svelte";
+	//import PsmcPlot from "./plots/PsmcPlot.svelte";
 	// DEMO-SPECIFIC IMPORTS
 	import bbox from "@turf/bbox";
 	import { getData, setColors, getTopo, getBreaks, getColor } from "./utils.js";
 	import { colors, units } from "./config.js";
 	import { ScatterChart, LineChart, ColumnChart } from '@onsvisual/svelte-charts';
 	import { Map, MapSource, MapLayer, MapTooltip } from "@onsvisual/svelte-maps";
-  	import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
+  import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
 	import AnnotationsData from "@onsvisual/svelte-charts/src/charts/shared/AnnotationsData.svelte";
-  	import { linear } from "svelte/easing";
-  	import { claim_svg_element } from "svelte/internal";
+  import { linear } from "svelte/easing";
+  import { claim_svg_element } from "svelte/internal";
 
 
 
@@ -69,8 +69,8 @@
 	
 	const mapbounds = {
 		uk: [
-			[-9, 49 ],
-			[ 2, 61 ]
+			[-7, 49 ],
+			[ 2, 58 ]
 		]
 	};
 
@@ -79,13 +79,11 @@
 	let map
 
 	// State
-	let zoom;
-	let center = {};
 	let select = true;
 	let showColors = true;
 	let showAnnotation = false;
-	let hovered; // Hovered district (chart or map)
-	let selected; // Selected district (chart or map)
+	let hovered; // Hovered component (chart or map)
+	let selected; // Selected component (chart or map)
 	let highlighted;
 	let mapHighlighted = []; // Highlighted district (map only)
 	let xKey = "year"; // xKey for scatter chart
@@ -93,7 +91,7 @@
 	let zKey = "species"; // zKey (color) for scatter chart
 	let mapKey = "Count"; // Key for data to be displayed on map
 
-	//Annotations
+	//Chart Annotations
 	let psmcAnnotations = [
     {
       text: 'End of last glacial period...',
@@ -120,10 +118,8 @@
    	]}
 	];
 
-
 	// Column/barchart options
 	let small = true;
-
 
 	// Functions for chart and map on:select and on:hover events
 	function doSelect(e) {
@@ -132,7 +128,6 @@
 		if (e.detail.feature) fitById(selected); // Fit map if select event comes from map
 	}
 	function doHover(e) {
-		console.log(e);
 		hovered = e.detail.id;
 	}
 	
@@ -144,7 +139,7 @@
 	}
 	function fitById(id) {
 		if (geojson && id) {
-			let feature = geojson.features.find(d => d.properties.AREACD == id);
+			let feature = geojson.features.find(d => d.properties.LAD13CD == id);
 			let bounds = bbox(feature.geometry);
 			fitBounds(bounds);
 		}
@@ -153,6 +148,26 @@
 
 	// Actions for Scroller components
 	const actions = {
+		map: { // Actions for <Scroller/> with id="map"
+			map01: () => { // Action for <section/> with data-id="map01"
+				fitBounds(mapbounds.uk);
+				//mapKey = "Count"; This is the pre-1925 count
+				mapHighlighted = [];
+			},
+			map02: () => {
+				fitBounds(mapbounds.uk);
+				//mapKey = "Count"; This is the pre-1925 count
+				mapHighlighted = [];
+			},
+			map03: () => {
+				let hl = [...data.occ].find(d => d.LAD13CD == "E07000106") //last known location of A. crategie before extirpation - Herne Bay, Canterbury
+				console.log(hl);
+				//let hl = [...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0];
+				fitById(hl.LAD13CD);
+				//mapKey = "Count"; This is the pre-1925 count
+				mapHighlighted = [hl.code];
+			}	
+		},
 		chart: {
 			chart01: () => {
 				highlighted = [];
@@ -331,11 +346,14 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 
 <Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
 
+<Section></Section>
 
 {#if geojson && data.occ}
+<Scroller {threshold} bind:id={id['map']}>
+	<div slot="background">
 		<figure>
 			<div class="col-full height-full">
-		<Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} controls={true}>
+		<Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>
 			<MapSource
 				id="lad"
 				type="geojson"
@@ -347,13 +365,15 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 					idKey="LAD13CD"
 					data={data.occ}
 					type="fill"
-					hover {hovered} on:hover={doHover} highlight
+					hover {hovered} on:hover={doHover}
+					highlight highlighted={mapHighlighted}
+					select {selected} on:select={doSelect}
 					paint={{
 						'fill-color': ['case',
 							['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],
 							'rgba(255, 255, 255, 0)'
 						],
-						'fill-opacity': 0.7
+						'fill-opacity': 0.6
 					}}>
 				<MapTooltip content={
 					hovered ? `${data.occ.find(d => d.LAD13CD == hovered)["LAD13NM"].toLocaleString()}<br/></strong>${data.occ.find(d => d.LAD13CD == hovered)[mapKey].toLocaleString()}</strong>` : ''
@@ -363,6 +383,41 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 		</Map>
 	</div>
 </figure>
+</div>
+
+<div slot="foreground">
+	<section data-id="map01">
+		<div class="col-medium">
+			<p>
+				This map shows <strong>occurence</strong> of the Black-veined white, <strong>prior</strong> to its extirpation in <strong>1925</strong> by 
+				district. The map now shows <strong>recordings</strong> of the butterfly, from <Em color={mapcolors.seq5[1]}>least</Em> to 
+				<Em color={mapcolors.seq5[4]}>most</Em>. You can hover to see the district name and density. <small>Source: GBIF.org (18 July 2024) GBIF 
+				Occurrence Download https://doi.org/10.15468/dl.w475z3</small>
+			</p>
+		</div>
+	</section>
+	<section data-id="map02">
+		<div class="col-medium">
+			<p>
+				This data comes from information on preserved museum specimens (some as old as<strong>1738!</strong>) and occaisional human recordings of the butterfly and is 
+				incomplete and suffers from bias in recording. However, the map does show that the Black-veined white could be found in southern England 
+				and eastern Wales.
+			</p>
+		</div>
+	</section>
+	<section data-id="map03">
+		<div class="col-medium">
+			<!-- This zooms into Centerrbury, Herne Bay was the location of the last collected specimen of A.craetgi -->
+			<p>
+				 The last known recording of a Black-veined white, before its extirpation, came from <strong>Herne Bay</strong>, in the 
+				 north of <strong>Canterbury</strong>. Since then there have been occaisional sightings of the butterfly
+				 in Britian but all are thought to be from unplanned introduction (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
+				 for a recent case) and none have persisted.
+			</p>	
+		</div>
+	</section>
+	</div>
+</Scroller>
 {/if}
 
 <Divider />
@@ -493,7 +548,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							data={small ? data.froh.froh.filter(d => d.interval == "Small") : data.froh.froh.filter(d => d.interval == "Big") }
 							xKey="pop" yKey="freq" zKey="pop"
 							colors={['#003f5c', '#ffa600']}
-							title="Inbreeding level"
+							title="Inbreeding levels"
 							mode="barcode"
 							hover {hovered} on:hover={doHover} colorHover='pink' 
 							{select} {selected} on:select={doSelect}
