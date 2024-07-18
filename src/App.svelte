@@ -255,7 +255,13 @@
 		let vals = res.map(d => d.Count).sort((a, b) => a - b);
 		let len = vals.length;
 		let breaks = [
-			0,1,5,10,20,80
+			0,0,1,5,10,80
+			// vals[0],
+			// vals[Math.floor(len * 0.2)],
+			// vals[Math.floor(len * 0.4)],
+			// vals[Math.floor(len * 0.6)],
+			// vals[Math.floor(len * 0.8)],
+			// vals[len - 1]
 		];
 		console.log(breaks); 
 		res.forEach(d => {
@@ -390,10 +396,12 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 		<div class="col-medium">
 			<p>
 				This map shows <strong>occurence</strong> of the Black-veined white, <strong>prior</strong> to its extirpation in <strong>1925</strong> by 
-				district. The map now shows <strong>recordings</strong> of the butterfly, from <Em color={mapcolors.seq5[1]}>least</Em> to 
-				<Em color={mapcolors.seq5[4]}>most</Em>. You can hover to see the district name and density. <small>Source: GBIF.org (18 July 2024) GBIF 
+				district. The map shows <strong>recordings</strong> of the butterfly, from <Em color={mapcolors.seq5[1]}>least</Em> to 
+				<Em color={mapcolors.seq5[4]}>most</Em>. You can hover to see the district name and density. </p>
+				<p>
+				<small>Source: GBIF.org (18 July 2024) GBIF 
 				Occurrence Download https://doi.org/10.15468/dl.w475z3</small>
-			</p>
+				</p>
 		</div>
 	</section>
 	<section data-id="map02">
