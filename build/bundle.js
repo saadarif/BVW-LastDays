@@ -39838,7 +39838,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (283:2) <Arrow color="black" {animation}>
+    // (289:2) <Arrow color="black" {animation}>
     function create_default_slot_17(ctx) {
     	let strong;
 
@@ -39846,7 +39846,7 @@ var app = (function () {
     		c: function create() {
     			strong = element("strong");
     			strong.textContent = "Scroll to begin";
-    			add_location(strong, file, 282, 35, 7724);
+    			add_location(strong, file, 288, 35, 7898);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, strong, anchor);
@@ -39861,14 +39861,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(283:2) <Arrow color=\\\"black\\\" {animation}>",
+    		source: "(289:2) <Arrow color=\\\"black\\\" {animation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (274:0) <Header bgfixed={false} theme="light" center={false} short={true}>
+    // (280:0) <Header bgfixed={false} theme="light" center={false} short={true}>
     function create_default_slot_16(ctx) {
     	let h1;
     	let t1;
@@ -39904,19 +39904,19 @@ var app = (function () {
     			create_component(arrow.$$.fragment);
     			set_style(h1, "margin-top", "-100px");
     			set_style(h1, "margin-left", "0px");
-    			add_location(h1, file, 274, 1, 7230);
-    			add_location(strong, file, 276, 2, 7469);
+    			add_location(h1, file, 280, 1, 7404);
+    			add_location(strong, file, 282, 2, 7643);
     			attr_dev(p, "class", "text-big");
-    			add_location(p, file, 275, 99, 7445);
+    			add_location(p, file, 281, 99, 7619);
     			set_style(div0, "margin-top", "5px");
     			set_style(div0, "background-color", "#fff");
     			set_style(div0, "opacity", "0.6");
     			set_style(div0, "z-index", "-1");
     			set_style(div0, "margin-left", "0px");
-    			add_location(div0, file, 275, 1, 7347);
+    			add_location(div0, file, 281, 1, 7521);
     			set_style(div1, "margin-top", "60px");
     			set_style(div1, "margin-left", "0px");
-    			add_location(div1, file, 281, 1, 7640);
+    			add_location(div1, file, 287, 1, 7814);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -39961,14 +39961,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(274:0) <Header bgfixed={false} theme=\\\"light\\\" center={false} short={true}>",
+    		source: "(280:0) <Header bgfixed={false} theme=\\\"light\\\" center={false} short={true}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (288:0) <Filler theme="light" short={true} wide={true} center={true}>
+    // (294:0) <Filler theme="light" short={true} wide={true} center={true}>
     function create_default_slot_15(ctx) {
     	let p0;
     	let strong0;
@@ -40003,18 +40003,18 @@ var app = (function () {
     			p3 = element("p");
     			small_1 = element("small");
     			small_1.textContent = "The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024.)\nRebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif\nbioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305";
-    			add_location(strong0, file, 289, 2, 7873);
+    			add_location(strong0, file, 295, 2, 8047);
     			attr_dev(p0, "class", "text-small");
-    			add_location(p0, file, 288, 1, 7848);
-    			add_location(strong1, file, 290, 24, 7933);
+    			add_location(p0, file, 294, 1, 8022);
+    			add_location(strong1, file, 296, 24, 8107);
     			attr_dev(p1, "class", "text-small");
-    			add_location(p1, file, 290, 2, 7911);
-    			add_location(strong2, file, 292, 24, 8014);
+    			add_location(p1, file, 296, 2, 8085);
+    			add_location(strong2, file, 298, 24, 8188);
     			attr_dev(p2, "class", "text-small");
-    			add_location(p2, file, 292, 1, 7991);
-    			add_location(small_1, file, 294, 2, 8081);
+    			add_location(p2, file, 298, 1, 8165);
+    			add_location(small_1, file, 300, 2, 8255);
     			attr_dev(p3, "class", "text-small");
-    			add_location(p3, file, 293, 1, 8056);
+    			add_location(p3, file, 299, 1, 8230);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -40047,14 +40047,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(288:0) <Filler theme=\\\"light\\\" short={true} wide={true} center={true}>",
+    		source: "(294:0) <Filler theme=\\\"light\\\" short={true} wide={true} center={true}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (327:0) <Section>
+    // (333:0) <Section>
     function create_default_slot_14(ctx) {
     	let h2;
     	let t1;
@@ -40089,12 +40089,12 @@ var app = (function () {
     			sup1 = element("sup");
     			sup1.textContent = "th";
     			t10 = text(" century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. \n\t   These result also give a snapshot of its \"genomic health\" around the time of its disappearance,\n\t   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.");
-    			add_location(h2, file, 327, 1, 10377);
-    			add_location(em, file, 329, 36, 10475);
-    			add_location(p0, file, 328, 1, 10435);
-    			add_location(sup0, file, 337, 229, 11763);
-    			add_location(sup1, file, 338, 19, 11797);
-    			add_location(p1, file, 336, 1, 11389);
+    			add_location(h2, file, 333, 1, 10551);
+    			add_location(em, file, 335, 36, 10649);
+    			add_location(p0, file, 334, 1, 10609);
+    			add_location(sup0, file, 343, 229, 11937);
+    			add_location(sup1, file, 344, 19, 11971);
+    			add_location(p1, file, 342, 1, 11563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -40125,14 +40125,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(327:0) <Section>",
+    		source: "(333:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (351:0) {#if geojson && data.occ}
+    // (357:0) {#if geojson && data.occ}
     function create_if_block_2(ctx) {
     	let scroller;
     	let updating_id;
@@ -40199,14 +40199,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(351:0) {#if geojson && data.occ}",
+    		source: "(357:0) {#if geojson && data.occ}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (363:4) <MapLayer      id="lad-fill"      idKey="LAD13CD"      data={data.occ}      type="fill"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>
+    // (369:4) <MapLayer      id="lad-fill"      idKey="LAD13CD"      data={data.occ}      type="fill"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>
     function create_default_slot_13(ctx) {
     	let maptooltip;
     	let current;
@@ -40255,14 +40255,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(363:4) <MapLayer      id=\\\"lad-fill\\\"      idKey=\\\"LAD13CD\\\"      data={data.occ}      type=\\\"fill\\\"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>",
+    		source: "(369:4) <MapLayer      id=\\\"lad-fill\\\"      idKey=\\\"LAD13CD\\\"      data={data.occ}      type=\\\"fill\\\"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (357:3) <MapSource     id="lad"     type="geojson"     data={geojson}     promoteId="LAD13CD"     maxzoom={13}>
+    // (363:3) <MapSource     id="lad"     type="geojson"     data={geojson}     promoteId="LAD13CD"     maxzoom={13}>
     function create_default_slot_12(ctx) {
     	let maplayer;
     	let current;
@@ -40336,14 +40336,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(357:3) <MapSource     id=\\\"lad\\\"     type=\\\"geojson\\\"     data={geojson}     promoteId=\\\"LAD13CD\\\"     maxzoom={13}>",
+    		source: "(363:3) <MapSource     id=\\\"lad\\\"     type=\\\"geojson\\\"     data={geojson}     promoteId=\\\"LAD13CD\\\"     maxzoom={13}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (356:2) <Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>
+    // (362:2) <Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>
     function create_default_slot_11(ctx) {
     	let mapsource;
     	let current;
@@ -40397,14 +40397,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(356:2) <Map id=\\\"map\\\" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>",
+    		source: "(362:2) <Map id=\\\"map\\\" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (353:1) 
+    // (359:1) 
     function create_background_slot_3(ctx) {
     	let div1;
     	let figure;
@@ -40440,10 +40440,10 @@ var app = (function () {
     			div0 = element("div");
     			create_component(map_1.$$.fragment);
     			attr_dev(div0, "class", "col-full height-full");
-    			add_location(div0, file, 354, 3, 12443);
-    			add_location(figure, file, 353, 2, 12431);
+    			add_location(div0, file, 360, 3, 12617);
+    			add_location(figure, file, 359, 2, 12605);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file, 352, 1, 12405);
+    			add_location(div1, file, 358, 1, 12579);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -40486,14 +40486,14 @@ var app = (function () {
     		block,
     		id: create_background_slot_3.name,
     		type: "slot",
-    		source: "(353:1) ",
+    		source: "(359:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (393:83) <Em color={mapcolors.seq5[1]}>
+    // (399:79) <Em color={mapcolors.seq5[1]}>
     function create_default_slot_10(ctx) {
     	let t;
 
@@ -40513,14 +40513,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(393:83) <Em color={mapcolors.seq5[1]}>",
+    		source: "(399:79) <Em color={mapcolors.seq5[1]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (394:4) <Em color={mapcolors.seq5[4]}>
+    // (400:4) <Em color={mapcolors.seq5[4]}>
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -40540,14 +40540,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(394:4) <Em color={mapcolors.seq5[4]}>",
+    		source: "(400:4) <Em color={mapcolors.seq5[4]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (388:0) 
+    // (394:0) 
     function create_foreground_slot_3(ctx) {
     	let div3;
     	let section0;
@@ -40566,25 +40566,27 @@ var app = (function () {
     	let t9;
     	let em1;
     	let t10;
+    	let t11;
+    	let p1;
     	let small_1;
-    	let t12;
+    	let t13;
     	let section1;
     	let div1;
-    	let p1;
-    	let t13;
+    	let p2;
+    	let t14;
     	let strong4;
-    	let t15;
     	let t16;
+    	let t17;
     	let section2;
     	let div2;
-    	let p2;
-    	let t17;
+    	let p3;
+    	let t18;
     	let strong5;
-    	let t19;
+    	let t20;
     	let strong6;
-    	let t21;
+    	let t22;
     	let a;
-    	let t23;
+    	let t24;
     	let current;
 
     	em0 = new Em({
@@ -40620,65 +40622,68 @@ var app = (function () {
     			t4 = text(" to its extirpation in ");
     			strong2 = element("strong");
     			strong2.textContent = "1925";
-    			t6 = text(" by \n\t\t\t\tdistrict. The map now shows ");
+    			t6 = text(" by \n\t\t\t\tdistrict. The map shows ");
     			strong3 = element("strong");
     			strong3.textContent = "recordings";
     			t8 = text(" of the butterfly, from ");
     			create_component(em0.$$.fragment);
     			t9 = text(" to \n\t\t\t\t");
     			create_component(em1.$$.fragment);
-    			t10 = text(". You can hover to see the district name and density. ");
+    			t10 = text(". You can hover to see the district name and density.");
+    			t11 = space();
+    			p1 = element("p");
     			small_1 = element("small");
     			small_1.textContent = "Source: GBIF.org (18 July 2024) GBIF \n\t\t\t\tOccurrence Download https://doi.org/10.15468/dl.w475z3";
-    			t12 = space();
+    			t13 = space();
     			section1 = element("section");
     			div1 = element("div");
-    			p1 = element("p");
-    			t13 = text("This data comes from information on preserved museum specimens (some as old as");
+    			p2 = element("p");
+    			t14 = text("This data comes from information on preserved museum specimens (some as old as");
     			strong4 = element("strong");
     			strong4.textContent = "1738!";
-    			t15 = text(") and occaisional human recordings of the butterfly and is \n\t\t\t\tincomplete and suffers from bias in recording. However, the map does show that the Black-veined white could be found in southern England \n\t\t\t\tand eastern Wales.");
-    			t16 = space();
+    			t16 = text(") and occaisional human recordings of the butterfly and is \n\t\t\t\tincomplete and suffers from bias in recording. However, the map does show that the Black-veined white could be found in southern England \n\t\t\t\tand eastern Wales.");
+    			t17 = space();
     			section2 = element("section");
     			div2 = element("div");
-    			p2 = element("p");
-    			t17 = text("The last known recording of a Black-veined white, before its extirpation, came from ");
+    			p3 = element("p");
+    			t18 = text("The last known recording of a Black-veined white, before its extirpation, came from ");
     			strong5 = element("strong");
     			strong5.textContent = "Herne Bay";
-    			t19 = text(", in the \n\t\t\t\t north of ");
+    			t20 = text(", in the \n\t\t\t\t north of ");
     			strong6 = element("strong");
     			strong6.textContent = "Canterbury";
-    			t21 = text(". Since then there have been occaisional sightings of the butterfly\n\t\t\t\t in Britian but all are thought to be from unplanned introduction (see ");
+    			t22 = text(". Since then there have been occaisional sightings of the butterfly\n\t\t\t\t in Britian but all are thought to be from unplanned introduction (see ");
     			a = element("a");
     			a.textContent = "here";
-    			t23 = text(" \n\t\t\t\t for a recent case) and none have persisted.");
-    			add_location(strong0, file, 391, 19, 13495);
-    			add_location(strong1, file, 391, 73, 13549);
-    			add_location(strong2, file, 391, 118, 13594);
-    			add_location(strong3, file, 392, 32, 13652);
-    			add_location(small_1, file, 393, 97, 13845);
-    			add_location(p0, file, 390, 3, 13472);
+    			t24 = text(" \n\t\t\t\t for a recent case) and none have persisted.");
+    			add_location(strong0, file, 397, 19, 13669);
+    			add_location(strong1, file, 397, 73, 13723);
+    			add_location(strong2, file, 397, 118, 13768);
+    			add_location(strong3, file, 398, 28, 13822);
+    			add_location(p0, file, 396, 3, 13646);
+    			add_location(small_1, file, 401, 4, 14032);
+    			add_location(p1, file, 400, 4, 14024);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 389, 2, 13444);
+    			add_location(div0, file, 395, 2, 13618);
     			attr_dev(section0, "data-id", "map01");
-    			add_location(section0, file, 388, 1, 13416);
-    			add_location(strong4, file, 401, 82, 14129);
-    			add_location(p1, file, 400, 3, 14043);
+    			add_location(section0, file, 394, 1, 13590);
+    			add_location(strong4, file, 409, 82, 14317);
+    			add_location(p2, file, 408, 3, 14231);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 399, 2, 14015);
+    			add_location(div1, file, 407, 2, 14203);
     			attr_dev(section1, "data-id", "map02");
-    			add_location(section1, file, 398, 1, 13987);
-    			add_location(strong5, file, 411, 89, 14667);
-    			add_location(strong6, file, 412, 14, 14717);
+    			add_location(section1, file, 406, 1, 14175);
+    			add_location(strong5, file, 419, 89, 14855);
+    			add_location(strong6, file, 420, 14, 14905);
     			attr_dev(a, "href", "https://www.bbc.co.uk/news/uk-65804939");
-    			add_location(a, file, 413, 75, 14887);
-    			add_location(p2, file, 410, 3, 14574);
+    			add_location(a, file, 421, 75, 15075);
+    			add_location(p3, file, 418, 3, 14762);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file, 408, 2, 14434);
+    			add_location(div2, file, 416, 2, 14622);
     			attr_dev(section2, "data-id", "map03");
-    			add_location(section2, file, 407, 1, 14406);
+    			add_location(section2, file, 415, 1, 14594);
     			attr_dev(div3, "slot", "foreground");
-    			add_location(div3, file, 387, 0, 13391);
+    			add_location(div3, file, 393, 0, 13565);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -40698,25 +40703,27 @@ var app = (function () {
     			append_dev(p0, t9);
     			mount_component(em1, p0, null);
     			append_dev(p0, t10);
-    			append_dev(p0, small_1);
-    			append_dev(div3, t12);
+    			append_dev(div0, t11);
+    			append_dev(div0, p1);
+    			append_dev(p1, small_1);
+    			append_dev(div3, t13);
     			append_dev(div3, section1);
     			append_dev(section1, div1);
-    			append_dev(div1, p1);
-    			append_dev(p1, t13);
-    			append_dev(p1, strong4);
-    			append_dev(p1, t15);
-    			append_dev(div3, t16);
+    			append_dev(div1, p2);
+    			append_dev(p2, t14);
+    			append_dev(p2, strong4);
+    			append_dev(p2, t16);
+    			append_dev(div3, t17);
     			append_dev(div3, section2);
     			append_dev(section2, div2);
-    			append_dev(div2, p2);
-    			append_dev(p2, t17);
-    			append_dev(p2, strong5);
-    			append_dev(p2, t19);
-    			append_dev(p2, strong6);
-    			append_dev(p2, t21);
-    			append_dev(p2, a);
-    			append_dev(p2, t23);
+    			append_dev(div2, p3);
+    			append_dev(p3, t18);
+    			append_dev(p3, strong5);
+    			append_dev(p3, t20);
+    			append_dev(p3, strong6);
+    			append_dev(p3, t22);
+    			append_dev(p3, a);
+    			append_dev(p3, t24);
     			current = true;
     		},
     		p: function update(ctx, dirty) {
@@ -40757,14 +40764,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot_3.name,
     		type: "slot",
-    		source: "(388:0) ",
+    		source: "(394:0) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (425:0) <Section>
+    // (433:0) <Section>
     function create_default_slot_8(ctx) {
     	let h2;
 
@@ -40772,7 +40779,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "Reconstructing the history of a Butterfly population";
-    			add_location(h2, file, 425, 1, 15076);
+    			add_location(h2, file, 433, 1, 15264);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -40787,14 +40794,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(425:0) <Section>",
+    		source: "(433:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (458:0) {#if data.psmc.Netimes}
+    // (466:0) {#if data.psmc.Netimes}
     function create_if_block_1(ctx) {
     	let scroller;
     	let updating_id;
@@ -40862,14 +40869,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(458:0) {#if data.psmc.Netimes}",
+    		source: "(466:0) {#if data.psmc.Netimes}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (460:1) 
+    // (468:1) 
     function create_background_slot_2(ctx) {
     	let div2;
     	let figure;
@@ -40922,12 +40929,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(linechart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 462, 5, 15853);
+    			add_location(div0, file, 470, 5, 16041);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 461, 3, 15813);
-    			add_location(figure, file, 460, 2, 15801);
+    			add_location(div1, file, 469, 3, 16001);
+    			add_location(figure, file, 468, 2, 15989);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 459, 1, 15775);
+    			add_location(div2, file, 467, 1, 15963);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -40969,14 +40976,14 @@ var app = (function () {
     		block,
     		id: create_background_slot_2.name,
     		type: "slot",
-    		source: "(460:1) ",
+    		source: "(468:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (500:9) <Em color=#999>
+    // (508:9) <Em color=#999>
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -40996,14 +41003,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(500:9) <Em color=#999>",
+    		source: "(508:9) <Em color=#999>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (512:10) <Em color=#999>
+    // (520:10) <Em color=#999>
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -41023,14 +41030,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(512:10) <Em color=#999>",
+    		source: "(520:10) <Em color=#999>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (525:89) <Em color='#003f5c'>
+    // (533:89) <Em color='#003f5c'>
     function create_default_slot_5(ctx) {
     	let t;
 
@@ -41050,14 +41057,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(525:89) <Em color='#003f5c'>",
+    		source: "(533:89) <Em color='#003f5c'>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (526:46) <Em color='#ffa600'>
+    // (534:46) <Em color='#ffa600'>
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -41077,14 +41084,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(526:46) <Em color='#ffa600'>",
+    		source: "(534:46) <Em color='#ffa600'>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (528:56) <Em color='#003f5c'>
+    // (536:56) <Em color='#003f5c'>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -41104,14 +41111,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(528:56) <Em color='#003f5c'>",
+    		source: "(536:56) <Em color='#003f5c'>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (487:1) 
+    // (495:1) 
     function create_foreground_slot_2(ctx) {
     	let div4;
     	let section0;
@@ -41275,39 +41282,39 @@ var app = (function () {
     			t31 = text(" Black-veined white colonizing ");
     			create_component(em4.$$.fragment);
     			t32 = text(", showed reduced genetic diversity,\n\t\t\t\t\t\t presumably as a result of colonization by a small number of indviduals");
-    			add_location(strong0, file, 490, 25, 16754);
-    			add_location(strong1, file, 490, 83, 16812);
-    			add_location(strong2, file, 491, 47, 16901);
-    			add_location(strong3, file, 492, 12, 16992);
-    			add_location(strong4, file, 492, 63, 17043);
-    			add_location(p0, file, 489, 4, 16725);
+    			add_location(strong0, file, 498, 25, 16942);
+    			add_location(strong1, file, 498, 83, 17000);
+    			add_location(strong2, file, 499, 47, 17089);
+    			add_location(strong3, file, 500, 12, 17180);
+    			add_location(strong4, file, 500, 63, 17231);
+    			add_location(p0, file, 497, 4, 16913);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 488, 3, 16696);
+    			add_location(div0, file, 496, 3, 16884);
     			attr_dev(section0, "data-id", "chart01");
-    			add_location(section0, file, 487, 2, 16665);
-    			add_location(strong5, file, 500, 6, 17302);
-    			add_location(p1, file, 498, 4, 17170);
+    			add_location(section0, file, 495, 2, 16853);
+    			add_location(strong5, file, 508, 6, 17490);
+    			add_location(p1, file, 506, 4, 17358);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 497, 3, 17141);
+    			add_location(div1, file, 505, 3, 17329);
     			attr_dev(section1, "data-id", "chart02");
-    			add_location(section1, file, 496, 2, 17110);
-    			add_location(strong6, file, 512, 6, 18165);
-    			add_location(strong7, file, 513, 71, 18382);
-    			add_location(p2, file, 510, 4, 18022);
-    			add_location(p3, file, 515, 4, 18445);
+    			add_location(section1, file, 504, 2, 17298);
+    			add_location(strong6, file, 520, 6, 18353);
+    			add_location(strong7, file, 521, 71, 18570);
+    			add_location(p2, file, 518, 4, 18210);
+    			add_location(p3, file, 523, 4, 18633);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file, 509, 3, 17993);
+    			add_location(div2, file, 517, 3, 18181);
     			attr_dev(section2, "data-id", "chart03");
-    			add_location(section2, file, 508, 2, 17962);
-    			add_location(strong8, file, 524, 68, 18929);
-    			add_location(strong9, file, 527, 4, 19202);
-    			add_location(p4, file, 523, 4, 18857);
+    			add_location(section2, file, 516, 2, 18150);
+    			add_location(strong8, file, 532, 68, 19117);
+    			add_location(strong9, file, 535, 4, 19390);
+    			add_location(p4, file, 531, 4, 19045);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file, 522, 3, 18828);
+    			add_location(div3, file, 530, 3, 19016);
     			attr_dev(section3, "data-id", "chart04");
-    			add_location(section3, file, 521, 2, 18797);
+    			add_location(section3, file, 529, 2, 18985);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file, 486, 1, 16639);
+    			add_location(div4, file, 494, 1, 16827);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -41431,14 +41438,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot_2.name,
     		type: "slot",
-    		source: "(487:1) ",
+    		source: "(495:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (540:0) {#if data.froh.froh}
+    // (548:0) {#if data.froh.froh}
     function create_if_block(ctx) {
     	let scroller;
     	let updating_id;
@@ -41506,14 +41513,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(540:0) {#if data.froh.froh}",
+    		source: "(548:0) {#if data.froh.froh}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (542:1) 
+    // (550:1) 
     function create_background_slot_1(ctx) {
     	let div2;
     	let figure;
@@ -41555,12 +41562,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(columnchart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 544, 5, 19656);
+    			add_location(div0, file, 552, 5, 19844);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 543, 3, 19616);
-    			add_location(figure, file, 542, 2, 19604);
+    			add_location(div1, file, 551, 3, 19804);
+    			add_location(figure, file, 550, 2, 19792);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 541, 1, 19578);
+    			add_location(div2, file, 549, 1, 19766);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41600,14 +41607,14 @@ var app = (function () {
     		block,
     		id: create_background_slot_1.name,
     		type: "slot",
-    		source: "(542:1) ",
+    		source: "(550:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (579:10) <Em color=#999>
+    // (587:10) <Em color=#999>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -41627,14 +41634,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(579:10) <Em color=#999>",
+    		source: "(587:10) <Em color=#999>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (566:2) 
+    // (574:2) 
     function create_foreground_slot_1(ctx) {
     	let div2;
     	let section0;
@@ -41701,24 +41708,24 @@ var app = (function () {
     			strong5 = element("strong");
     			strong5.textContent = "France";
     			t14 = text(" collected in the early 1900s. Its population size is low for most of the last 500,000 years but showing\n\t\t\t\t\t\t a small peak at roughly 125,000 years ago, corresponding to the penultimate interglacial period (the Eemian interglacial). The population\n\t\t\t\t\t\t then contracts up till around 12,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds\n\t\t\t\t\t\t expanded all over europe from their warm southern refugia and we find the signs of an exponential population increase in the genome of this \n\t\t\t\t\t\t Black-veined white butterfly from France.");
-    			add_location(strong0, file, 569, 26, 20544);
-    			add_location(strong1, file, 569, 84, 20602);
-    			add_location(strong2, file, 570, 48, 20692);
-    			add_location(strong3, file, 571, 13, 20784);
-    			add_location(strong4, file, 571, 64, 20835);
-    			add_location(p0, file, 568, 5, 20514);
+    			add_location(strong0, file, 577, 26, 20732);
+    			add_location(strong1, file, 577, 84, 20790);
+    			add_location(strong2, file, 578, 48, 20880);
+    			add_location(strong3, file, 579, 13, 20972);
+    			add_location(strong4, file, 579, 64, 21023);
+    			add_location(p0, file, 576, 5, 20702);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 567, 4, 20484);
+    			add_location(div0, file, 575, 4, 20672);
     			attr_dev(section0, "data-id", "frohchart01");
-    			add_location(section0, file, 566, 3, 20448);
-    			add_location(strong5, file, 579, 7, 21106);
-    			add_location(p1, file, 577, 5, 20972);
+    			add_location(section0, file, 574, 3, 20636);
+    			add_location(strong5, file, 587, 7, 21294);
+    			add_location(p1, file, 585, 5, 21160);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 576, 4, 20942);
+    			add_location(div1, file, 584, 4, 21130);
     			attr_dev(section1, "data-id", "frohchart02");
-    			add_location(section1, file, 575, 3, 20906);
+    			add_location(section1, file, 583, 3, 21094);
     			attr_dev(div2, "slot", "foreground");
-    			add_location(div2, file, 565, 2, 20421);
+    			add_location(div2, file, 573, 2, 20609);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41774,14 +41781,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot_1.name,
     		type: "slot",
-    		source: "(566:2) ",
+    		source: "(574:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (596:2) 
+    // (604:2) 
     function create_background_slot(ctx) {
     	let div1;
     	let figure;
@@ -41795,10 +41802,10 @@ var app = (function () {
     			attr_dev(div0, "class", "col-full height-full");
     			set_style(div0, "background-image", "url(\"./img/BVW_museum1.png\")");
     			set_style(div0, "background-size", "cover");
-    			add_location(div0, file, 597, 5, 21875);
-    			add_location(figure, file, 596, 4, 21861);
+    			add_location(div0, file, 605, 5, 22063);
+    			add_location(figure, file, 604, 4, 22049);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file, 595, 2, 21832);
+    			add_location(div1, file, 603, 2, 22020);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -41815,14 +41822,14 @@ var app = (function () {
     		block,
     		id: create_background_slot.name,
     		type: "slot",
-    		source: "(596:2) ",
+    		source: "(604:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (602:2) 
+    // (610:2) 
     function create_foreground_slot(ctx) {
     	let div2;
     	let section0;
@@ -41845,14 +41852,14 @@ var app = (function () {
     			div1 = element("div");
     			p1 = element("p");
     			p1.textContent = "This is a another section";
-    			add_location(p0, file, 602, 17, 22058);
-    			add_location(div0, file, 602, 12, 22053);
-    			add_location(section0, file, 602, 3, 22044);
-    			add_location(p1, file, 603, 17, 22118);
-    			add_location(div1, file, 603, 12, 22113);
-    			add_location(section1, file, 603, 3, 22104);
+    			add_location(p0, file, 610, 17, 22246);
+    			add_location(div0, file, 610, 12, 22241);
+    			add_location(section0, file, 610, 3, 22232);
+    			add_location(p1, file, 611, 17, 22306);
+    			add_location(div1, file, 611, 12, 22301);
+    			add_location(section1, file, 611, 3, 22292);
     			attr_dev(div2, "slot", "foreground");
-    			add_location(div2, file, 601, 2, 22017);
+    			add_location(div2, file, 609, 2, 22205);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41874,14 +41881,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot.name,
     		type: "slot",
-    		source: "(602:2) ",
+    		source: "(610:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (609:0) <Section>
+    // (617:0) <Section>
     function create_default_slot(ctx) {
     	let h2;
     	let t1;
@@ -41900,11 +41907,11 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "this Github repo";
     			t4 = text(".");
-    			add_location(h2, file, 609, 1, 22201);
+    			add_location(h2, file, 617, 1, 22389);
     			attr_dev(a, "href", "https://github.com/ONSvisual/svelte-scrolly/");
     			attr_dev(a, "target", "_blank");
-    			add_location(a, file, 611, 80, 22320);
-    			add_location(p, file, 610, 1, 22236);
+    			add_location(a, file, 619, 80, 22508);
+    			add_location(p, file, 618, 1, 22424);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -41926,7 +41933,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(609:0) <Section>",
+    		source: "(617:0) <Section>",
     		ctx
     	});
 
@@ -42580,7 +42587,14 @@ var app = (function () {
     	getData(occData).then(res => {
     		let vals = res.map(d => d.Count).sort((a, b) => a - b);
     		vals.length;
-    		let breaks = [0, 1, 5, 10, 20, 80];
+
+    		let breaks = [0, 0, 1, 5, 10, 80]; // vals[0],
+    		// vals[Math.floor(len * 0.2)],
+    		// vals[Math.floor(len * 0.4)],
+
+    		// vals[Math.floor(len * 0.6)],
+    		// vals[Math.floor(len * 0.8)],
+    		// vals[len - 1]
     		console.log(breaks);
 
     		res.forEach(d => {
