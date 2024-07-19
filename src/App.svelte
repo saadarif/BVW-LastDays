@@ -92,7 +92,6 @@
 	let mapHighlighted = []; // Highlighted district (map only)
 	let xKey = "year"; // xKey for scatter chart
 	let yKey = "Ne"; // yKey for scatter chart
-	let zKey = "species"; // zKey (color) for scatter chart
 	let mapKey = "Count"; // Key for data to be displayed on map
 	let snpchartkey = "totCounts"; //key for plotting variants
 
@@ -211,7 +210,7 @@
 		},
 		snp_chart:{
 			snpchart01: () => {
-				//displays total variants
+				snpchartkey = "totCounts";
 			},
 			snpchart02: () => {
 				snpchartkey = "homCounts";
@@ -635,13 +634,14 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 			<section data-id="snpchart01">
 				<div class="col-medium">
 					<p>
-				
+						text
 					</p>
 				</div>
 			</section>
 			<section data-id="snpchart02">
 				<div class="col-medium">
 					<p>
+						text
 					</p>
 				</div>
 			</section>
