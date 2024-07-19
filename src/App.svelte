@@ -166,7 +166,6 @@
 			},
 			map03: () => {
 				let hl = [...data.occ].find(d => d.LAD13CD == "E07000106") //last known location of A. crategie before extirpation - Herne Bay, Canterbury
-				console.log(hl);
 				//let hl = [...data.district.indicators].sort((a, b) => b.age_med - a.age_med)[0];
 				fitById(hl.LAD13CD);
 				//mapKey = "Count"; This is the pre-1925 count
@@ -284,7 +283,7 @@
 		let vals = res.map(d => d.Count).sort((a, b) => a - b);
 		let len = vals.length;
 		let breaks = [
-			0,0,1,5,10,80
+			0,0,1,5,10,80 //manual implementation of breaks
 			// vals[0],
 			// vals[Math.floor(len * 0.2)],
 			// vals[Math.floor(len * 0.4)],
@@ -292,7 +291,6 @@
 			// vals[Math.floor(len * 0.8)],
 			// vals[len - 1]
 		];
-		console.log(breaks); 
 		res.forEach(d => {
 			d.color = getColor(d.Count, breaks, mapcolors.seq5);
 		});
