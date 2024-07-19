@@ -40,7 +40,7 @@
 				<a href="https://creativecommons.org/licenses/by-sa/4.0/">
 				<img
 				class="copr-img"
-				style="width: 80px; height: 26px"
+				style="width: 90px; height: 31px"
 				src="./img/by-sa.png"
 				alt="by-sa license image"
 				 /></a>

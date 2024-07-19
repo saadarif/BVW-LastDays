@@ -295,13 +295,13 @@
 			d.color = getColor(d.Count, breaks, mapcolors.seq5);
 		});
 		data.occ = res;
-		//console.log(data.occ);
+		//console.log(data.occ); 
 	});
 		
 	
 </script>
 
-<OrientationPrompt />
+<!-- <OrientationPrompt /> -->
 
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
