@@ -1373,8 +1373,8 @@ var app = (function () {
     			add_location(a3, file$z, 33, 4, 1110);
     			add_location(br, file$z, 38, 85, 1293);
     			attr_dev(img1, "class", "copr-img svelte-kxehm0");
-    			set_style(img1, "width", "80px");
-    			set_style(img1, "height", "26px");
+    			set_style(img1, "width", "90px");
+    			set_style(img1, "height", "31px");
     			if (!src_url_equal(img1.src, img1_src_value = "./img/by-sa.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "alt", "by-sa license image");
     			add_location(img1, file$z, 40, 4, 1365);
@@ -39877,7 +39877,7 @@ var app = (function () {
     		c: function create() {
     			strong = element("strong");
     			strong.textContent = "Scroll to begin";
-    			add_location(strong, file, 315, 35, 8597);
+    			add_location(strong, file, 315, 35, 8607);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, strong, anchor);
@@ -39935,19 +39935,19 @@ var app = (function () {
     			create_component(arrow.$$.fragment);
     			set_style(h1, "margin-top", "-100px");
     			set_style(h1, "margin-left", "0px");
-    			add_location(h1, file, 307, 1, 8103);
-    			add_location(strong, file, 309, 2, 8342);
+    			add_location(h1, file, 307, 1, 8113);
+    			add_location(strong, file, 309, 2, 8352);
     			attr_dev(p, "class", "text-big");
-    			add_location(p, file, 308, 99, 8318);
+    			add_location(p, file, 308, 99, 8328);
     			set_style(div0, "margin-top", "5px");
     			set_style(div0, "background-color", "#fff");
     			set_style(div0, "opacity", "0.6");
     			set_style(div0, "z-index", "-1");
     			set_style(div0, "margin-left", "0px");
-    			add_location(div0, file, 308, 1, 8220);
+    			add_location(div0, file, 308, 1, 8230);
     			set_style(div1, "margin-top", "60px");
     			set_style(div1, "margin-left", "0px");
-    			add_location(div1, file, 314, 1, 8513);
+    			add_location(div1, file, 314, 1, 8523);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -40034,18 +40034,18 @@ var app = (function () {
     			p3 = element("p");
     			small_1 = element("small");
     			small_1.textContent = "The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024.)\nRebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif\nbioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305";
-    			add_location(strong0, file, 322, 2, 8746);
+    			add_location(strong0, file, 322, 2, 8756);
     			attr_dev(p0, "class", "text-small");
-    			add_location(p0, file, 321, 1, 8721);
-    			add_location(strong1, file, 323, 24, 8806);
+    			add_location(p0, file, 321, 1, 8731);
+    			add_location(strong1, file, 323, 24, 8816);
     			attr_dev(p1, "class", "text-small");
-    			add_location(p1, file, 323, 2, 8784);
-    			add_location(strong2, file, 325, 24, 8887);
+    			add_location(p1, file, 323, 2, 8794);
+    			add_location(strong2, file, 325, 24, 8897);
     			attr_dev(p2, "class", "text-small");
-    			add_location(p2, file, 325, 1, 8864);
-    			add_location(small_1, file, 327, 2, 8954);
+    			add_location(p2, file, 325, 1, 8874);
+    			add_location(small_1, file, 327, 2, 8964);
     			attr_dev(p3, "class", "text-small");
-    			add_location(p3, file, 326, 1, 8929);
+    			add_location(p3, file, 326, 1, 8939);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -40120,12 +40120,12 @@ var app = (function () {
     			sup1 = element("sup");
     			sup1.textContent = "th";
     			t10 = text(" century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. \n\t   These result also give a snapshot of its \"genomic health\" around the time of its disappearance,\n\t   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.");
-    			add_location(h2, file, 360, 1, 11250);
-    			add_location(em, file, 362, 36, 11348);
-    			add_location(p0, file, 361, 1, 11308);
-    			add_location(sup0, file, 370, 229, 12636);
-    			add_location(sup1, file, 371, 19, 12670);
-    			add_location(p1, file, 369, 1, 12262);
+    			add_location(h2, file, 360, 1, 11260);
+    			add_location(em, file, 362, 36, 11358);
+    			add_location(p0, file, 361, 1, 11318);
+    			add_location(sup0, file, 370, 229, 12646);
+    			add_location(sup1, file, 371, 19, 12680);
+    			add_location(p1, file, 369, 1, 12272);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -40471,10 +40471,10 @@ var app = (function () {
     			div0 = element("div");
     			create_component(map_1.$$.fragment);
     			attr_dev(div0, "class", "col-full height-full");
-    			add_location(div0, file, 387, 3, 13316);
-    			add_location(figure, file, 386, 2, 13304);
+    			add_location(div0, file, 387, 3, 13326);
+    			add_location(figure, file, 386, 2, 13314);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file, 385, 1, 13278);
+    			add_location(div1, file, 385, 1, 13288);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -40697,39 +40697,39 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "here";
     			t26 = text(" \n\t\t\t\tfor a recent case) and none have persisted.");
-    			add_location(strong0, file, 424, 19, 14368);
-    			add_location(strong1, file, 424, 73, 14422);
-    			add_location(strong2, file, 424, 118, 14467);
-    			add_location(strong3, file, 425, 28, 14521);
-    			add_location(p0, file, 423, 3, 14345);
-    			add_location(small_1, file, 428, 4, 14731);
-    			add_location(p1, file, 427, 4, 14723);
+    			add_location(strong0, file, 424, 19, 14378);
+    			add_location(strong1, file, 424, 73, 14432);
+    			add_location(strong2, file, 424, 118, 14477);
+    			add_location(strong3, file, 425, 28, 14531);
+    			add_location(p0, file, 423, 3, 14355);
+    			add_location(small_1, file, 428, 4, 14741);
+    			add_location(p1, file, 427, 4, 14733);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 422, 2, 14317);
+    			add_location(div0, file, 422, 2, 14327);
     			attr_dev(section0, "data-id", "map01");
-    			add_location(section0, file, 421, 1, 14289);
-    			add_location(strong4, file, 436, 82, 15016);
-    			add_location(p2, file, 435, 3, 14930);
+    			add_location(section0, file, 421, 1, 14299);
+    			add_location(strong4, file, 436, 82, 15026);
+    			add_location(p2, file, 435, 3, 14940);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 434, 2, 14902);
+    			add_location(div1, file, 434, 2, 14912);
     			attr_dev(section1, "data-id", "map02");
-    			add_location(section1, file, 433, 1, 14874);
-    			add_location(strong5, file, 446, 89, 15554);
-    			add_location(strong6, file, 447, 14, 15604);
-    			add_location(p3, file, 445, 3, 15461);
+    			add_location(section1, file, 433, 1, 14884);
+    			add_location(strong5, file, 446, 89, 15564);
+    			add_location(strong6, file, 447, 14, 15614);
+    			add_location(p3, file, 445, 3, 15471);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file, 443, 2, 15321);
+    			add_location(div2, file, 443, 2, 15331);
     			attr_dev(section2, "data-id", "map03");
-    			add_location(section2, file, 442, 1, 15293);
+    			add_location(section2, file, 442, 1, 15303);
     			attr_dev(a, "href", "https://www.bbc.co.uk/news/uk-65804939");
-    			add_location(a, file, 454, 74, 15879);
-    			add_location(p4, file, 452, 3, 15720);
+    			add_location(a, file, 454, 74, 15889);
+    			add_location(p4, file, 452, 3, 15730);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file, 451, 2, 15692);
+    			add_location(div3, file, 451, 2, 15702);
     			attr_dev(section3, "data-id", "map04");
-    			add_location(section3, file, 450, 12, 15664);
+    			add_location(section3, file, 450, 12, 15674);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file, 420, 0, 14264);
+    			add_location(div4, file, 420, 0, 14274);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -40830,7 +40830,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "Reconstructing the history of a Butterfly population";
-    			add_location(h2, file, 467, 1, 16068);
+    			add_location(h2, file, 467, 1, 16078);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -40979,12 +40979,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(linechart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 478, 5, 16322);
+    			add_location(div0, file, 478, 5, 16332);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 477, 3, 16282);
-    			add_location(figure, file, 476, 2, 16270);
+    			add_location(div1, file, 477, 3, 16292);
+    			add_location(figure, file, 476, 2, 16280);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 475, 1, 16244);
+    			add_location(div2, file, 475, 1, 16254);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41332,39 +41332,39 @@ var app = (function () {
     			t31 = text(" Black-veined white colonizing ");
     			create_component(em4.$$.fragment);
     			t32 = text(", showed reduced genetic diversity,\n\t\t\t\t\t\t presumably as a result of colonization by a small number of indviduals");
-    			add_location(strong0, file, 506, 25, 17212);
-    			add_location(strong1, file, 506, 83, 17270);
-    			add_location(strong2, file, 507, 47, 17359);
-    			add_location(strong3, file, 508, 12, 17450);
-    			add_location(strong4, file, 508, 63, 17501);
-    			add_location(p0, file, 505, 4, 17183);
+    			add_location(strong0, file, 506, 25, 17222);
+    			add_location(strong1, file, 506, 83, 17280);
+    			add_location(strong2, file, 507, 47, 17369);
+    			add_location(strong3, file, 508, 12, 17460);
+    			add_location(strong4, file, 508, 63, 17511);
+    			add_location(p0, file, 505, 4, 17193);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 504, 3, 17154);
+    			add_location(div0, file, 504, 3, 17164);
     			attr_dev(section0, "data-id", "chart01");
-    			add_location(section0, file, 503, 2, 17123);
-    			add_location(strong5, file, 516, 6, 17760);
-    			add_location(p1, file, 514, 4, 17628);
+    			add_location(section0, file, 503, 2, 17133);
+    			add_location(strong5, file, 516, 6, 17770);
+    			add_location(p1, file, 514, 4, 17638);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 513, 3, 17599);
+    			add_location(div1, file, 513, 3, 17609);
     			attr_dev(section1, "data-id", "chart02");
-    			add_location(section1, file, 512, 2, 17568);
-    			add_location(strong6, file, 528, 6, 18623);
-    			add_location(strong7, file, 529, 71, 18840);
-    			add_location(p2, file, 526, 4, 18480);
-    			add_location(p3, file, 531, 4, 18903);
+    			add_location(section1, file, 512, 2, 17578);
+    			add_location(strong6, file, 528, 6, 18633);
+    			add_location(strong7, file, 529, 71, 18850);
+    			add_location(p2, file, 526, 4, 18490);
+    			add_location(p3, file, 531, 4, 18913);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file, 525, 3, 18451);
+    			add_location(div2, file, 525, 3, 18461);
     			attr_dev(section2, "data-id", "chart03");
-    			add_location(section2, file, 524, 2, 18420);
-    			add_location(strong8, file, 540, 68, 19387);
-    			add_location(strong9, file, 543, 4, 19660);
-    			add_location(p4, file, 539, 4, 19315);
+    			add_location(section2, file, 524, 2, 18430);
+    			add_location(strong8, file, 540, 68, 19397);
+    			add_location(strong9, file, 543, 4, 19670);
+    			add_location(p4, file, 539, 4, 19325);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file, 538, 3, 19286);
+    			add_location(div3, file, 538, 3, 19296);
     			attr_dev(section3, "data-id", "chart04");
-    			add_location(section3, file, 537, 2, 19255);
+    			add_location(section3, file, 537, 2, 19265);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file, 502, 1, 17097);
+    			add_location(div4, file, 502, 1, 17107);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -41639,12 +41639,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(columnchart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 560, 5, 20124);
+    			add_location(div0, file, 560, 5, 20134);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 559, 3, 20084);
-    			add_location(figure, file, 558, 2, 20072);
+    			add_location(div1, file, 559, 3, 20094);
+    			add_location(figure, file, 558, 2, 20082);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 557, 1, 20046);
+    			add_location(div2, file, 557, 1, 20056);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41737,23 +41737,23 @@ var app = (function () {
     			section1 = element("section");
     			div1 = element("div");
     			p1 = element("p");
-    			add_location(strong0, file, 585, 26, 21012);
-    			add_location(strong1, file, 585, 84, 21070);
-    			add_location(strong2, file, 586, 48, 21160);
-    			add_location(strong3, file, 587, 13, 21252);
-    			add_location(strong4, file, 587, 64, 21303);
-    			add_location(p0, file, 584, 5, 20982);
+    			add_location(strong0, file, 585, 26, 21022);
+    			add_location(strong1, file, 585, 84, 21080);
+    			add_location(strong2, file, 586, 48, 21170);
+    			add_location(strong3, file, 587, 13, 21262);
+    			add_location(strong4, file, 587, 64, 21313);
+    			add_location(p0, file, 584, 5, 20992);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 583, 4, 20952);
+    			add_location(div0, file, 583, 4, 20962);
     			attr_dev(section0, "data-id", "frohchart01");
-    			add_location(section0, file, 582, 3, 20916);
-    			add_location(p1, file, 593, 5, 21440);
+    			add_location(section0, file, 582, 3, 20926);
+    			add_location(p1, file, 593, 5, 21450);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 592, 4, 21410);
+    			add_location(div1, file, 592, 4, 21420);
     			attr_dev(section1, "data-id", "frohchart02");
-    			add_location(section1, file, 591, 3, 21374);
+    			add_location(section1, file, 591, 3, 21384);
     			attr_dev(div2, "slot", "foreground");
-    			add_location(div2, file, 581, 2, 20889);
+    			add_location(div2, file, 581, 2, 20899);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41800,7 +41800,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "Impact of variants";
-    			add_location(h2, file, 604, 1, 21529);
+    			add_location(h2, file, 604, 1, 21539);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -41937,12 +41937,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(columnchart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 612, 5, 21742);
+    			add_location(div0, file, 612, 5, 21752);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 611, 3, 21702);
-    			add_location(figure, file, 610, 2, 21690);
+    			add_location(div1, file, 611, 3, 21712);
+    			add_location(figure, file, 610, 2, 21700);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 609, 1, 21664);
+    			add_location(div2, file, 609, 1, 21674);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -42007,18 +42007,18 @@ var app = (function () {
     			section1 = element("section");
     			div1 = element("div");
     			p1 = element("p");
-    			add_location(p0, file, 636, 5, 22514);
+    			add_location(p0, file, 636, 5, 22524);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 635, 4, 22484);
+    			add_location(div0, file, 635, 4, 22494);
     			attr_dev(section0, "data-id", "snpchart01");
-    			add_location(section0, file, 634, 3, 22449);
-    			add_location(p1, file, 643, 5, 22626);
+    			add_location(section0, file, 634, 3, 22459);
+    			add_location(p1, file, 643, 5, 22636);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 642, 4, 22596);
+    			add_location(div1, file, 642, 4, 22606);
     			attr_dev(section1, "data-id", "snpchart02");
-    			add_location(section1, file, 641, 3, 22561);
+    			add_location(section1, file, 641, 3, 22571);
     			attr_dev(div2, "slot", "foreground");
-    			add_location(div2, file, 633, 2, 22422);
+    			add_location(div2, file, 633, 2, 22432);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -42055,7 +42055,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "What next?";
-    			add_location(h2, file, 653, 1, 22711);
+    			add_location(h2, file, 653, 1, 22721);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -42078,41 +42078,38 @@ var app = (function () {
     }
 
     function create_fragment(ctx) {
-    	let orientationprompt;
-    	let t0;
     	let header;
-    	let t1;
+    	let t0;
     	let filler0;
-    	let t2;
+    	let t1;
     	let divider0;
-    	let t3;
+    	let t2;
     	let section0;
-    	let t4;
+    	let t3;
     	let divider1;
-    	let t5;
+    	let t4;
     	let filler1;
-    	let t6;
+    	let t5;
     	let section1;
+    	let t6;
     	let t7;
-    	let t8;
     	let divider2;
-    	let t9;
+    	let t8;
     	let section2;
-    	let t10;
+    	let t9;
     	let divider3;
+    	let t10;
     	let t11;
-    	let t12;
     	let section3;
+    	let t12;
     	let t13;
-    	let t14;
     	let section4;
+    	let t14;
     	let t15;
-    	let t16;
     	let section5;
-    	let t17;
+    	let t16;
     	let footer;
     	let current;
-    	orientationprompt = new OrientationPrompt({ $$inline: true });
 
     	header = new Header({
     			props: {
@@ -42208,84 +42205,80 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			create_component(orientationprompt.$$.fragment);
-    			t0 = space();
     			create_component(header.$$.fragment);
-    			t1 = space();
+    			t0 = space();
     			create_component(filler0.$$.fragment);
-    			t2 = space();
+    			t1 = space();
     			create_component(divider0.$$.fragment);
-    			t3 = space();
+    			t2 = space();
     			create_component(section0.$$.fragment);
-    			t4 = space();
+    			t3 = space();
     			create_component(divider1.$$.fragment);
-    			t5 = space();
+    			t4 = space();
     			create_component(filler1.$$.fragment);
-    			t6 = space();
+    			t5 = space();
     			create_component(section1.$$.fragment);
-    			t7 = space();
+    			t6 = space();
     			if (if_block0) if_block0.c();
-    			t8 = space();
+    			t7 = space();
     			create_component(divider2.$$.fragment);
-    			t9 = space();
+    			t8 = space();
     			create_component(section2.$$.fragment);
-    			t10 = space();
+    			t9 = space();
     			create_component(divider3.$$.fragment);
-    			t11 = space();
+    			t10 = space();
     			if (if_block1) if_block1.c();
-    			t12 = space();
+    			t11 = space();
     			create_component(section3.$$.fragment);
-    			t13 = space();
+    			t12 = space();
     			if (if_block2) if_block2.c();
-    			t14 = space();
+    			t13 = space();
     			create_component(section4.$$.fragment);
-    			t15 = space();
+    			t14 = space();
     			if (if_block3) if_block3.c();
-    			t16 = space();
+    			t15 = space();
     			create_component(section5.$$.fragment);
-    			t17 = space();
+    			t16 = space();
     			create_component(footer.$$.fragment);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			mount_component(orientationprompt, target, anchor);
-    			insert_dev(target, t0, anchor);
     			mount_component(header, target, anchor);
-    			insert_dev(target, t1, anchor);
+    			insert_dev(target, t0, anchor);
     			mount_component(filler0, target, anchor);
-    			insert_dev(target, t2, anchor);
+    			insert_dev(target, t1, anchor);
     			mount_component(divider0, target, anchor);
-    			insert_dev(target, t3, anchor);
+    			insert_dev(target, t2, anchor);
     			mount_component(section0, target, anchor);
-    			insert_dev(target, t4, anchor);
+    			insert_dev(target, t3, anchor);
     			mount_component(divider1, target, anchor);
-    			insert_dev(target, t5, anchor);
+    			insert_dev(target, t4, anchor);
     			mount_component(filler1, target, anchor);
-    			insert_dev(target, t6, anchor);
+    			insert_dev(target, t5, anchor);
     			mount_component(section1, target, anchor);
-    			insert_dev(target, t7, anchor);
+    			insert_dev(target, t6, anchor);
     			if (if_block0) if_block0.m(target, anchor);
-    			insert_dev(target, t8, anchor);
+    			insert_dev(target, t7, anchor);
     			mount_component(divider2, target, anchor);
-    			insert_dev(target, t9, anchor);
+    			insert_dev(target, t8, anchor);
     			mount_component(section2, target, anchor);
-    			insert_dev(target, t10, anchor);
+    			insert_dev(target, t9, anchor);
     			mount_component(divider3, target, anchor);
-    			insert_dev(target, t11, anchor);
+    			insert_dev(target, t10, anchor);
     			if (if_block1) if_block1.m(target, anchor);
-    			insert_dev(target, t12, anchor);
+    			insert_dev(target, t11, anchor);
     			mount_component(section3, target, anchor);
-    			insert_dev(target, t13, anchor);
+    			insert_dev(target, t12, anchor);
     			if (if_block2) if_block2.m(target, anchor);
-    			insert_dev(target, t14, anchor);
+    			insert_dev(target, t13, anchor);
     			mount_component(section4, target, anchor);
-    			insert_dev(target, t15, anchor);
+    			insert_dev(target, t14, anchor);
     			if (if_block3) if_block3.m(target, anchor);
-    			insert_dev(target, t16, anchor);
+    			insert_dev(target, t15, anchor);
     			mount_component(section5, target, anchor);
-    			insert_dev(target, t17, anchor);
+    			insert_dev(target, t16, anchor);
     			mount_component(footer, target, anchor);
     			current = true;
     		},
@@ -42323,7 +42316,7 @@ var app = (function () {
     					if_block0 = create_if_block_3(ctx);
     					if_block0.c();
     					transition_in(if_block0, 1);
-    					if_block0.m(t8.parentNode, t8);
+    					if_block0.m(t7.parentNode, t7);
     				}
     			} else if (if_block0) {
     				group_outros();
@@ -42354,7 +42347,7 @@ var app = (function () {
     					if_block1 = create_if_block_2(ctx);
     					if_block1.c();
     					transition_in(if_block1, 1);
-    					if_block1.m(t12.parentNode, t12);
+    					if_block1.m(t11.parentNode, t11);
     				}
     			} else if (if_block1) {
     				group_outros();
@@ -42385,7 +42378,7 @@ var app = (function () {
     					if_block2 = create_if_block_1(ctx);
     					if_block2.c();
     					transition_in(if_block2, 1);
-    					if_block2.m(t14.parentNode, t14);
+    					if_block2.m(t13.parentNode, t13);
     				}
     			} else if (if_block2) {
     				group_outros();
@@ -42416,7 +42409,7 @@ var app = (function () {
     					if_block3 = create_if_block(ctx);
     					if_block3.c();
     					transition_in(if_block3, 1);
-    					if_block3.m(t16.parentNode, t16);
+    					if_block3.m(t15.parentNode, t15);
     				}
     			} else if (if_block3) {
     				group_outros();
@@ -42438,7 +42431,6 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(orientationprompt.$$.fragment, local);
     			transition_in(header.$$.fragment, local);
     			transition_in(filler0.$$.fragment, local);
     			transition_in(divider0.$$.fragment, local);
@@ -42460,7 +42452,6 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(orientationprompt.$$.fragment, local);
     			transition_out(header.$$.fragment, local);
     			transition_out(filler0.$$.fragment, local);
     			transition_out(divider0.$$.fragment, local);
@@ -42482,42 +42473,40 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(orientationprompt, detaching);
-    			if (detaching) detach_dev(t0);
     			destroy_component(header, detaching);
-    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t0);
     			destroy_component(filler0, detaching);
-    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(t1);
     			destroy_component(divider0, detaching);
-    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(t2);
     			destroy_component(section0, detaching);
-    			if (detaching) detach_dev(t4);
+    			if (detaching) detach_dev(t3);
     			destroy_component(divider1, detaching);
-    			if (detaching) detach_dev(t5);
+    			if (detaching) detach_dev(t4);
     			destroy_component(filler1, detaching);
-    			if (detaching) detach_dev(t6);
+    			if (detaching) detach_dev(t5);
     			destroy_component(section1, detaching);
-    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t6);
     			if (if_block0) if_block0.d(detaching);
-    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(t7);
     			destroy_component(divider2, detaching);
-    			if (detaching) detach_dev(t9);
+    			if (detaching) detach_dev(t8);
     			destroy_component(section2, detaching);
-    			if (detaching) detach_dev(t10);
+    			if (detaching) detach_dev(t9);
     			destroy_component(divider3, detaching);
-    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(t10);
     			if (if_block1) if_block1.d(detaching);
-    			if (detaching) detach_dev(t12);
+    			if (detaching) detach_dev(t11);
     			destroy_component(section3, detaching);
-    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(t12);
     			if (if_block2) if_block2.d(detaching);
-    			if (detaching) detach_dev(t14);
+    			if (detaching) detach_dev(t13);
     			destroy_component(section4, detaching);
-    			if (detaching) detach_dev(t15);
+    			if (detaching) detach_dev(t14);
     			if (if_block3) if_block3.d(detaching);
-    			if (detaching) detach_dev(t16);
+    			if (detaching) detach_dev(t15);
     			destroy_component(section5, detaching);
-    			if (detaching) detach_dev(t17);
+    			if (detaching) detach_dev(t16);
     			destroy_component(footer, detaching);
     		}
     	};
@@ -42814,7 +42803,7 @@ var app = (function () {
     		});
 
     		$$invalidate(1, data.occ = res, data);
-    	}); //console.log(data.occ);
+    	}); //console.log(data.occ); 
 
     	const writable_props = [];
 
