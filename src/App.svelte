@@ -29,7 +29,7 @@
   import Area from "@onsvisual/svelte-charts/src/charts/shared/Area.svelte";
 	import AnnotationsData from "@onsvisual/svelte-charts/src/charts/shared/AnnotationsData.svelte";
   import { linear } from "svelte/easing";
-  import { claim_svg_element } from "svelte/internal";
+  import { claim_svg_element, select_options } from "svelte/internal";
 
 
 
@@ -56,7 +56,7 @@
 	});
 
 		// Data
-	let data ={psmc: {}, froh: {}, occ:{}};
+	let data ={psmc: {}, froh: {}, occ:{}, snpEff: {}};
 	let geojson;
 	//Map constants
 
@@ -71,7 +71,11 @@
 		uk: [
 			[-7, 49 ],
 			[ 2, 58 ]
-		]
+		],
+		southernUk: [
+			[-7, 49 ],
+			[ 2, 53 ]
+		],
 	};
 
   const mapstyle = "https://bothness.github.io/ons-basemaps/data/style-omt.json";
@@ -90,6 +94,7 @@
 	let yKey = "Ne"; // yKey for scatter chart
 	let zKey = "species"; // zKey (color) for scatter chart
 	let mapKey = "Count"; // Key for data to be displayed on map
+	let snpchartkey = "totCounts"; //key for plotting variants
 
 	//Chart Annotations
 	let psmcAnnotations = [
@@ -155,7 +160,7 @@
 				mapHighlighted = [];
 			},
 			map02: () => {
-				fitBounds(mapbounds.uk);
+				fitBounds(mapbounds.southernUk);
 				//mapKey = "Count"; This is the pre-1925 count
 				mapHighlighted = [];
 			},
@@ -166,7 +171,11 @@
 				fitById(hl.LAD13CD);
 				//mapKey = "Count"; This is the pre-1925 count
 				mapHighlighted = [hl.code];
-			}	
+			},
+			map04: () => {
+				fitBounds(mapbounds.uk); //return to base
+				mapHighlighted = [];
+			}
 		},
 		chart: {
 			chart01: () => {
@@ -200,9 +209,15 @@
 			frohchart02: () => {
 				small = false;
 			},
-
-		}
-		
+		},
+		snp_chart:{
+			snpchart01: () => {
+				//displays total variants
+			},
+			snpchart02: () => {
+				snpchartkey = "homCounts";
+			},
+		},
 	};
 	// Code to run Scroller actions when new caption IDs come into view
 	function runActions(codes = []) {
@@ -235,16 +250,30 @@
 	//FROH
 	getData(`./data/data_froh.csv`)
 		.then(arr => {
-			let froh = arr.map((d,i) => ({
+			let res = arr.map((d,i) => ({
 			pop: d.ID,
 			sample: d.sample,
 			interval: d.Interval,
 			freq: parseFloat(d.freq)
 		}));
-		data.froh.froh = froh;
+		data.froh.froh = res;
 		//console.log(data.froh)
 		});
 
+	//SnpEff data
+	getData(`./data/data_snpEff.csv`)
+		.then(arr => {
+			let res = arr.map((d,i) => ({
+			pop: d.ID,
+			sample: d.sample,
+			homozygous: d.Hom_Pred,
+			homCounts: parseInt(d.HomCounts),
+			total: d.Tot_Pred,		
+			totCounts: parseInt(d.TotCounts),
+		}));
+		data.snpEff.snpEff = res;
+		// console.log(data.snpEff.snpEff)
+		});
 	
 	// Get geometry for geojson maps
 	getTopo(occDataBounds.url, occDataBounds.layer)
@@ -418,12 +447,19 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 			<!-- This zooms into Centerrbury, Herne Bay was the location of the last collected specimen of A.craetgi -->
 			<p>
 				 The last known recording of a Black-veined white, before its extirpation, came from <strong>Herne Bay</strong>, in the 
-				 north of <strong>Canterbury</strong>. Since then there have been occaisional sightings of the butterfly
-				 in Britian but all are thought to be from unplanned introduction (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
-				 for a recent case) and none have persisted.
+				 north of <strong>Canterbury</strong>. 
+			</p>	
+		</div>
+	</section>	<section data-id="map04">
+		<div class="col-medium">
+			<p>
+				Since its extirpation there have been occaisional sightings of the butterfly
+				in Britian but all are thought to be from unplanned introduction (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
+				for a recent case) and none have persisted.
 			</p>	
 		</div>
 	</section>
+
 	</div>
 </Scroller>
 {/if}
@@ -436,32 +472,6 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 
 <Divider/>
 
-<!--{#if data.psmc.Netimes}
-	<Media
-		col="medium"
-		caption="Source: Paper "
-	>
-		<div class="chart-sml">
-			<LineChart
-			data={data.psmc.Netimes}
-			xKey="year"
-			yKey="Ne"
-			zKey="species"	  <slot name="front"/>
-
-			xScale= "log"
-			xTicks={[1000,10000, 50000, 100000, 500000]} 
-			lineWidth={4}
-			height={500}
-			colors={['#003f5c', '#ffa600']}
-
-			area={false} 
-			padding={{ top: 0, bottom: 28, left: 35, right: 60 }}
-			{animation} labels
-			{hover} {select}
-			snapTicks={false} />
-		</div>
-	</Media>
-{/if} -->
 
 {#if data.psmc.Netimes}
 <Scroller {threshold} bind:id={id['chart']} splitscreen={true}>
@@ -482,7 +492,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							xSuffix= "  years ago"
 							xTicks={[10000, 50000, 100000, 250000]}  xFormatTick={d => d.toLocaleString()}
 							yFormatTick={d => d.toLocaleString()}
-							{highlighted} colorHighlight="#999" overlayFill
+							{highlighted} colorHighlight="#999" 
 							hover {hovered} on:hover={doHover} colorHover='pink' 
 							annotations={psmcAnnotations}
 							labels labelKey="species"
@@ -543,7 +553,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 </Scroller>
 {/if}
 
-<Section></Section>
+<Section>Inbreeding</Section>
 
 {#if data.froh.froh} 
 <Scroller {threshold} bind:id={id['froh_chart']} splitscreen={true}>
@@ -584,12 +594,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 			<section data-id="frohchart02">
 				<div class="col-medium">
 					<p>
-						The <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from northwestern
-						 <strong>France</strong> collected in the early 1900s. Its population size is low for most of the last 500,000 years but showing
-						 a small peak at roughly 125,000 years ago, corresponding to the penultimate interglacial period (the Eemian interglacial). The population
-						 then contracts up till around 12,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds
-						 expanded all over europe from their warm southern refugia and we find the signs of an exponential population increase in the genome of this 
-						 Black-veined white butterfly from France. 
+					
 					</p>
 				</div>
 			</section>
@@ -598,27 +603,57 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 {/if}
 
 
+<Section>
+	<h2>Impact of variants</h2>
+</Section>
 
-
-<Scroller {threshold} >
-		<div slot="background" >
-				<figure>
-					<div class="col-full height-full" style='background-image: url("./img/BVW_museum1.png"); background-size: cover;'/>
-				</figure>
+{#if data.snpEff.snpEff} 
+<Scroller {threshold} bind:id={id['snp_chart']} splitscreen={true}>
+	<div slot="background">
+		<figure>
+			<div class="col-wide height-full">
+					<div class="chart">
+					<ColumnChart
+							height="calc(100vh - 150px)"
+							data={data.snpEff.snpEff}
+							xKey="homozygous" yKey={snpchartkey} zKey="pop"
+							colors={['#003f5c', '#ffa600']}
+							title="Variants"
+							mode="grouped"
+							hover {hovered} on:hover={doHover} colorHover='pink' 
+							{select} {selected} on:select={doSelect}
+							{animation}>
+							<!-- <div slot="options" class="controls small">
+								{#each barchart1.options as option}
+									<label><input type="radio" bind:group={barchart1.selected} value={option}/> {option}</label>
+								{/each}
+							</div> -->
+						</ColumnChart>
+					</div>
+				</div>
+			</figure>
 		</div>
-
 		<div slot="foreground">
-			<section><div><p>This is one section</p></div></section>
-			<section><div><p>This is a another section</p></div></section>
-		</div>
-</Scroller>
+			<section data-id="snpchart01">
+				<div class="col-medium">
+					<p>
+				
+					</p>
+				</div>
+			</section>
+			<section data-id="snpchart02">
+				<div class="col-medium">
+					<p>
+					</p>
+				</div>
+			</section>
+			</div>
+	</Scroller>			
+	{/if}
 
 
 <Section>
-	<h2>How to use this template</h2>
-	<p>
-		You can find the source code and documentation on how to use this template in <a href="https://github.com/ONSvisual/svelte-scrolly/" target="_blank">this Github repo</a>.
-	</p>
+	<h2>What next?</h2>
 </Section>
 
 

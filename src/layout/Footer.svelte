@@ -29,20 +29,23 @@
 			<img
 				class="copr-img"
 				src="./img/Copyright.png"
-				alt="Copyright logog" />
-			All content is copyright of 
-			<a
-				href="http://www.brookes.ac.uk/"
-				class="link"
-				target="_blank"
-				rel="noopener"
-				style="color: {themes[theme]['text']}">Oxford Brookes University</a>, other than the header meadow illustration which is copyright to
+				alt="Copyright logo" />
+			 	The header meadow illustration which is copyright to
 				<a
 				href="https://lizzieharper.co.uk/"
 				class="link"
 				target="_blank"
 				rel="noopener"
-				style="color: {themes[theme]['text']}">Lizzie Harper</a> and used under license.
+				style="color: {themes[theme]['text']}">Lizzie Harper</a> and used under license. <br>
+				<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+				<img
+				class="copr-img"
+				style="width: 80px; height: 26px"
+				src="./img/by-sa.png"
+				alt="by-sa license image"
+				 /></a>
+				All other materials are available under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 </a> license.
+				This page was developed using the excellent <a href="https://github.com/ONSvisual/svelte-scrolly/"> ONS Scrollytelling Github repo</a>.
 			
 	</div>
 </footer>
