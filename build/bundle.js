@@ -39869,7 +39869,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file = "src/App.svelte";
 
-    // (316:2) <Arrow color="black" {animation}>
+    // (315:2) <Arrow color="black" {animation}>
     function create_default_slot_19(ctx) {
     	let strong;
 
@@ -39877,7 +39877,7 @@ var app = (function () {
     		c: function create() {
     			strong = element("strong");
     			strong.textContent = "Scroll to begin";
-    			add_location(strong, file, 315, 35, 8607);
+    			add_location(strong, file, 314, 35, 8551);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, strong, anchor);
@@ -39892,14 +39892,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_19.name,
     		type: "slot",
-    		source: "(316:2) <Arrow color=\\\"black\\\" {animation}>",
+    		source: "(315:2) <Arrow color=\\\"black\\\" {animation}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (307:0) <Header bgfixed={false} theme="light" center={false} short={true}>
+    // (306:0) <Header bgfixed={false} theme="light" center={false} short={true}>
     function create_default_slot_18(ctx) {
     	let h1;
     	let t1;
@@ -39935,19 +39935,19 @@ var app = (function () {
     			create_component(arrow.$$.fragment);
     			set_style(h1, "margin-top", "-100px");
     			set_style(h1, "margin-left", "0px");
-    			add_location(h1, file, 307, 1, 8113);
-    			add_location(strong, file, 309, 2, 8352);
+    			add_location(h1, file, 306, 1, 8057);
+    			add_location(strong, file, 308, 2, 8296);
     			attr_dev(p, "class", "text-big");
-    			add_location(p, file, 308, 99, 8328);
+    			add_location(p, file, 307, 99, 8272);
     			set_style(div0, "margin-top", "5px");
     			set_style(div0, "background-color", "#fff");
     			set_style(div0, "opacity", "0.6");
     			set_style(div0, "z-index", "-1");
     			set_style(div0, "margin-left", "0px");
-    			add_location(div0, file, 308, 1, 8230);
+    			add_location(div0, file, 307, 1, 8174);
     			set_style(div1, "margin-top", "60px");
     			set_style(div1, "margin-left", "0px");
-    			add_location(div1, file, 314, 1, 8523);
+    			add_location(div1, file, 313, 1, 8467);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
@@ -39963,7 +39963,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const arrow_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				arrow_changes.$$scope = { dirty, ctx };
     			}
 
@@ -39992,14 +39992,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(307:0) <Header bgfixed={false} theme=\\\"light\\\" center={false} short={true}>",
+    		source: "(306:0) <Header bgfixed={false} theme=\\\"light\\\" center={false} short={true}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (321:0) <Filler theme="light" short={true} wide={true} center={true}>
+    // (320:0) <Filler theme="light" short={true} wide={true} center={true}>
     function create_default_slot_17(ctx) {
     	let p0;
     	let strong0;
@@ -40034,18 +40034,18 @@ var app = (function () {
     			p3 = element("p");
     			small_1 = element("small");
     			small_1.textContent = "The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024.)\nRebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif\nbioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305";
-    			add_location(strong0, file, 322, 2, 8756);
+    			add_location(strong0, file, 321, 2, 8700);
     			attr_dev(p0, "class", "text-small");
-    			add_location(p0, file, 321, 1, 8731);
-    			add_location(strong1, file, 323, 24, 8816);
+    			add_location(p0, file, 320, 1, 8675);
+    			add_location(strong1, file, 322, 24, 8760);
     			attr_dev(p1, "class", "text-small");
-    			add_location(p1, file, 323, 2, 8794);
-    			add_location(strong2, file, 325, 24, 8897);
+    			add_location(p1, file, 322, 2, 8738);
+    			add_location(strong2, file, 324, 24, 8841);
     			attr_dev(p2, "class", "text-small");
-    			add_location(p2, file, 325, 1, 8874);
-    			add_location(small_1, file, 327, 2, 8964);
+    			add_location(p2, file, 324, 1, 8818);
+    			add_location(small_1, file, 326, 2, 8908);
     			attr_dev(p3, "class", "text-small");
-    			add_location(p3, file, 326, 1, 8939);
+    			add_location(p3, file, 325, 1, 8883);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p0, anchor);
@@ -40078,14 +40078,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_17.name,
     		type: "slot",
-    		source: "(321:0) <Filler theme=\\\"light\\\" short={true} wide={true} center={true}>",
+    		source: "(320:0) <Filler theme=\\\"light\\\" short={true} wide={true} center={true}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (360:0) <Section>
+    // (359:0) <Section>
     function create_default_slot_16(ctx) {
     	let h2;
     	let t1;
@@ -40120,12 +40120,12 @@ var app = (function () {
     			sup1 = element("sup");
     			sup1.textContent = "th";
     			t10 = text(" century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. \n\t   These result also give a snapshot of its \"genomic health\" around the time of its disappearance,\n\t   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.");
-    			add_location(h2, file, 360, 1, 11260);
-    			add_location(em, file, 362, 36, 11358);
-    			add_location(p0, file, 361, 1, 11318);
-    			add_location(sup0, file, 370, 229, 12646);
-    			add_location(sup1, file, 371, 19, 12680);
-    			add_location(p1, file, 369, 1, 12272);
+    			add_location(h2, file, 359, 1, 11204);
+    			add_location(em, file, 361, 36, 11302);
+    			add_location(p0, file, 360, 1, 11262);
+    			add_location(sup0, file, 369, 229, 12590);
+    			add_location(sup1, file, 370, 19, 12624);
+    			add_location(p1, file, 368, 1, 12216);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -40156,14 +40156,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_16.name,
     		type: "slot",
-    		source: "(360:0) <Section>",
+    		source: "(359:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (384:0) {#if geojson && data.occ}
+    // (383:0) {#if geojson && data.occ}
     function create_if_block_3(ctx) {
     	let scroller;
     	let updating_id;
@@ -40200,7 +40200,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const scroller_changes = {};
 
-    			if (dirty[0] & /*map, geojson, data, hovered, mapHighlighted, selected*/ 366 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*map, geojson, data, hovered, mapHighlighted, selected*/ 366 | dirty[1] & /*$$scope*/ 32) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40230,14 +40230,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(384:0) {#if geojson && data.occ}",
+    		source: "(383:0) {#if geojson && data.occ}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (396:4) <MapLayer      id="lad-fill"      idKey="LAD13CD"      data={data.occ}      type="fill"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>
+    // (395:4) <MapLayer      id="lad-fill"      idKey="LAD13CD"      data={data.occ}      type="fill"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>
     function create_default_slot_15(ctx) {
     	let maptooltip;
     	let current;
@@ -40286,14 +40286,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_15.name,
     		type: "slot",
-    		source: "(396:4) <MapLayer      id=\\\"lad-fill\\\"      idKey=\\\"LAD13CD\\\"      data={data.occ}      type=\\\"fill\\\"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>",
+    		source: "(395:4) <MapLayer      id=\\\"lad-fill\\\"      idKey=\\\"LAD13CD\\\"      data={data.occ}      type=\\\"fill\\\"      hover {hovered} on:hover={doHover}      highlight highlighted={mapHighlighted}      select {selected} on:select={doSelect}      paint={{       'fill-color': ['case',        ['!=', ['feature-state', 'color'], null], ['feature-state', 'color'],        'rgba(255, 255, 255, 0)'       ],       'fill-opacity': 0.6      }}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (390:3) <MapSource     id="lad"     type="geojson"     data={geojson}     promoteId="LAD13CD"     maxzoom={13}>
+    // (389:3) <MapSource     id="lad"     type="geojson"     data={geojson}     promoteId="LAD13CD"     maxzoom={13}>
     function create_default_slot_14(ctx) {
     	let maplayer;
     	let current;
@@ -40343,7 +40343,7 @@ var app = (function () {
     			if (dirty[0] & /*mapHighlighted*/ 256) maplayer_changes.highlighted = /*mapHighlighted*/ ctx[8];
     			if (dirty[0] & /*selected*/ 64) maplayer_changes.selected = /*selected*/ ctx[6];
 
-    			if (dirty[0] & /*hovered, data*/ 34 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*hovered, data*/ 34 | dirty[1] & /*$$scope*/ 32) {
     				maplayer_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40367,14 +40367,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_14.name,
     		type: "slot",
-    		source: "(390:3) <MapSource     id=\\\"lad\\\"     type=\\\"geojson\\\"     data={geojson}     promoteId=\\\"LAD13CD\\\"     maxzoom={13}>",
+    		source: "(389:3) <MapSource     id=\\\"lad\\\"     type=\\\"geojson\\\"     data={geojson}     promoteId=\\\"LAD13CD\\\"     maxzoom={13}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (389:2) <Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>
+    // (388:2) <Map id="map" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>
     function create_default_slot_13(ctx) {
     	let mapsource;
     	let current;
@@ -40404,7 +40404,7 @@ var app = (function () {
     			const mapsource_changes = {};
     			if (dirty[0] & /*geojson*/ 4) mapsource_changes.data = /*geojson*/ ctx[2];
 
-    			if (dirty[0] & /*data, hovered, mapHighlighted, selected*/ 354 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*data, hovered, mapHighlighted, selected*/ 354 | dirty[1] & /*$$scope*/ 32) {
     				mapsource_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40428,14 +40428,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_13.name,
     		type: "slot",
-    		source: "(389:2) <Map id=\\\"map\\\" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>",
+    		source: "(388:2) <Map id=\\\"map\\\" style={mapstyle} location={{bounds: mapbounds.uk}} bind:map={map} interactive={false}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (386:1) 
+    // (385:1) 
     function create_background_slot_3(ctx) {
     	let div1;
     	let figure;
@@ -40471,10 +40471,10 @@ var app = (function () {
     			div0 = element("div");
     			create_component(map_1.$$.fragment);
     			attr_dev(div0, "class", "col-full height-full");
-    			add_location(div0, file, 387, 3, 13326);
-    			add_location(figure, file, 386, 2, 13314);
+    			add_location(div0, file, 386, 3, 13270);
+    			add_location(figure, file, 385, 2, 13258);
     			attr_dev(div1, "slot", "background");
-    			add_location(div1, file, 385, 1, 13288);
+    			add_location(div1, file, 384, 1, 13232);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -40486,7 +40486,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const map_1_changes = {};
 
-    			if (dirty[0] & /*geojson, data, hovered, mapHighlighted, selected*/ 358 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*geojson, data, hovered, mapHighlighted, selected*/ 358 | dirty[1] & /*$$scope*/ 32) {
     				map_1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40517,14 +40517,14 @@ var app = (function () {
     		block,
     		id: create_background_slot_3.name,
     		type: "slot",
-    		source: "(386:1) ",
+    		source: "(385:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (426:79) <Em color={mapcolors.seq5[1]}>
+    // (425:79) <Em color={mapcolors.seq5[1]}>
     function create_default_slot_12(ctx) {
     	let t;
 
@@ -40544,14 +40544,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_12.name,
     		type: "slot",
-    		source: "(426:79) <Em color={mapcolors.seq5[1]}>",
+    		source: "(425:79) <Em color={mapcolors.seq5[1]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (427:4) <Em color={mapcolors.seq5[4]}>
+    // (426:4) <Em color={mapcolors.seq5[4]}>
     function create_default_slot_11(ctx) {
     	let t;
 
@@ -40571,14 +40571,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_11.name,
     		type: "slot",
-    		source: "(427:4) <Em color={mapcolors.seq5[4]}>",
+    		source: "(426:4) <Em color={mapcolors.seq5[4]}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (421:0) 
+    // (420:0) 
     function create_foreground_slot_3(ctx) {
     	let div4;
     	let section0;
@@ -40697,39 +40697,39 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "here";
     			t26 = text(" \n\t\t\t\tfor a recent case) and none have persisted.");
-    			add_location(strong0, file, 424, 19, 14378);
-    			add_location(strong1, file, 424, 73, 14432);
-    			add_location(strong2, file, 424, 118, 14477);
-    			add_location(strong3, file, 425, 28, 14531);
-    			add_location(p0, file, 423, 3, 14355);
-    			add_location(small_1, file, 428, 4, 14741);
-    			add_location(p1, file, 427, 4, 14733);
+    			add_location(strong0, file, 423, 19, 14322);
+    			add_location(strong1, file, 423, 73, 14376);
+    			add_location(strong2, file, 423, 118, 14421);
+    			add_location(strong3, file, 424, 28, 14475);
+    			add_location(p0, file, 422, 3, 14299);
+    			add_location(small_1, file, 427, 4, 14685);
+    			add_location(p1, file, 426, 4, 14677);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 422, 2, 14327);
+    			add_location(div0, file, 421, 2, 14271);
     			attr_dev(section0, "data-id", "map01");
-    			add_location(section0, file, 421, 1, 14299);
-    			add_location(strong4, file, 436, 82, 15026);
-    			add_location(p2, file, 435, 3, 14940);
+    			add_location(section0, file, 420, 1, 14243);
+    			add_location(strong4, file, 435, 82, 14970);
+    			add_location(p2, file, 434, 3, 14884);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 434, 2, 14912);
+    			add_location(div1, file, 433, 2, 14856);
     			attr_dev(section1, "data-id", "map02");
-    			add_location(section1, file, 433, 1, 14884);
-    			add_location(strong5, file, 446, 89, 15564);
-    			add_location(strong6, file, 447, 14, 15614);
-    			add_location(p3, file, 445, 3, 15471);
+    			add_location(section1, file, 432, 1, 14828);
+    			add_location(strong5, file, 445, 89, 15508);
+    			add_location(strong6, file, 446, 14, 15558);
+    			add_location(p3, file, 444, 3, 15415);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file, 443, 2, 15331);
+    			add_location(div2, file, 442, 2, 15275);
     			attr_dev(section2, "data-id", "map03");
-    			add_location(section2, file, 442, 1, 15303);
+    			add_location(section2, file, 441, 1, 15247);
     			attr_dev(a, "href", "https://www.bbc.co.uk/news/uk-65804939");
-    			add_location(a, file, 454, 74, 15889);
-    			add_location(p4, file, 452, 3, 15730);
+    			add_location(a, file, 453, 74, 15833);
+    			add_location(p4, file, 451, 3, 15674);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file, 451, 2, 15702);
+    			add_location(div3, file, 450, 2, 15646);
     			attr_dev(section3, "data-id", "map04");
-    			add_location(section3, file, 450, 12, 15674);
+    			add_location(section3, file, 449, 12, 15618);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file, 420, 0, 14274);
+    			add_location(div4, file, 419, 0, 14218);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -40780,14 +40780,14 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const em0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em0_changes.$$scope = { dirty, ctx };
     			}
 
     			em0.$set(em0_changes);
     			const em1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em1_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40815,14 +40815,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot_3.name,
     		type: "slot",
-    		source: "(421:0) ",
+    		source: "(420:0) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (467:0) <Section>
+    // (466:0) <Section>
     function create_default_slot_10(ctx) {
     	let h2;
 
@@ -40830,7 +40830,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "Reconstructing the history of a Butterfly population";
-    			add_location(h2, file, 467, 1, 16078);
+    			add_location(h2, file, 466, 1, 16022);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -40845,14 +40845,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_10.name,
     		type: "slot",
-    		source: "(467:0) <Section>",
+    		source: "(466:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (474:0) {#if data.psmc.Netimes}
+    // (473:0) {#if data.psmc.Netimes}
     function create_if_block_2(ctx) {
     	let scroller;
     	let updating_id;
@@ -40890,7 +40890,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const scroller_changes = {};
 
-    			if (dirty[0] & /*data, showColors, highlighted, hovered*/ 178 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*data, showColors, highlighted, hovered*/ 178 | dirty[1] & /*$$scope*/ 32) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
@@ -40920,14 +40920,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(474:0) {#if data.psmc.Netimes}",
+    		source: "(473:0) {#if data.psmc.Netimes}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (476:1) 
+    // (475:1) 
     function create_background_slot_2(ctx) {
     	let div2;
     	let figure;
@@ -40979,12 +40979,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(linechart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 478, 5, 16332);
+    			add_location(div0, file, 477, 5, 16276);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 477, 3, 16292);
-    			add_location(figure, file, 476, 2, 16280);
+    			add_location(div1, file, 476, 3, 16236);
+    			add_location(figure, file, 475, 2, 16224);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 475, 1, 16254);
+    			add_location(div2, file, 474, 1, 16198);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41026,14 +41026,14 @@ var app = (function () {
     		block,
     		id: create_background_slot_2.name,
     		type: "slot",
-    		source: "(476:1) ",
+    		source: "(475:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (516:9) <Em color=#999>
+    // (515:9) <Em color=#999>
     function create_default_slot_9(ctx) {
     	let t;
 
@@ -41053,14 +41053,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(516:9) <Em color=#999>",
+    		source: "(515:9) <Em color=#999>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (528:10) <Em color=#999>
+    // (527:10) <Em color=#999>
     function create_default_slot_8(ctx) {
     	let t;
 
@@ -41080,14 +41080,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(528:10) <Em color=#999>",
+    		source: "(527:10) <Em color=#999>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (541:89) <Em color='#003f5c'>
+    // (540:89) <Em color='#003f5c'>
     function create_default_slot_7(ctx) {
     	let t;
 
@@ -41107,14 +41107,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_7.name,
     		type: "slot",
-    		source: "(541:89) <Em color='#003f5c'>",
+    		source: "(540:89) <Em color='#003f5c'>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (542:46) <Em color='#ffa600'>
+    // (541:46) <Em color='#ffa600'>
     function create_default_slot_6(ctx) {
     	let t;
 
@@ -41134,14 +41134,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_6.name,
     		type: "slot",
-    		source: "(542:46) <Em color='#ffa600'>",
+    		source: "(541:46) <Em color='#ffa600'>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (544:56) <Em color='#003f5c'>
+    // (543:56) <Em color='#003f5c'>
     function create_default_slot_5(ctx) {
     	let t;
 
@@ -41161,14 +41161,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_5.name,
     		type: "slot",
-    		source: "(544:56) <Em color='#003f5c'>",
+    		source: "(543:56) <Em color='#003f5c'>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (503:1) 
+    // (502:1) 
     function create_foreground_slot_2(ctx) {
     	let div4;
     	let section0;
@@ -41332,39 +41332,39 @@ var app = (function () {
     			t31 = text(" Black-veined white colonizing ");
     			create_component(em4.$$.fragment);
     			t32 = text(", showed reduced genetic diversity,\n\t\t\t\t\t\t presumably as a result of colonization by a small number of indviduals");
-    			add_location(strong0, file, 506, 25, 17222);
-    			add_location(strong1, file, 506, 83, 17280);
-    			add_location(strong2, file, 507, 47, 17369);
-    			add_location(strong3, file, 508, 12, 17460);
-    			add_location(strong4, file, 508, 63, 17511);
-    			add_location(p0, file, 505, 4, 17193);
+    			add_location(strong0, file, 505, 25, 17166);
+    			add_location(strong1, file, 505, 83, 17224);
+    			add_location(strong2, file, 506, 47, 17313);
+    			add_location(strong3, file, 507, 12, 17404);
+    			add_location(strong4, file, 507, 63, 17455);
+    			add_location(p0, file, 504, 4, 17137);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 504, 3, 17164);
+    			add_location(div0, file, 503, 3, 17108);
     			attr_dev(section0, "data-id", "chart01");
-    			add_location(section0, file, 503, 2, 17133);
-    			add_location(strong5, file, 516, 6, 17770);
-    			add_location(p1, file, 514, 4, 17638);
+    			add_location(section0, file, 502, 2, 17077);
+    			add_location(strong5, file, 515, 6, 17714);
+    			add_location(p1, file, 513, 4, 17582);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 513, 3, 17609);
+    			add_location(div1, file, 512, 3, 17553);
     			attr_dev(section1, "data-id", "chart02");
-    			add_location(section1, file, 512, 2, 17578);
-    			add_location(strong6, file, 528, 6, 18633);
-    			add_location(strong7, file, 529, 71, 18850);
-    			add_location(p2, file, 526, 4, 18490);
-    			add_location(p3, file, 531, 4, 18913);
+    			add_location(section1, file, 511, 2, 17522);
+    			add_location(strong6, file, 527, 6, 18577);
+    			add_location(strong7, file, 528, 71, 18794);
+    			add_location(p2, file, 525, 4, 18434);
+    			add_location(p3, file, 530, 4, 18857);
     			attr_dev(div2, "class", "col-medium");
-    			add_location(div2, file, 525, 3, 18461);
+    			add_location(div2, file, 524, 3, 18405);
     			attr_dev(section2, "data-id", "chart03");
-    			add_location(section2, file, 524, 2, 18430);
-    			add_location(strong8, file, 540, 68, 19397);
-    			add_location(strong9, file, 543, 4, 19670);
-    			add_location(p4, file, 539, 4, 19325);
+    			add_location(section2, file, 523, 2, 18374);
+    			add_location(strong8, file, 539, 68, 19341);
+    			add_location(strong9, file, 542, 4, 19614);
+    			add_location(p4, file, 538, 4, 19269);
     			attr_dev(div3, "class", "col-medium");
-    			add_location(div3, file, 538, 3, 19296);
+    			add_location(div3, file, 537, 3, 19240);
     			attr_dev(section3, "data-id", "chart04");
-    			add_location(section3, file, 537, 2, 19265);
+    			add_location(section3, file, 536, 2, 19209);
     			attr_dev(div4, "slot", "foreground");
-    			add_location(div4, file, 502, 1, 17107);
+    			add_location(div4, file, 501, 1, 17051);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div4, anchor);
@@ -41423,35 +41423,35 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const em0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em0_changes.$$scope = { dirty, ctx };
     			}
 
     			em0.$set(em0_changes);
     			const em1_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em1_changes.$$scope = { dirty, ctx };
     			}
 
     			em1.$set(em1_changes);
     			const em2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em2_changes.$$scope = { dirty, ctx };
     			}
 
     			em2.$set(em2_changes);
     			const em3_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em3_changes.$$scope = { dirty, ctx };
     			}
 
     			em3.$set(em3_changes);
     			const em4_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				em4_changes.$$scope = { dirty, ctx };
     			}
 
@@ -41488,14 +41488,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot_2.name,
     		type: "slot",
-    		source: "(503:1) ",
+    		source: "(502:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (554:0) <Section>
+    // (553:0) <Section>
     function create_default_slot_4(ctx) {
     	let t;
 
@@ -41515,14 +41515,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_4.name,
     		type: "slot",
-    		source: "(554:0) <Section>",
+    		source: "(553:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (556:0) {#if data.froh.froh}
+    // (555:0) {#if data.froh.froh}
     function create_if_block_1(ctx) {
     	let scroller;
     	let updating_id;
@@ -41560,7 +41560,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const scroller_changes = {};
 
-    			if (dirty[0] & /*small, data, hovered, selected*/ 1122 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*small, data, hovered, selected*/ 1122 | dirty[1] & /*$$scope*/ 32) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
@@ -41590,14 +41590,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(556:0) {#if data.froh.froh}",
+    		source: "(555:0) {#if data.froh.froh}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (558:1) 
+    // (557:1) 
     function create_background_slot_1(ctx) {
     	let div2;
     	let figure;
@@ -41639,12 +41639,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(columnchart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 560, 5, 20134);
+    			add_location(div0, file, 559, 5, 20078);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 559, 3, 20094);
-    			add_location(figure, file, 558, 2, 20082);
+    			add_location(div1, file, 558, 3, 20038);
+    			add_location(figure, file, 557, 2, 20026);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 557, 1, 20056);
+    			add_location(div2, file, 556, 1, 20000);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41684,14 +41684,14 @@ var app = (function () {
     		block,
     		id: create_background_slot_1.name,
     		type: "slot",
-    		source: "(558:1) ",
+    		source: "(557:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (582:2) 
+    // (581:2) 
     function create_foreground_slot_1(ctx) {
     	let div2;
     	let section0;
@@ -41737,23 +41737,23 @@ var app = (function () {
     			section1 = element("section");
     			div1 = element("div");
     			p1 = element("p");
-    			add_location(strong0, file, 585, 26, 21022);
-    			add_location(strong1, file, 585, 84, 21080);
-    			add_location(strong2, file, 586, 48, 21170);
-    			add_location(strong3, file, 587, 13, 21262);
-    			add_location(strong4, file, 587, 64, 21313);
-    			add_location(p0, file, 584, 5, 20992);
+    			add_location(strong0, file, 584, 26, 20966);
+    			add_location(strong1, file, 584, 84, 21024);
+    			add_location(strong2, file, 585, 48, 21114);
+    			add_location(strong3, file, 586, 13, 21206);
+    			add_location(strong4, file, 586, 64, 21257);
+    			add_location(p0, file, 583, 5, 20936);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 583, 4, 20962);
+    			add_location(div0, file, 582, 4, 20906);
     			attr_dev(section0, "data-id", "frohchart01");
-    			add_location(section0, file, 582, 3, 20926);
-    			add_location(p1, file, 593, 5, 21450);
+    			add_location(section0, file, 581, 3, 20870);
+    			add_location(p1, file, 592, 5, 21394);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 592, 4, 21420);
+    			add_location(div1, file, 591, 4, 21364);
     			attr_dev(section1, "data-id", "frohchart02");
-    			add_location(section1, file, 591, 3, 21384);
+    			add_location(section1, file, 590, 3, 21328);
     			attr_dev(div2, "slot", "foreground");
-    			add_location(div2, file, 581, 2, 20899);
+    			add_location(div2, file, 580, 2, 20843);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41785,14 +41785,14 @@ var app = (function () {
     		block,
     		id: create_foreground_slot_1.name,
     		type: "slot",
-    		source: "(582:2) ",
+    		source: "(581:2) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (604:0) <Section>
+    // (603:0) <Section>
     function create_default_slot_2(ctx) {
     	let h2;
 
@@ -41800,7 +41800,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "Impact of variants";
-    			add_location(h2, file, 604, 1, 21539);
+    			add_location(h2, file, 603, 1, 21483);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -41815,14 +41815,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(604:0) <Section>",
+    		source: "(603:0) <Section>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (608:0) {#if data.snpEff.snpEff}
+    // (607:0) {#if data.snpEff.snpEff}
     function create_if_block(ctx) {
     	let scroller;
     	let updating_id;
@@ -41860,7 +41860,7 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const scroller_changes = {};
 
-    			if (dirty[0] & /*data, snpchartkey, hovered, selected*/ 610 | dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[0] & /*data, snpchartkey, hovered, selected*/ 610 | dirty[1] & /*$$scope*/ 32) {
     				scroller_changes.$$scope = { dirty, ctx };
     			}
 
@@ -41890,14 +41890,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(608:0) {#if data.snpEff.snpEff}",
+    		source: "(607:0) {#if data.snpEff.snpEff}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (610:1) 
+    // (609:1) 
     function create_background_slot(ctx) {
     	let div2;
     	let figure;
@@ -41937,12 +41937,12 @@ var app = (function () {
     			div0 = element("div");
     			create_component(columnchart.$$.fragment);
     			attr_dev(div0, "class", "chart svelte-1g0va6n");
-    			add_location(div0, file, 612, 5, 21752);
+    			add_location(div0, file, 611, 5, 21696);
     			attr_dev(div1, "class", "col-wide height-full");
-    			add_location(div1, file, 611, 3, 21712);
-    			add_location(figure, file, 610, 2, 21700);
+    			add_location(div1, file, 610, 3, 21656);
+    			add_location(figure, file, 609, 2, 21644);
     			attr_dev(div2, "slot", "background");
-    			add_location(div2, file, 609, 1, 21674);
+    			add_location(div2, file, 608, 1, 21618);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
@@ -41979,20 +41979,20 @@ var app = (function () {
     		block,
     		id: create_background_slot.name,
     		type: "slot",
-    		source: "(610:1) ",
+    		source: "(609:1) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (634:2) 
+    // (633:2) 
     function create_foreground_slot(ctx) {
     	let div2;
     	let section0;
     	let div0;
     	let p0;
-    	let t;
+    	let t1;
     	let section1;
     	let div1;
     	let p1;
@@ -42003,29 +42003,31 @@ var app = (function () {
     			section0 = element("section");
     			div0 = element("div");
     			p0 = element("p");
-    			t = space();
+    			p0.textContent = "text";
+    			t1 = space();
     			section1 = element("section");
     			div1 = element("div");
     			p1 = element("p");
-    			add_location(p0, file, 636, 5, 22524);
+    			p1.textContent = "text";
+    			add_location(p0, file, 635, 5, 22468);
     			attr_dev(div0, "class", "col-medium");
-    			add_location(div0, file, 635, 4, 22494);
+    			add_location(div0, file, 634, 4, 22438);
     			attr_dev(section0, "data-id", "snpchart01");
-    			add_location(section0, file, 634, 3, 22459);
-    			add_location(p1, file, 643, 5, 22636);
+    			add_location(section0, file, 633, 3, 22403);
+    			add_location(p1, file, 642, 5, 22586);
     			attr_dev(div1, "class", "col-medium");
-    			add_location(div1, file, 642, 4, 22606);
+    			add_location(div1, file, 641, 4, 22556);
     			attr_dev(section1, "data-id", "snpchart02");
-    			add_location(section1, file, 641, 3, 22571);
+    			add_location(section1, file, 640, 3, 22521);
     			attr_dev(div2, "slot", "foreground");
-    			add_location(div2, file, 633, 2, 22432);
+    			add_location(div2, file, 632, 2, 22376);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div2, anchor);
     			append_dev(div2, section0);
     			append_dev(section0, div0);
     			append_dev(div0, p0);
-    			append_dev(div2, t);
+    			append_dev(div2, t1);
     			append_dev(div2, section1);
     			append_dev(section1, div1);
     			append_dev(div1, p1);
@@ -42040,7 +42042,7 @@ var app = (function () {
     		block,
     		id: create_foreground_slot.name,
     		type: "slot",
-    		source: "(634:2) ",
+    		source: "(633:2) ",
     		ctx
     	});
 
@@ -42055,7 +42057,7 @@ var app = (function () {
     		c: function create() {
     			h2 = element("h2");
     			h2.textContent = "What next?";
-    			add_location(h2, file, 653, 1, 22721);
+    			add_location(h2, file, 653, 1, 22682);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h2, anchor);
@@ -42285,21 +42287,21 @@ var app = (function () {
     		p: function update(ctx, dirty) {
     			const header_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				header_changes.$$scope = { dirty, ctx };
     			}
 
     			header.$set(header_changes);
     			const filler0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				filler0_changes.$$scope = { dirty, ctx };
     			}
 
     			filler0.$set(filler0_changes);
     			const section0_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				section0_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42330,7 +42332,7 @@ var app = (function () {
 
     			const section2_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				section2_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42361,7 +42363,7 @@ var app = (function () {
 
     			const section3_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				section3_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42392,7 +42394,7 @@ var app = (function () {
 
     			const section4_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				section4_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42423,7 +42425,7 @@ var app = (function () {
 
     			const section5_changes = {};
 
-    			if (dirty[1] & /*$$scope*/ 64) {
+    			if (dirty[1] & /*$$scope*/ 32) {
     				section5_changes.$$scope = { dirty, ctx };
     			}
 
@@ -42602,7 +42604,6 @@ var app = (function () {
     	let mapHighlighted = []; // Highlighted district (map only)
     	let xKey = "year"; // xKey for scatter chart
     	let yKey = "Ne"; // yKey for scatter chart
-    	let zKey = "species"; // zKey (color) for scatter chart
     	let mapKey = "Count"; // Key for data to be displayed on map
     	let snpchartkey = "totCounts"; //key for plotting variants
 
@@ -42722,8 +42723,8 @@ var app = (function () {
     		},
     		snp_chart: {
     			snpchart01: () => {
-    				
-    			}, //displays total variants
+    				$$invalidate(9, snpchartkey = "totCounts");
+    			},
     			snpchart02: () => {
     				$$invalidate(9, snpchartkey = "homCounts");
     			}
@@ -42905,7 +42906,6 @@ var app = (function () {
     		mapHighlighted,
     		xKey,
     		yKey,
-    		zKey,
     		mapKey,
     		snpchartkey,
     		psmcAnnotations,
@@ -42935,7 +42935,6 @@ var app = (function () {
     		if ('mapHighlighted' in $$props) $$invalidate(8, mapHighlighted = $$props.mapHighlighted);
     		if ('xKey' in $$props) xKey = $$props.xKey;
     		if ('yKey' in $$props) yKey = $$props.yKey;
-    		if ('zKey' in $$props) zKey = $$props.zKey;
     		if ('mapKey' in $$props) $$invalidate(15, mapKey = $$props.mapKey);
     		if ('snpchartkey' in $$props) $$invalidate(9, snpchartkey = $$props.snpchartkey);
     		if ('psmcAnnotations' in $$props) $$invalidate(16, psmcAnnotations = $$props.psmcAnnotations);
