@@ -21,8 +21,9 @@
 			{/if}
 		</a>
 		<ul>
-			<li><a href="https://saadarif.github.io/" class="link" style="color: {themes[theme]['text']}">Contact Author</a></li>
-			<li><a href="https://www.biorxiv.org/content/10.1101/2023.12.19.572305v4.abstract" class="link" style="color: {themes[theme]['text']}">Read the Paper</a></li>
+			<li><a href="https://saadarif.github.io/" class="link" style="color: {themes[theme]['text']}">Contact author</a></li>
+			<li><a href="https://www.biorxiv.org/content/10.1101/2023.12.19.572305v4.abstract" class="link" style="color: {themes[theme]['text']}">More info</a></li>
+			<li><a href="https://lizzieharper.co.uk/" class="link" style="color: {themes[theme]['text']}">More art</a></li>
 		</ul>
 		<hr style="border-top-color: {themes[theme]['muted']}" />
 		<div class="license">

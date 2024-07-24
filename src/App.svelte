@@ -18,6 +18,7 @@
 	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
 	//import StepLinePlot from "./plots/StepLinePlot.svelte";
 	//import * as d3 from 'd3';
+	import Comments from "disqus-svelte"; 
 	
 	//import PsmcPlot from "./plots/PsmcPlot.svelte";
 	// DEMO-SPECIFIC IMPORTS
@@ -73,7 +74,7 @@
 			[ 2, 58 ]
 		],
 		southernUk: [
-			[-7, 49 ],
+			[-7, 50 ],
 			[ 2, 53 ]
 		],
 	};
@@ -411,6 +412,19 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 					hovered ? `${data.occ.find(d => d.LAD13CD == hovered)["LAD13NM"].toLocaleString()}<br/></strong>${data.occ.find(d => d.LAD13CD == hovered)[mapKey].toLocaleString()}</strong>` : ''
 				} />
 				</MapLayer>
+				<MapLayer
+					  	id="lad-line"
+					  	type="line"
+					  	paint={{
+					  		'line-color': ['case',
+					  			['==', ['feature-state', 'hovered'], true], 'orange',
+					  			['==', ['feature-state', 'selected'], true], 'black',
+					  			['==', ['feature-state', 'highlighted'], true], 'black',
+					  			'rgba(255,255,255,0)'
+					  		],
+					  		'line-width': 2
+					  	}}
+				    />
 			</MapSource>
 		</Map>
 	</div>
@@ -614,9 +628,10 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 							height="calc(100vh - 150px)"
 							data={data.snpEff.snpEff}
 							xKey="homozygous" yKey={snpchartkey} zKey="pop"
+							legend="true"
 							colors={['#003f5c', '#ffa600']}
 							title="Variants"
-							mode="grouped"
+							mode={["grouped", "barcode"]}
 							hover {hovered} on:hover={doHover} colorHover='pink' 
 							{select} {selected} on:select={doSelect}
 							{animation}>
@@ -654,6 +669,10 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	<h2>What next?</h2>
 </Section>
 
+<!-- a place for leaving comments? -->
+<!-- <Section>
+<Comments identifier="bvw-lastdays-posts" />
+</Section> -->
 
 <Footer />
 
