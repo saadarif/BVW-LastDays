@@ -27,25 +27,20 @@
 		</ul>
 		<hr style="border-top-color: {themes[theme]['muted']}" />
 		<div class="license">
-			<img
-				class="copr-img"
-				src="./img/Copyright.png"
-				alt="Copyright logo" />
-			 	The header meadow illustration which is copyright to
-				<a
-				href="https://lizzieharper.co.uk/"
-				class="link"
-				target="_blank"
-				rel="noopener"
-				style="color: {themes[theme]['text']}">Lizzie Harper</a> and used under license. <br>
-				<a href="https://creativecommons.org/licenses/by-sa/4.0/">
+			<a href="https://creativecommons.org/licenses/by-sa/4.0/">
 				<img
 				class="copr-img"
 				style="width: 90px; height: 31px"
 				src="./img/by-sa.png"
 				alt="by-sa license image"
-				 /></a>
-				All other materials are available under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 </a> license.
+				 /></a> All content is under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 </a> license unless otherwise stated.
+			 	The header meadow illustration is used under license which is <strong>copyright</strong> to
+				<a
+				href="https://lizzieharper.co.uk/"
+				class="link"
+				target="_blank"
+				rel="noopener"
+				style="color: {themes[theme]['text']}">Lizzie Harper</a>. 
 				This page was developed using the excellent <a href="https://github.com/ONSvisual/svelte-scrolly/"> ONS Scrollytelling Github repo</a>.
 			
 	</div>
