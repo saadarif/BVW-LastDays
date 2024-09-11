@@ -33,15 +33,8 @@
 				style="width: 90px; height: 31px"
 				src="./img/by-sa.png"
 				alt="by-sa license image"
-				 /></a> All content is under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 </a> license unless otherwise stated.
-			 	The header meadow illustration is used under license which is <strong>copyright</strong> to
-				<a
-				href="https://lizzieharper.co.uk/"
-				class="link"
-				target="_blank"
-				rel="noopener"
-				style="color: {themes[theme]['text']}">Lizzie Harper</a>. 
-				This page was developed using the excellent <a href="https://github.com/ONSvisual/svelte-scrolly/"> ONS Scrollytelling Github repo</a>.
+				 /></a> All content is under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 </a> license unless otherwise stated. 
+				This page was developed using the <a href="https://github.com/ONSvisual/svelte-scrolly/"> ONS Scrollytelling Github repo</a>.
 			
 	</div>
 </footer>

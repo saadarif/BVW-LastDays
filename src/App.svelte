@@ -305,7 +305,7 @@
 
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
-	<h1 style="margin-top: -100px; margin-left: 0px"> The last days of the Black-veined white butterfly in Britain</h1>
+	<h1 style="margin-top: -100px; margin-left: 0px"> A genomic view of the demise of <em>Aporia crataegi</em> (L.): The Black-veined White</h1>
 	<div style="margin-top: 5px;  background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px"><p class="text-big" >
 		<strong>
 			A genomic history of the the Black-veined white butterfly in Britain from its arrival to its demise in the early twentieth century
@@ -321,13 +321,12 @@
 <Filler theme="light" short={true} wide={true} center={true}>
 	<p class="text-small">
 		<strong>By</strong>: Saad Arif </p>
-		<p class="text-small"><strong>Cover Illustration</strong>: Lizzie Harper
-	</p>
+	
 	<p class="text-small"> <strong>Based on data from:</strong></p>
 	<p class="text-small">
 		<small>The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024).
-Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif
-bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </small>
+Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif.
+<em>Molecular Ecology</em>, e17518; doi: https://doi.org/10.1111/mec.17518 </small>
 	</p>
 </Filler>
 
@@ -339,7 +338,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 		<img src="./img/resized_BVW_pinned.png" alt="Left Image">
 	</div>
 	<div>
-	<h2>A butterfly disappearance, museums and genomics</h2>
+	<h2>The disappearance of the Black-viened white from the British Isles</h2>
 	<p>
 		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
 		to Japan. However, in some places it is in decline and has completely disappeared from the Netherlands, Czechia, and South Korea [Refs]. 
@@ -358,28 +357,18 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 </BISection>-->
 
 <Section>
-	<h2>A butterfly disappearance, museums and genomics</h2>
+	<h2>The Black-veined white in Britain</h2>
 	<p>
 		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
-		to Japan. However, in some places it is in decline and has completely disappeared from the Netherlands, Czechia, and South Korea [Refs]. 
-		It had been recorded in Britain as early as 1667 [REF] but went extinct in the early twentieth century. Prior to its extirpation in Britain, it could be found in southern England and Wales.
-		Why did the Black-veined white disappear from Britain? Numerous hypothesis have been suggested, including a run of unsually "wet" Autumns, pathogen infection, and predation.
-		Given that this butterfly disappeared from Britain in the early twentieth century, it is difficult to pinpoint the exact cause of its disappearence. Over the years, there have been various attempts
-		to reintroduce this species to Britain but none have been successful thus far. 
-	</p>
-	<p>Museums contains large collections of butterflies, some from as early as the 18th century, collected by scientists and butterfly enthusiasts.
-	   Modern advances in genomics now allow us to interrogate the genomes of these long-dead individuals. To peer into the history of the Black-veined white in Britian, we extracted DNA from musueum specimens dating from the mid-19<sup>th</sup> 
-	   to the early 20<sup>th</sup> century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. 
-	   These result also give a snapshot of its "genomic health" around the time of its disappearance,
-	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
-	</p>
+		to Japan. It was once a common garden and meadow species in southern Britian, with records dating back to 1667. However, towards the middle of the nineteenth
+		century the butterfly started disappearing from the western and central part of its range and eventually disappeared altogether by the first quarter
+		of the twentieth century. More recently, the butterfly has also gone extinct in South Korea and the Netherlands.
+		<p></p>
+		<img src="./img/wiki_cp.png" alt="Black-veined whie resting on flower">
 </Section>
 
 <Divider/>
 
-<Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
-
-<Section></Section>
 
 {#if geojson && data.occ}
 <Scroller {threshold} bind:id={id['map']}>
@@ -447,7 +436,7 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	<section data-id="map02">
 		<div class="col-medium">
 			<p>
-				This data comes from information on preserved museum specimens (some as old as<strong>1738!</strong>) and occaisional human recordings of the butterfly and is 
+				This data comes from information on preserved museum specimens (some as old as<strong>1738!</strong>) and occaisonal human recordings of the butterfly but is 
 				incomplete and suffers from bias in recording. However, the map does show that the Black-veined white could be found in southern England 
 				and eastern Wales.
 			</p>
@@ -464,9 +453,9 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 	</section>	<section data-id="map04">
 		<div class="col-medium">
 			<p>
-				Since its extirpation there have been occaisional sightings of the butterfly
-				in Britian but all are thought to be from unplanned introduction (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
-				for a recent case) and none have persisted.
+				Since 1925 there have been occaisonal sightings of the butterfly
+				in Britian but all are thought to be from unplanned introductions from European stock (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
+				for a recent case), a practise that was already common by mid to late nineteenth century. But none of the introductions have persisted.
 			</p>	
 		</div>
 	</section>
@@ -476,6 +465,36 @@ bioRxiv 2023.12.19.572305; doi: https://doi.org/10.1101/2023.12.19.572305 </smal
 {/if}
 
 <Divider />
+
+<Section>
+	<h2>Why did the Black-veined White disappear?</h2>
+	<p>
+	No one is quite sure why the butterfly disappeared but some potential reasons that have 
+	been explored. The most plausible of these include predation by small birds (which increased due to decline of raptorial birds), 
+	fungal or viral disease, and a series on unseasonably wet autumns. It is quite likely a combination of these 
+	and other factors contributed to the extinction of the butterfly in Britain.  
+	</p>
+	<p>Apart from external factors such as climate, disease and other man-made perturbations, genetics can also excerbate
+		extinction risk. Although not usually the direct cause of extinction, lack of genetic diversity may put speices or populations
+		at risk of extinction. The role of genetics in the demise of the Black-veined white has never been explored, for the simple reason
+		that we did not have the genetic tools to do in the early twentieth century
+	</p>
+	<p>
+		However, thanks to improvements in DNA extraction and sequencing technologies and museum collections, we can now do genomics in century-old museum specimens.
+		We wanted to use this technology to examine the genomics of Black-viened white before it disappeared from Britain. 
+	</p>
+	<p>
+		We conducted genomics on 100-175 year-old specimens to explore decline of genetic fitness in British Black-veined White butterflies. In order to preserve
+		as much of the specimens for any future work (e.g. morphology) we used only 1 or 2 legs to extract DNA. For the first time, we were able
+		to sequence genomes from Black-veined white butterflies, caught as early as 1854 and ask the following questions:
+	</p>
+	<ul>
+		<li></li>
+	</ul>
+</Section>
+
+<Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
+
 
 <Section>
 	<h2>Reconstructing the history of a Butterfly population</h2>
