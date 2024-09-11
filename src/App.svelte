@@ -100,8 +100,8 @@
 	let psmcAnnotations = [
     {
       text: 'End of last glacial period...',
-      [xKey]: '40000',
-      [yKey]: 60,
+      [xKey]: '30000',
+      [yKey]: 50,
       dx: 15, // Optional pixel values
       dy: -5,
       arrows: [{
@@ -305,14 +305,14 @@
 
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
-	<h1 style="margin-top: -100px; margin-left: 0px"> A genomic view of the demise of <em>Aporia crataegi</em> (L.): The Black-veined White</h1>
-	<div style="margin-top: 5px;  background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px"><p class="text-big" >
+	<h1 style="margin-top: 50px; margin-left: 0px"> A genomic view of the demise of <em>Aporia crataegi</em> (L.): The Black-veined White</h1>
+	<div style="margin-top: 5px; background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px"><p class="text-big" >
 		<strong>
 			A genomic history of the the Black-veined white butterfly in Britain from its arrival to its demise in the early twentieth century
 		</strong>
 		</p>
 	</div>
-	<div style="margin-top: 60px;margin-left: 0px;">
+	<div style="margin-top: 60px;margin-left:  0px;">
 		<Arrow color="black" {animation}><strong>Scroll to begin</strong></Arrow>
 	</div>
 </Header>
@@ -364,7 +364,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		century the butterfly started disappearing from the western and central part of its range and eventually disappeared altogether by the first quarter
 		of the twentieth century. More recently, the butterfly has also gone extinct in South Korea and the Netherlands.
 		<p></p>
-		<img src="./img/wiki_cp.png" alt="Black-veined whie resting on flower">
+		<img class="image" width="95%" src="./img/wiki_cp.png" alt="Black-veined whie resting on flower">
 </Section>
 
 <Divider/>
@@ -476,13 +476,16 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	</p>
 	<p>Apart from external factors such as climate, disease and other man-made perturbations, genetics can also excerbate
 		extinction risk. Although not usually the direct cause of extinction, lack of genetic diversity may put speices or populations
-		at risk of extinction. The role of genetics in the demise of the Black-veined white has never been explored, for the simple reason
-		that we did not have the genetic tools to do in the early twentieth century
+		at risk of extinction. The role of genetics in the demise of the Black-veined white has never been explored and until recently wouldnot have
+		been possible.
 	</p>
 	<p>
-		However, thanks to improvements in DNA extraction and sequencing technologies and museum collections, we can now do genomics in century-old museum specimens.
-		We wanted to use this technology to examine the genomics of Black-viened white before it disappeared from Britain. 
+		Due to improvements in DNA extraction, sequencing technologies and museum collections, we can now do genomics in century-old museum specimens.
+		We wanted to use this technology to examine the genomics of Black-veined white before it disappeared from Britain. 
 	</p>
+	<p></p>
+	<img class="image" width="95%" src="./img/museum.jpg" alt="Drawers of museum specimens">
+	<br>
 	<p>
 		We conducted genomics on 100-175 year-old specimens to explore decline of genetic fitness in British Black-veined White butterflies. In order to preserve
 		as much of the specimens for any future work (e.g. morphology) we used only 1 or 2 legs to extract DNA. For the first time, we were able

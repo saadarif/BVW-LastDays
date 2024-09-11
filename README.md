@@ -9,7 +9,7 @@ if you want to build your own scrollytelling page, I suggest you start from ONS'
 
 # Content
 
-The content for this web app eventually draws from this publication:
+The content for this web app draws from this publication and sources therein:
 
 > The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly
 > Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif
