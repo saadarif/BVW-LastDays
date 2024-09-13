@@ -299,7 +299,7 @@ svelte-scroller-background-container {
 		margin: 0;	
 		padding: 0 30px;
 	}
-
+	/* additions */
 	h1 {
 		font-size: 44px; /*54px;*/
 	}
@@ -308,5 +308,8 @@ svelte-scroller-background-container {
 		font-size: 28px; /*30px*/
 		margin: 20px 0;
 	}
+	.image { 
+		box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); 
+	} 
 
 }
