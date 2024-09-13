@@ -348,7 +348,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
 		to Japan. It was once a common garden and meadow species in southern Britian, with records dating back to 1667. However, towards the middle of the nineteenth
 		century the butterfly started disappearing from the western and central part of its range and eventually disappeared altogether by the first quarter
-		of the twentieth century. More recently, the butterfly has also gone disappeared from South Korea and the Netherlands.
+		of the twentieth century. More recently, the butterfly has also disappeared from South Korea and the Netherlands.
 		<p></p>
 		<img class="image" width="95%" src="./img/wiki_cp.png" alt="Black-veined whie resting on flower">
 </Section>
@@ -764,7 +764,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			the black veined white. The entomologist’s record and journal of variation 95, 161–166
 			 <br/><br/>
 			 <strong>Developed and edited by:</strong><br/>
-			 Saad Arif, Rebecca Whitla & Casper Breuker
+			 Saad Arif, Rebecca Whitla, Casper Breuker & Korneel Hens
 			 <br/><br/> 
 			 <strong>Cover Illustration by:</strong><br/>
 			 Lizzie Harper</p>
