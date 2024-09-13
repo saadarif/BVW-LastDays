@@ -422,7 +422,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<section data-id="map02">
 		<div class="col-medium">
 			<p>
-				This data comes from information on preserved museum specimens (some as old as<strong>1738</strong>)! and occasional human recordings of the butterfly but is 
+				This data comes from information on preserved museum specimens (some as old as <strong>1738</strong>)! and occasional human recordings of the butterfly but is 
 				incomplete and suffers from bias in recording. <br/><br/> However, the map does show that the Black-veined white could be found in southern England 
 				and eastern Wales.
 			</p>
