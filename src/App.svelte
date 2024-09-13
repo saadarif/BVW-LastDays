@@ -14,6 +14,7 @@
 	import Toggle from "./ui/Toggle.svelte";
 	import Arrow from "./ui/Arrow.svelte";
 	import Em from "./ui/Em.svelte";
+	import ObuHeader from "./layout/OBUHeader.svelte";
 
 	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
 	//import StepLinePlot from "./plots/StepLinePlot.svelte";
@@ -95,6 +96,7 @@
 	let yKey = "Ne"; // yKey for scatter chart
 	let mapKey = "Count"; // Key for data to be displayed on map
 	let snpchartkey = "totCounts"; //key for plotting variants
+	let rohTitle, snpTitle; //title for animated barcode plots
 
 	//Chart Annotations
 	let psmcAnnotations = [
@@ -204,17 +206,24 @@
 		froh_chart:{
 			frohchart01: () => {
 				small = true;
+				rohTitle = "Small RoHs";
 			},
 			frohchart02: () => {
 				small = false;
+				rohTitle = "Large RoHs";
 			},
 		},
 		snp_chart:{
 			snpchart01: () => {
 				snpchartkey = "totCounts";
+				snpTitle= "Total Genetic Load"
 			},
 			snpchart02: () => {
 				snpchartkey = "homCounts";
+				snpTitle= "Realised Genetic Load (homozygotes)"
+			},
+			snpchart03: () => {
+				// snpchartkey = "homCounts";
 			},
 		},
 	};
@@ -302,7 +311,7 @@
 </script>
 
 <!-- <OrientationPrompt /> -->
-
+<!-- <ObuHeader/> -->
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
 	<h1 style="margin-top: 50px; margin-left: 0px"> A genomic view of the demise of <em>Aporia crataegi</em> (L.): The Black-veined White</h1>
@@ -320,9 +329,9 @@
 
 <Filler theme="light" short={true} wide={true} center={true}>
 	<p class="text-small">
-		<strong>By</strong>: Saad Arif </p>
+		<!-- <strong>By</strong>: Saad Arif </p> -->
 	
-	<p class="text-small"> <strong>Based on data from:</strong></p>
+	<p class="text-small"> <strong>The following is based on data and references from:</strong></p>
 	<p class="text-small">
 		<small>The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024).
 Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif.
@@ -330,31 +339,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	</p>
 </Filler>
 
-<Divider/>
+<Divider/> 
 
-
-<!--<BISection>
-	<div slot="image">
-		<img src="./img/resized_BVW_pinned.png" alt="Left Image">
-	</div>
-	<div>
-	<h2>The disappearance of the Black-viened white from the British Isles</h2>
-	<p>
-		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
-		to Japan. However, in some places it is in decline and has completely disappeared from the Netherlands, Czechia, and South Korea [Refs]. 
-		It had been recorded in Britain as early as 1667 [REF] but went extinct in the early twentieth century. Prior to its extirpation in Britain, it could be found in southern England and Wales.
-		Why did the Black-veined white disappear from Britain? Numerous hypothesis have been suggested, including a run of unsually "wet" Autumns, pathogen infection, and predation.
-		Given that this butterfly disappeared from Britain in the early twentieth century, it is difficult to pinpoint the exact cause of its disappearence. Over the years, there have been various attempts
-		to reintroduce this species to Britain but none have been successful thus far. 
-	</p>
-	<p>Museums contains large collections of butterflies, some from as early as the 18th century, collected by scientists and butterfly enthusiasts.
-	   Modern advances in genomics now allow us to interrogate the genomes of these long-dead individuals. To peer into the history of the Black-veined white in Britian, we extracted DNA from musueum specimens dating from the mid-19<sup>th</sup> 
-	   to the early 20<sup>th</sup> century. We applied genomic tools to build a demographic history of this species in Britain, from its arrival to its eventual demise. 
-	   These result also give a snapshot of its "genomic health" around the time of its disappearance,
-	   which may be useful in understanding the extinction process and aid in the conservation of extant species or populations of insects.
-	</p>
-	</div>
-</BISection>-->
 
 <Section>
 	<h2>The Black-veined white in Britain</h2>
@@ -362,7 +348,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
 		to Japan. It was once a common garden and meadow species in southern Britian, with records dating back to 1667. However, towards the middle of the nineteenth
 		century the butterfly started disappearing from the western and central part of its range and eventually disappeared altogether by the first quarter
-		of the twentieth century. More recently, the butterfly has also gone extinct in South Korea and the Netherlands.
+		of the twentieth century. More recently, the butterfly has also gone disappeared from South Korea and the Netherlands.
 		<p></p>
 		<img class="image" width="95%" src="./img/wiki_cp.png" alt="Black-veined whie resting on flower">
 </Section>
@@ -436,8 +422,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<section data-id="map02">
 		<div class="col-medium">
 			<p>
-				This data comes from information on preserved museum specimens (some as old as<strong>1738!</strong>) and occaisonal human recordings of the butterfly but is 
-				incomplete and suffers from bias in recording. However, the map does show that the Black-veined white could be found in southern England 
+				This data comes from information on preserved museum specimens (some as old as<strong>1738</strong>)! and occasional human recordings of the butterfly but is 
+				incomplete and suffers from bias in recording. <br/><br/> However, the map does show that the Black-veined white could be found in southern England 
 				and eastern Wales.
 			</p>
 		</div>
@@ -453,8 +439,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	</section>	<section data-id="map04">
 		<div class="col-medium">
 			<p>
-				Since 1925 there have been occaisonal sightings of the butterfly
-				in Britian but all are thought to be from unplanned introductions from European stock (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
+				Since 1925 there have been occasional sightings of the butterfly
+				in Britain but all are thought to be from unplanned introductions from European stock (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
 				for a recent case), a practise that was already common by mid to late nineteenth century. But none of the introductions have persisted.
 			</p>	
 		</div>
@@ -469,14 +455,14 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 <Section>
 	<h2>Why did the Black-veined White disappear?</h2>
 	<p>
-	No one is quite sure why the butterfly disappeared but some potential reasons that have 
-	been explored. The most plausible of these include predation by small birds (which increased due to decline of raptorial birds), 
+	No one is quite sure why the butterfly disappeared but some potential reasons have 
+	been explored. The most plausible of these include: predation by small birds (which increased due to decline of raptorial birds), 
 	fungal or viral disease, and a series on unseasonably wet autumns. It is quite likely a combination of these 
-	and other factors contributed to the extinction of the butterfly in Britain.  
+	and other factors contributed to the ultimate demise of the butterfly in Britain.  
 	</p>
-	<p>Apart from external factors such as climate, disease and other man-made perturbations, genetics can also excerbate
-		extinction risk. Although not usually the direct cause of extinction, lack of genetic diversity may put speices or populations
-		at risk of extinction. The role of genetics in the demise of the Black-veined white has never been explored and until recently wouldnot have
+	<p>Apart from external factors such as climate, disease and other man-made perturbations, genetics can also exacerbate
+		extinction risk. Although not usually the direct cause of extinction, lack of genetic diversity may put species or populations
+		at risk of extinction. The role of genetics in the demise of the Black-veined white has never been explored and until recently would not have
 		been possible.
 	</p>
 	<p>
@@ -487,24 +473,43 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<img class="image" width="95%" src="./img/museum.jpg" alt="Drawers of museum specimens">
 	<br>
 	<p>
-		We conducted genomics on 100-175 year-old specimens to explore decline of genetic fitness in British Black-veined White butterflies. In order to preserve
-		as much of the specimens for any future work (e.g. morphology) we used only 1 or 2 legs to extract DNA. For the first time, we were able
-		to sequence genomes from Black-veined white butterflies, caught as early as 1854 and ask the following questions:
+		We conducted genomics on 100-175 year-old specimens to explore historical demography and genetic fitness in British Black-veined White butterflies. For the first time, we were able
+		to sequence whole genomes from Black-veined white butterflies, caught as early as 1854, and ask the following questions:
 	</p>
 	<ul>
-		<li></li>
+		<li>How has the population size of the Black-veined white changed since arriving in Britain?</li>
+		<li>Is there any evidence of inbreeding in the 19th century just prior to its demise?</li>
+		<li>Was there a decrease in the genetic fitness associated with its demise?</li>
 	</ul>
+
+		<p>In order to preserve
+			as much of these museum specimens for any future work (e.g. morphology) we used only 1 or 2 legs to extract DNA. 
+			We share our results below.</p>
+		<p></p>
 </Section>
 
 <Filler bgimage="./img/BVW_museum1.png"	theme="lightblue" short={true} wide={true} center={false}/>
 
-
-<Section>
-	<h2>Reconstructing the history of a Butterfly population</h2>
-</Section>
-
 <Divider/>
 
+<Section>
+	<h2>Reconstructing the historical demography of the Black-veined white</h2>
+
+	<p>
+	The current insect fauna of Great Britain is thought to have started arriving sometime around the <a href="https://www.antarcticglaciers.org/glacial-geology/british-irish-ice-sheet/last-glacial-maximum/the-british-irish-ice-sheet-an-introduction/">
+	last glacial maximum</a> or the LGM. These insects would have arrived from the continent ~11-12,000 years ago. Early colonisers
+	would represent a small sample of the populations found on the continent and would also harbor only a fraction of the continental
+	genetic diversity, a phenomenom referred to as a <strong><a href="https://en.wikipedia.org/wiki/Population_bottleneck">genetic bottleneck</a></strong>. Over many generations, these insects may recover
+	from this bottleneck due to subsequent expansion in population size or continued immigration from the continent.
+	</p>
+
+	<p><em>When did the Black-veined white arrive in Britian? Is there any evidence of a historical bottleneck and is there a subsequent recovery
+		post-colonisation?</em> To answer these questions we reconstructed the historical demography from a single Black-veiend white
+		collected in 1858 in Herne Bay, Kent. For comparison, we present the same analysis from an individual caught in 
+		France in 1921.
+	</p>
+
+</Section>
 
 {#if data.psmc.Netimes}
 <Scroller {threshold} bind:id={id['chart']} splitscreen={true}>
@@ -540,42 +545,43 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<div class="col-medium">
 				<p>
 					This plot shows the <strong>effective population size </strong> (y-axis) over <strong>time</strong> in years (x-axis). 
-					Small values on the x-axis represent time <strong>closer to the present</strong>! Higher values on the x-axis represent 
-					higher <strong>genetic diversity</strong> and thus, higher<strong>population size</strong>
+					Small values on the x-axis represent time <strong>closer to the present</strong>. Higher values on the y-axis represent 
+					higher <strong>genetic diversity</strong> and thus, higher <strong>population size</strong>
 				</p>
 			</div>
 		</section>
 		<section data-id="chart02">
 			<div class="col-medium">
 				<p>
-					The <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from northwestern
-					 <strong>France</strong> collected in the early 1900s. Its population size is low for most of the last 500,000 years but showing
+					The <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from
+					 <strong>France</strong> collected in 1921. This genome suggests a low population size for most of the last 500,000 years but showing
 					 a small peak at roughly 125,000 years ago, corresponding to the penultimate interglacial period (the Eemian interglacial). The population
 					 then contracts up till around 12,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds
-					 expanded all over europe from their warm southern refugia and we find the signs of an exponential population increase in the genome of this 
-					 Black-veined white butterfly from France. 
+					 expanded and mixed all over europe from their warm southern refugia and we find the signs of a drastic increase in genetic diversity. 
 				</p>
 			</div>
 		</section>
 		<section data-id="chart03">
 			<div class="col-medium">
 				<p>
-					This <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from kent county in eastern
-					 <strong>Great Britain</strong> collected in the 1860s. For most of its history, it follows a similar trajectory to the French butterfly, however,
+					This <Em color=#999> highlighted line</Em> is the demographic reconstruction of an individual from southeastern
+					 <strong>Britain</strong> collected in 1858. For most of its history, it follows a similar trajectory to the French butterfly, however,
 					 it shows no signs of population increase but rather a population <strong>decrease </strong> at the end of the LGM.
 				</p>
 				<p>
-					What happened? This decrease in population size at the end of the LGM is exactly what we would expect to see if butterflies began colonizing the 
-					British Isles at this time. The British Isles would have been founded by a relatively small number of Black-veined white to those that lived on the mainland.
+					This decrease in population size at the end of the LGM is exactly what we would expect to see if butterflies began colonizing the 
+					British Isles at this time. The British Isles would have been founded by a relatively small number of Black-veined white from those that lived on the mainland.
+					Additionally, there are no signs of recovery or increase post-colonisation, however this reconstruction offers limited resolution
+					in the last 10,000 years.
 				</p>
 			</div>
 		</section>
 		<section data-id="chart04">
 			<div class="col-medium">
 				<p>
-					These demographic recontructions tell us two important things: <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined white have a 
+					These demographic recontructions tell us two important things: <br/> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined white have a 
 					distinct demographic history compared to <Em color='#ffa600'>European</Em>. Hence, the British black-veined white were long
-					term residents in the UK, rather than recent migrants
+					term residents in the UK, rather than recent migrants. <br/>
 				<strong>(ii)</strong> Black-veined white colonizing <Em color='#003f5c'>Britain</Em>, showed reduced genetic diversity,
 						 presumably as a result of colonization by a small number of indviduals
 					
@@ -586,7 +592,23 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 </Scroller>
 {/if}
 
-<Section>Inbreeding</Section>
+<Divider/>
+
+<Section>
+	<h2>Were there more recent reductions in population size?</h2>
+	<p>The method from the previous section is good at reconstructing signals of past bottlenecks or expansions but is poor for more 
+		recent times (last 10,000 years). Nineteenth century records suggest a spasmodic decline in Black-veined white occurence
+		across Britain. Could our genomic data be used to corroborate such records?
+	</p>
+	<p>
+		The degree of inbreeding can be more useful in determining more recent declines in a population. We measured 
+		inbreeding as the proportion of the genome in homozygous state for each individual. Small streches or 
+		<a href="https://en.wikipedia.org/wiki/Runs_of_homozygosity"><strong>runs of homozygosity</strong></a> (RoHs), a hundred thousand DNA bases long,
+		suggest historial inbreeding, whereas large RoHs of 1 million bases or more are indicative
+		of more recent inbreeding that might be expected from a shrinking gene-pool. 
+
+	</p>
+</Section>
 
 {#if data.froh.froh} 
 <Scroller {threshold} bind:id={id['froh_chart']} splitscreen={true}>
@@ -599,10 +621,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 							data={small ? data.froh.froh.filter(d => d.interval == "Small") : data.froh.froh.filter(d => d.interval == "Big") }
 							xKey="pop" yKey="freq" zKey="pop"
 							colors={['#003f5c', '#ffa600']}
-							title="Inbreeding levels"
+							title={rohTitle}
 							mode="barcode"
-							hover {hovered} on:hover={doHover} colorHover='pink' 
-							{select} {selected} on:select={doSelect}
 							{animation}>
 							<!-- <div slot="options" class="controls small">
 								{#each barchart1.options as option}
@@ -618,16 +638,20 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<section data-id="frohchart01">
 				<div class="col-medium">
 					<p>
-						This plot shows the <strong>effective population size </strong> (y-axis) over <strong>time</strong> in years (x-axis). 
-						Small values on the x-axis represent time <strong>closer to the present</strong>! Higher values on the x-axis represent 
-						higher <strong>genetic diversity</strong> and thus, higher<strong>population size</strong>
+						The plot on right shows a comparison of the proportion of the genome in <strong>short</strong> RoHs, on the vertical axis, between genomes of museums sample of
+						 <Em color='#003f5c'>British</Em> and <Em color='#ffa600'>European</Em> origin. Prior to their extinction, <Em color='#003f5c'>British</Em> Black-veined
+						 white had consistently larger proportions of their genome in RoH. However, this pattern only corroborates ancestral reductions in population size,
+						 for example, the bottleneck during the post-glacial colonisation.
 					</p>
 				</div>
 			</section>
 			<section data-id="frohchart02">
 				<div class="col-medium">
 					<p>
-					
+						To determine if there were more recent reductions we need to look of the proportion of the genome in <strong>large</strong> RoHs. We
+						find <Em color='#003f5c'>British</Em> Black-veined white consistently exhibit larger proportions of their genome in large RoHs as well.
+						This suggests that the <Em color='#003f5c'>British</Em> Black-veined white underwent additional population reductions or bottlenecks beyond the initial 
+						post-glacial event, potentially as late as the nineteenth century.
 					</p>
 				</div>
 			</section>
@@ -635,9 +659,25 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 </Scroller>			
 {/if}
 
+<Divider/>
 
 <Section>
-	<h2>Impact of variants</h2>
+	<h2>The weight of genetic load</h2>
+	<div>
+	<p>
+		Small or declining populations can harbor individuals with a heavy <strong>genetic load</strong> or a high number of harmful
+		mutations or variants in their genes. Many individuals in any given population carry a number of harmful variants,
+		however, most of the time, these occur in single copy (i.e. heterozygous) and their effects can be shielded due to a fully functional
+		second copy in our genome. However, in small or declining populations, the harmful variants can be inherited from both parents due to inbreeding or chance. 
+		In such a homozygous state, there is no respite from the deleterious effects of these variants. Such an increase in genetic load, sometimes called
+		the <strong>realised</strong> genetic load, can make a populatiion
+		more prone to extinction</p>
+	
+		<p>We classified the variants in the genomes of museums speciemens as 
+			low, moderate or high impact, depending on their predicted impact on gene function. We then compared variants in all classes, in both
+			homozygous and heterozygous state, between British and European individuals.
+		</p>
+	</div>
 </Section>
 
 {#if data.snpEff.snpEff} 
@@ -652,10 +692,9 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 							xKey="homozygous" yKey={snpchartkey} zKey="pop"
 							legend="true"
 							colors={['#003f5c', '#ffa600']}
-							title="Variants"
+							title={snpTitle}
 							mode={["grouped", "barcode"]}
-							hover {hovered} on:hover={doHover} colorHover='pink' 
-							{select} {selected} on:select={doSelect}
+
 							{animation}>
 							<!-- <div slot="options" class="controls small">
 								{#each barchart1.options as option}
@@ -671,24 +710,67 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<section data-id="snpchart01">
 				<div class="col-medium">
 					<p>
-						text
+						This plot shows the <Em color=#00A36C>total</Em> number of low and moderate impact variants (vertical axis) between individuals of 
+						<Em color='#003f5c'>British</Em> and <Em color='#ffa600'>European</Em> origin. For total number of such variants,
+						<Em color='#ffa600'>European</Em> indiviuals easily outnumber those in <Em color='#003f5c'>British</Em> individuals.
 					</p>
 				</div>
 			</section>
 			<section data-id="snpchart02">
 				<div class="col-medium">
 					<p>
-						text
+						However, if look at the same class of variants but in <Em color=#00A36C>homozygous</Em> state only, the tables are turned. This suggests
+						that <Em color='#003f5c'>British</Em> individuals displayed a higher level of <em>realised</em> genetic load, which could also make them more 
+						susceptible to extinction.
 					</p>
 				</div>
 			</section>
+			<section data-id="snpchart03">
+				<div class="col-medium">
+					<p>
+						<strong>Note</strong>: we did not present the data on high impact variants here as there was no difference for total or homozygous variants in this class.
+						This could be partly due to the small number of variants predicted in this class. The full data can be found in the associated <a href="https://doi.org/10.1111/mec.17518">publication</a>.
+					</p>
+				</div>
 			</div>
 	</Scroller>			
 	{/if}
 
+<Divider/>
 
 <Section>
-	<h2>What next?</h2>
+	<h2>Where do we go from here?</h2>
+	<div>
+		<p>
+			Our genomic analysis on the decline of the Black-viened provides a more nuanced perspective. We suggest that the Black-veined white
+			colonized Great Britain around the end of the last glacial period (~11-12000 years ago). It experienced an expected bottleneck during the colonisation
+			event but never fully recovered from this. In addition it likely suffered from additional bottlnecks or reductions in population size, some potentially as 
+			late at the nineteenth century. Finally, it is possible that accumulation of mildy deleterious variants in homozygous state could have added to its woes prior
+			to disappearing altogether in Great Britian.
+		</p>
+		<p>
+			Our analysis provides an example of how we can use more than century-old museum specimens to explore the genomic footprints of extinction. Exploration
+			of such signals in extant insects could provide a viable tool for their conservation.
+		</p>
+		<p>
+			On a brighter note, there are now murmurs of a planned reintroduction of the Black-veined white in Britain. A <a href="https://doi.org/10.1101/2024.05.21.595182">systematic and well-planned</a>
+			reintroduction could very well see the return of this species to our gardens and meadows.
+		</p>
+		<br>
+		<small>
+			<p> 
+			<strong>Further Reading:</strong> <br/>
+			Pratt, C., 1983. A modern review of the demise of <em>Aporia crataegi</em> L.: 
+			the black veined white. The entomologist’s record and journal of variation 95, 161–166
+			 <br/><br/>
+			 <strong>Developed and edited by:</strong><br/>
+			 Saad Arif, Rebecca Whitla & Casper Breuker
+			 <br/><br/> 
+			 <strong>Cover Illustration by:</strong><br/>
+			 Lizzie Harper</p>
+		</small>
+	</div>
+	
 </Section>
 
 <!-- a place for leaving comments? -->

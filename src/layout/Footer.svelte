@@ -21,9 +21,10 @@
 			{/if}
 		</a>
 		<ul>
-			<li><a href="https://saadarif.github.io/" class="link" style="color: {themes[theme]['text']}">Contact author</a></li>
-			<li><a href="https://www.biorxiv.org/content/10.1101/2023.12.19.572305v4.abstract" class="link" style="color: {themes[theme]['text']}">More info</a></li>
-			<li><a href="https://lizzieharper.co.uk/" class="link" style="color: {themes[theme]['text']}">More art</a></li>
+			<li><a href="https://saadarif.github.io/" class="link" style="color: {themes[theme]['text']}">Contact the authors</a></li>
+			<li><a href="https://doi.org/10.1111/mec.17518" class="link" style="color: {themes[theme]['text']}">Read the Paper</a></li>
+			<li><a href="https://www.reuters.com/graphics/GLOBAL-ENVIRONMENT/INSECT-APOCALYPSE/egpbykdxjvq/" class="link" style="color: {themes[theme]['text']}">The collapse of insects</a></li>
+			<li><a href="https://lizzieharper.co.uk/" class="link" style="color: {themes[theme]['text']}">Art by Lizzie Harper</a></li>
 		</ul>
 		<hr style="border-top-color: {themes[theme]['muted']}" />
 		<div class="license">
@@ -34,7 +35,7 @@
 				src="./img/by-sa.png"
 				alt="by-sa license image"
 				 /></a> All content is under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 </a> license unless otherwise stated. 
-				This page was developed using the <a href="https://github.com/ONSvisual/svelte-scrolly/"> ONS Scrollytelling Github repo</a>.
+				This page was developed using the <a href="https://github.com/ONSvisual/svelte-scrolly/"> ONS Scrollytelling tools</a>.
 			
 	</div>
 </footer>
