@@ -315,7 +315,7 @@
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
 	<h1 style="margin-top: 50px; margin-left: 0px"> A genomic view of the demise of <em>Aporia crataegi</em> (L.): The Black-veined White</h1>
-	<div style="margin-top: 5px; background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px"><p class="text-big" >
+	<div style="margin-top: 5px; background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px;"><p class="text-big" >
 		<strong>
 			A genomic history of the the Black-veined white butterfly in Britain from its arrival to its demise in the early twentieth century
 		</strong>

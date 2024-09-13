@@ -305,7 +305,7 @@ svelte-scroller-background-container {
 	}
 
 	.text-big {
-		font-size: 28px; /*30px*/
+		font-size: 24px; /*30px*/
 		margin: 20px 0;
 	}
 	.image { 
