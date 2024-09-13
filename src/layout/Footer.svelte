@@ -23,7 +23,7 @@
 		<ul>
 			<li><a href="https://saadarif.github.io/" class="link" style="color: {themes[theme]['text']}">Contact the authors</a></li>
 			<li><a href="https://doi.org/10.1111/mec.17518" class="link" style="color: {themes[theme]['text']}">Read the Paper</a></li>
-			<li><a href="https://www.reuters.com/graphics/GLOBAL-ENVIRONMENT/INSECT-APOCALYPSE/egpbykdxjvq/" class="link" style="color: {themes[theme]['text']}">The collapse of insects</a></li>
+			<!-- <li><a href="https://www.reuters.com/graphics/GLOBAL-ENVIRONMENT/INSECT-APOCALYPSE/egpbykdxjvq/" class="link" style="color: {themes[theme]['text']}">The collapse of insects</a></li> -->
 			<li><a href="https://lizzieharper.co.uk/" class="link" style="color: {themes[theme]['text']}">Art by Lizzie Harper</a></li>
 		</ul>
 		<hr style="border-top-color: {themes[theme]['muted']}" />

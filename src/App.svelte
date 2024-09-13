@@ -115,7 +115,7 @@
         },
         target: {
            // These can be expressed in our data units if passed under the data keys
-		  [xKey]: '20000',
+		  [xKey]: '17000',
           [yKey]: 22,
           // Optional adjustments
           dx: 2,
@@ -244,7 +244,7 @@
 	//INITIALISATION CODE
 	//Read in the Datasets
 	//PSMC
-	getData(`./data/data_psmc.csv`)
+	getData(`./data/data_psmc_shorter.csv`)
 		.then(arr => {
 			let Netimes = arr.map((d,i) => ({
 			species: d.ID,
@@ -497,7 +497,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 
 	<p>
 	The current insect fauna of Great Britain is thought to have started arriving sometime around the <a href="https://www.antarcticglaciers.org/glacial-geology/british-irish-ice-sheet/last-glacial-maximum/the-british-irish-ice-sheet-an-introduction/">
-	last glacial maximum</a> or the LGM. These insects would have arrived from the continent ~11-12,000 years ago. Early colonisers
+	last glacial maximum</a> or the LGM. These insects would have arrived from the continent sometime between 12-15,000 years ago. Early colonisers
 	would represent a small sample of the populations found on the continent and would also harbor only a fraction of the continental
 	genetic diversity, a phenomenom referred to as a <strong><a href="https://en.wikipedia.org/wiki/Population_bottleneck">genetic bottleneck</a></strong>. Over many generations, these insects may recover
 	from this bottleneck due to subsequent expansion in population size or continued immigration from the continent.
@@ -527,8 +527,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 							lineWidth={5}  yScale="log"
 							area={false} 
 							xScale= "log"
-							xSuffix= "  years ago"
-							xTicks={[10000, 50000, 100000, 250000]}  xFormatTick={d => d.toLocaleString()}
+							xSuffix= " years ago"
+							xTicks={[10000, 25000, 50000, 100000]}  xFormatTick={d => d.toLocaleString()}
 							yFormatTick={d => d.toLocaleString()}
 							{highlighted} colorHighlight="#999" 
 							hover {hovered} on:hover={doHover} colorHover='pink' 
@@ -553,10 +553,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<section data-id="chart02">
 			<div class="col-medium">
 				<p>
-					The <Em color=#999> highlighted line</Em> is the demographic reconstruction of a single individual from
-					 <strong>France</strong> collected in 1921. This genome suggests a low population size for most of the last 500,000 years but showing
-					 a small peak at roughly 125,000 years ago, corresponding to the penultimate interglacial period (the Eemian interglacial). The population
-					 then contracts up till around 12,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds
+					The <Em color=#999> highlighted line</Em> is the demographic reconstruction from a single individual from
+					 <strong>France</strong> collected in 1921. The population shows a gradual decline up until roughly 15,000 years ago. This time corresponds to the end of the last glacial maximum (LGM). At this point, species of all kinds
 					 expanded and mixed all over europe from their warm southern refugia and we find the signs of a drastic increase in genetic diversity. 
 				</p>
 			</div>
@@ -710,7 +708,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<section data-id="snpchart01">
 				<div class="col-medium">
 					<p>
-						This plot shows the <Em color=#00A36C>total</Em> number of low and moderate impact variants (vertical axis) between individuals of 
+						This plot shows the <strong>total</strong> number of low and moderate impact variants (vertical axis) between individuals of 
 						<Em color='#003f5c'>British</Em> and <Em color='#ffa600'>European</Em> origin. For total number of such variants,
 						<Em color='#ffa600'>European</Em> indiviuals easily outnumber those in <Em color='#003f5c'>British</Em> individuals.
 					</p>
@@ -719,7 +717,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<section data-id="snpchart02">
 				<div class="col-medium">
 					<p>
-						However, if look at the same class of variants but in <Em color=#00A36C>homozygous</Em> state only, the tables are turned. This suggests
+						However, if look at the same class of variants but in <strong>homozygous</strong> state only, the tables are turned. This suggests
 						that <Em color='#003f5c'>British</Em> individuals displayed a higher level of <em>realised</em> genetic load, which could also make them more 
 						susceptible to extinction.
 					</p>
@@ -743,7 +741,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<div>
 		<p>
 			Our genomic analysis on the decline of the Black-viened provides a more nuanced perspective. We suggest that the Black-veined white
-			colonized Great Britain around the end of the last glacial period (~11-12000 years ago). It experienced an expected bottleneck during the colonisation
+			colonized Great Britain around the end of the last glacial period (~12-15000 years ago). It experienced an expected bottleneck during the colonisation
 			event but never fully recovered from this. In addition it likely suffered from additional bottlnecks or reductions in population size, some potentially as 
 			late at the nineteenth century. Finally, it is possible that accumulation of mildy deleterious variants in homozygous state could have added to its woes prior
 			to disappearing altogether in Great Britian.
