@@ -206,11 +206,11 @@
 		froh_chart:{
 			frohchart01: () => {
 				small = true;
-				rohTitle = "Small RoHs";
+				rohTitle = "Short RoHs";
 			},
 			frohchart02: () => {
 				small = false;
-				rohTitle = "Large RoHs";
+				rohTitle = "Long RoHs";
 			},
 		},
 		snp_chart:{
@@ -602,9 +602,9 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	</p>
 	<p>
 		The degree of inbreeding can be more useful in determining more recent declines in a population. We measured 
-		inbreeding as the proportion of the genome in homozygous state for each individual. Small streches or 
+		inbreeding as the proportion of the genome in homozygous state for each individual. Short streches or 
 		<a href="https://en.wikipedia.org/wiki/Runs_of_homozygosity"><strong>runs of homozygosity</strong></a> (RoHs), a hundred thousand DNA bases long,
-		suggest historial inbreeding, whereas large RoHs of 1 million bases or more are indicative
+		suggest historial inbreeding, whereas long RoHs of 1 million bases or more are indicative
 		of more recent inbreeding that might be expected from a shrinking gene-pool. 
 
 	</p>
@@ -648,7 +648,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<section data-id="frohchart02">
 				<div class="col-medium">
 					<p>
-						To determine if there were more recent reductions we need to look of the proportion of the genome in <strong>large</strong> RoHs. We
+						To determine if there were more recent reductions we need to look of the proportion of the genome in <strong>long</strong> RoHs. We
 						find <Em color='#003f5c'>British</Em> Black-veined white consistently exhibit larger proportions of their genome in large RoHs as well.
 						This suggests that the <Em color='#003f5c'>British</Em> Black-veined white underwent additional population reductions or bottlenecks beyond the initial 
 						post-glacial event, potentially as late as the nineteenth century.
