@@ -113,6 +113,7 @@ img {
 	max-width: 100%;
 	height: auto;
 	vertical-align: middle;
+	box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 blockquote {
@@ -308,8 +309,4 @@ svelte-scroller-background-container {
 		font-size: 24px; /*30px*/
 		margin: 20px 0;
 	}
-	.image { 
-		box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); 
-	} 
-
 }

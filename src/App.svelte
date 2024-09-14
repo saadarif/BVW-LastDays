@@ -5,8 +5,7 @@
 	import { themes } from "./config.js";
 	import Footer from "./layout/Footer.svelte";
 	import Header from "./layout/Header.svelte";
-	import Section from "./layout/BISection.svelte";
-	//import BISection from "./layout/BISection.svelte";
+	import Section from "./layout/Section.svelte";
 	import Media from "./layout/Media.svelte";
 	import Scroller from "./layout/Scroller.svelte";
 	import Filler from "./layout/Filler.svelte";
@@ -14,7 +13,6 @@
 	import Toggle from "./ui/Toggle.svelte";
 	import Arrow from "./ui/Arrow.svelte";
 	import Em from "./ui/Em.svelte";
-	import ObuHeader from "./layout/OBUHeader.svelte";
 
 	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
 	//import StepLinePlot from "./plots/StepLinePlot.svelte";
@@ -520,7 +518,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 						<LineChart
 							height="calc(100vh - 150px)"
 							data={data.psmc.Netimes} 
-							title="Demographic history"
+							title="Demographic history in the lass 100,000 years"
 							xKey="year" yKey="Ne" zKey="species" 
 							colors={showColors ? ['lightgrey'] : ['#003f5c', '#ffa600']}
 							legend={showColors ? false : true}
@@ -661,7 +659,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 
 <Section>
 	<h2>The weight of genetic load</h2>
-	<div>
+
 	<p>
 		Small or declining populations can harbor individuals with a heavy <strong>genetic load</strong> or a high number of harmful
 		mutations or variants in their genes. Many individuals in any given population carry a number of harmful variants,
@@ -675,7 +673,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			low, moderate or high impact, depending on their predicted impact on gene function. We then compared variants in all classes, in both
 			homozygous and heterozygous state, between British and European individuals.
 		</p>
-	</div>
+	
 </Section>
 
 {#if data.snpEff.snpEff} 
@@ -738,7 +736,6 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 
 <Section>
 	<h2>Where do we go from here?</h2>
-	<div>
 		<p>
 			Our genomic analysis on the decline of the Black-viened provides a more nuanced perspective. We suggest that the Black-veined white
 			colonized Great Britain around the end of the last glacial period (~12-15000 years ago). It experienced an expected bottleneck during the colonisation
@@ -767,7 +764,6 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			 <strong>Cover Illustration by:</strong><br/>
 			 Lizzie Harper</p>
 		</small>
-	</div>
 	
 </Section>
 
