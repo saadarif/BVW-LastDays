@@ -518,7 +518,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 						<LineChart
 							height="calc(100vh - 150px)"
 							data={data.psmc.Netimes} 
-							title="Demographic history in the lass 100,000 years"
+							title="Demographic history in the last 100,000 years"
 							xKey="year" yKey="Ne" zKey="species" 
 							colors={showColors ? ['lightgrey'] : ['#003f5c', '#ffa600']}
 							legend={showColors ? false : true}
