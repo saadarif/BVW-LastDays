@@ -420,7 +420,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<section data-id="map02">
 		<div class="col-medium">
 			<p>
-				This data comes from information on preserved museum specimens (some as old as <strong>1738</strong>)! and occasional human recordings of the butterfly but is 
+				This data comes from information on preserved museum specimens (some as old as <strong>1738</strong>!) and occasional human recordings of the butterfly but is 
 				incomplete and suffers from bias in recording. <br/><br/> However, the map does show that the Black-veined white could be found in southern England 
 				and eastern Wales.
 			</p>
@@ -453,36 +453,32 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 <Section>
 	<h2>Why did the Black-veined White disappear?</h2>
 	<p>
-	No one is quite sure why the butterfly disappeared but some potential reasons have 
-	been explored. The most plausible of these include: predation by small birds (which increased due to decline of raptorial birds), 
-	fungal or viral disease, and a series on unseasonably wet autumns. It is quite likely a combination of these 
-	and other factors contributed to the ultimate demise of the butterfly in Britain.  
-	</p>
-	<p>Apart from external factors such as climate, disease and other man-made perturbations, genetics can also exacerbate
-		extinction risk. Although not usually the direct cause of extinction, lack of genetic diversity may put species or populations
-		at risk of extinction. The role of genetics in the demise of the Black-veined white has never been explored and until recently would not have
-		been possible.
-	</p>
-	<p>
-		Due to improvements in DNA extraction, sequencing technologies and museum collections, we can now do genomics in century-old museum specimens.
-		We wanted to use this technology to examine the genomics of Black-veined white before it disappeared from Britain. 
-	</p>
-	<p></p>
+		The exact reason why the butterfly disappeared is unknown, but several possible 
+		factors have been suggested. These include increased predation by small birds, 
+		disease, and unusually wet autumns. It was likely a mix of these and other factors. 
+		In addition to outside influences like climate and disease, genetics can also 
+		increase extinction risk. While genetics might not directly cause extinction, 
+		a lack of genetic diversity can make species more vulnerable. The genetic role in
+		 the butterfly’s extinction has never been studied before, but with new DNA sequencing 
+		 technology, we can now interrogate <strong>museum specimens</strong>, collected when the butterfly
+		 still flew in Britian, to provide a new perspetive on its demise.
+	</p><br>
 	<img class="image" width="95%" src="./img/museum.jpg" alt="Drawers of museum specimens">
 	<br>
 	<p>
-		We conducted genomics on 100-175 year-old specimens to explore historical demography and genetic fitness in British Black-veined White butterflies. For the first time, we were able
-		to sequence whole genomes from Black-veined white butterflies, caught as early as 1854, and ask the following questions:
+		For the first time, we sequenced whole genomes from Black-veined white museum specimens, some caught as early as 1854.
+		We analyzed these genomes to provide a molecular persepctive on the disappearance of this species in UK by addressing the 
+		following questions:
 	</p>
 	<ul>
-		<li>How has the population size of the Black-veined white changed since arriving in Britain?</li>
+		<li>How did the population size of the Black-veined white changed after arriving in Britain?</li>
 		<li>Is there any evidence of inbreeding in the 19th century just prior to its demise?</li>
 		<li>Was there a decrease in the genetic fitness associated with its demise?</li>
 	</ul>
 
 		<p>In order to preserve
-			as much of these museum specimens for any future work (e.g. morphology) we used only 1 or 2 legs to extract DNA. 
-			We share our results below.</p>
+			as much of these museum specimens for any future work (e.g. morphology) we used only 1 or 2 legs for our analysis. 
+		</p>
 		<p></p>
 </Section>
 
@@ -560,28 +556,24 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<section data-id="chart03">
 			<div class="col-medium">
 				<p>
-					This <Em color=#999> highlighted line</Em> is the demographic reconstruction of an individual from southeastern
-					 <strong>Britain</strong> collected in 1858. For most of its history, it follows a similar trajectory to the French butterfly, however,
-					 it shows no signs of population increase but rather a population <strong>decrease </strong> at the end of the LGM.
-				</p>
-				<p>
-					This decrease in population size at the end of the LGM is exactly what we would expect to see if butterflies began colonizing the 
-					British Isles at this time. The British Isles would have been founded by a relatively small number of Black-veined white from those that lived on the mainland.
-					Additionally, there are no signs of recovery or increase post-colonisation, however this reconstruction offers limited resolution
-					in the last 10,000 years.
+					This <Em color=#999> highlighted line</Em> shows the population history of a butterfly from southeastern <strong>Britain</strong> 
+					collected in 1858. It mostly exhibit the same pattern seen in the French butterfly but shows a <strong>decline</strong> 
+					at the end of the Last Glacial Maximum (LGM). This decline suggests that butterflies began colonizing the British Isles 
+					at that time, in relatively small numbers from the mainland. There is no sign of population growth after colonization, though the 
+					data from the last 10,000 years is not detailed enough to confirm or reject this.
 				</p>
 			</div>
 		</section>
 		<section data-id="chart04">
 			<div class="col-medium">
 				<p>
-					These demographic recontructions tell us two important things: <br/> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined white have a 
-					distinct demographic history compared to <Em color='#ffa600'>European</Em>. Hence, the British black-veined white were long
-					term residents in the UK, rather than recent migrants. <br/>
+					These demographic recontructions tell us two important things: <p> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined white have a 
+					distinct demographic history compared to <Em color='#ffa600'>Europe</Em>. Hence, the British black-veined white were long
+					term residents in the UK, rather than recent migrants. </p>
+					<p>
 				<strong>(ii)</strong> Black-veined white colonizing <Em color='#003f5c'>Britain</Em>, showed reduced genetic diversity,
-						 presumably as a result of colonization by a small number of indviduals
-					
-				</p>
+						 presumably as a result of colonization by a small number of indviduals. </p>
+
 			</div>
 		</section>
 	</div>
@@ -666,8 +658,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		however, most of the time, these occur in single copy (i.e. heterozygous) and their effects can be shielded due to a fully functional
 		second copy in our genome. However, in small or declining populations, the harmful variants can be inherited from both parents due to inbreeding or chance. 
 		In such a homozygous state, there is no respite from the deleterious effects of these variants. Such an increase in genetic load, sometimes called
-		the <strong>realised</strong> genetic load, can make a populatiion
-		more prone to extinction</p>
+		the <strong>realised</strong> genetic load, can make a population
+		more prone to extinction.</p>
 	
 		<p>We classified the variants in the genomes of museums speciemens as 
 			low, moderate or high impact, depending on their predicted impact on gene function. We then compared variants in all classes, in both
@@ -756,7 +748,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<p> 
 			<strong>Further Reading:</strong> <br/>
 			Pratt, C., 1983. A modern review of the demise of <em>Aporia crataegi</em> L.: 
-			the black veined white. The entomologist’s record and journal of variation 95, 161–166
+			The black veined white. The entomologist’s record and journal of variation 95, 161–166
 			 <br/><br/>
 			 <strong>Developed and edited by:</strong><br/>
 			 Saad Arif, Rebecca Whitla, Casper Breuker & Korneel Hens
