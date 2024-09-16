@@ -100,24 +100,24 @@
 	let psmcAnnotations = [
     {
       text: 'End of last glacial period...',
-      [xKey]: '30',
+      [xKey]: '45',
       [yKey]: 50,
-      dx: 15, // Optional pixel values
-      dy: -5,
+      //dx: 15, // Optional pixel values
+      //dy: -5,
       arrows: [{
         clockwise: false, // true or false, defaults to true
         source: {
-          anchor: 'left-middle',
-          dy: 5,
-          dx: -40
+          anchor: 'left-bottom',
+        //  dy: 5,
+          //dx: -40
         },
         target: {
            // These can be expressed in our data units if passed under the data keys
 		  [xKey]: '17',
-          [yKey]: 22,
+          [yKey]: 20,
           // Optional adjustments
-          dx: 2,
-          dy: 5
+          //dx: 2,
+          //dy: 5
         }
       },     
    	]}
