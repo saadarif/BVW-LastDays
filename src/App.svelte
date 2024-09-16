@@ -756,7 +756,10 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			 Saad Arif, Rebecca Whitla, Casper Breuker & Korneel Hens
 			 <br/><br/> 
 			 <strong>Cover Illustration by:</strong><br/>
-			 Lizzie Harper</p>
+			 Lizzie Harper
+			 <br/><br/> 
+			 <strong>Published:</strong><br/>
+			 20th September, 2024</p>
 		</small>
 		</blockquote>
 </Section>
