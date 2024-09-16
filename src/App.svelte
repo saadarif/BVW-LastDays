@@ -100,24 +100,24 @@
 	let psmcAnnotations = [
     {
       text: 'End of last glacial period...',
-      [xKey]: '45',
-      [yKey]: 50,
-      //dx: 15, // Optional pixel values
-      //dy: -5,
+      [xKey]: '30',
+      [yKey]: 45,
+      dx: 15, // Optional pixel values
+      dy: -5,
       arrows: [{
         clockwise: false, // true or false, defaults to true
         source: {
-          anchor: 'left-bottom',
-        //  dy: 5,
-          //dx: -40
+          anchor: 'left-middle',
+         dy: 5,
+          dx: -40
         },
         target: {
            // These can be expressed in our data units if passed under the data keys
 		  [xKey]: '17',
-          [yKey]: 20,
+          [yKey]: 22,
           // Optional adjustments
-          //dx: 2,
-          //dy: 5
+          dx: 2,
+          dy: 5
         }
       },     
    	]}
@@ -330,11 +330,12 @@
 		<!-- <strong>By</strong>: Saad Arif </p> -->
 	
 	<p class="text-small"> <strong>The following is based on data and references from:</strong></p>
+	<blockquote class="text-indent">
 	<p class="text-small">
 		<small>The last days of Aporia crataegi (L.) in Britain: evaluating genomic erosion in an extirpated butterfly. (2024).
 Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy G. Shreeve, Saad Arif.
 <em>Molecular Ecology</em>, e17518; doi: https://doi.org/10.1111/mec.17518 </small>
-	</p>
+	</p></blockquote>
 </Filler>
 
 <Divider/> 
@@ -700,7 +701,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 					<p>
 						This plot shows the <strong>total</strong> number of low and moderate impact variants (vertical axis) between individuals of 
 						<Em color='#003f5c'>British</Em> and <Em color='#ffa600'>European</Em> origin. For total number of such variants,
-						<Em color='#ffa600'>European</Em> indiviuals easily outnumber those in <Em color='#003f5c'>British</Em> individuals.
+						<Em color='#ffa600'>European</Em> individuals easily outnumber those in <Em color='#003f5c'>Britain</Em>.
 					</p>
 				</div>
 			</section>
@@ -744,6 +745,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			reintroduction could very well see the return of this species to our gardens and meadows.
 		</p>
 		<br>
+		<blockquote class="text-indent">
 		<small>
 			<p> 
 			<strong>Further Reading:</strong> <br/>
@@ -756,7 +758,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			 <strong>Cover Illustration by:</strong><br/>
 			 Lizzie Harper</p>
 		</small>
-	
+		</blockquote>
 </Section>
 
 <!-- a place for leaving comments? -->
