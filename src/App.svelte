@@ -326,9 +326,6 @@
 
 
 <Filler theme="light" short={true} wide={true} center={true}>
-	<p class="text-small">
-		<!-- <strong>By</strong>: Saad Arif </p> -->
-	
 	<p class="text-small"> <strong>The following is based on data and references from:</strong></p>
 	<blockquote class="text-indent">
 	<p class="text-small">
