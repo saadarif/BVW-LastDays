@@ -79,12 +79,14 @@
 	}
 	.logo-img {
 		margin-bottom: 27px;
+		box-shadow: none !important;
 	}
 	.copr-img {
 		margin: 0 0.5rem 0.2rem 0;
 		width: 25px;
 		height: 25px;
 		vertical-align: middle;
+		box-shadow: none !important;
 	}
 	.license {
 		vertical-align: top;

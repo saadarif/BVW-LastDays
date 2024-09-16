@@ -100,7 +100,7 @@
 	let psmcAnnotations = [
     {
       text: 'End of last glacial period...',
-      [xKey]: '30000',
+      [xKey]: '30',
       [yKey]: 50,
       dx: 15, // Optional pixel values
       dy: -5,
@@ -113,7 +113,7 @@
         },
         target: {
            // These can be expressed in our data units if passed under the data keys
-		  [xKey]: '17000',
+		  [xKey]: '17',
           [yKey]: 22,
           // Optional adjustments
           dx: 2,
@@ -242,7 +242,7 @@
 	//INITIALISATION CODE
 	//Read in the Datasets
 	//PSMC
-	getData(`./data/data_psmc_shorter.csv`)
+	getData(`./data/data_psmc_shorter_kyears.csv`)
 		.then(arr => {
 			let Netimes = arr.map((d,i) => ({
 			species: d.ID,
@@ -312,8 +312,8 @@
 <!-- <ObuHeader/> -->
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
-	<h1 style="margin-top: 50px; margin-left: 0px"> A genomic view of the demise of <em>Aporia crataegi</em> (L.): The Black-veined White</h1>
-	<div style="margin-top: 5px; background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px;"><p class="text-big" >
+	<h1 style="margin-top: -105px; margin-left: 0px"> A genomic view of the demise of <br/><em>Aporia crataegi</em> (L.): The Black-veined White</h1>
+	<div style="margin-top: 40px; background-color: #fff; opacity: 0.6; z-index: -1;margin-left: 0px;"><p class="text-big" >
 		<strong>
 			A genomic history of the the Black-veined white butterfly in Britain from its arrival to its demise in the early twentieth century
 		</strong>
@@ -525,10 +525,10 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 							lineWidth={5}  yScale="log"
 							area={false} 
 							xScale= "log"
-							xSuffix= " years ago"
-							xTicks={[10000, 25000, 50000, 100000]}  xFormatTick={d => d.toLocaleString()}
+							xSuffix= " k years ago"
+							xTicks={[10, 25, 50, 100]}  xFormatTick={d => d.toLocaleString()}
 							yFormatTick={d => d.toLocaleString()}
-							{highlighted} colorHighlight="#999" 
+							{highlighted} colorHighlight="#999"  
 							hover {hovered} on:hover={doHover} colorHover='pink' 
 							annotations={psmcAnnotations}
 							labels labelKey="species"
