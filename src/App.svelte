@@ -339,14 +339,14 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 
 
 <Section>
-	<h2>The Black-veined white in Britain</h2>
+	<h2>The Black-veined White in Britain</h2>
 	<p>
 		The Black-veined white butterfly (<em>Aporia crataegi</em>) is a large butterfly that is common and widespread in the northern hemisphere from Europe 
 		to Japan. It was once a common garden and meadow species in southern Britian, with records dating back to 1667. However, towards the middle of the nineteenth
 		century the butterfly started disappearing from the western and central part of its range and eventually disappeared altogether by the first quarter
 		of the twentieth century. More recently, the butterfly has also disappeared from South Korea and the Netherlands.
 		<p></p>
-		<img class="image" width="95%" src="./img/wiki_cp.png" alt="Black-veined whie resting on flower">
+		<img class="image" width="95%" src="./img/wiki_cp.png" alt="Black-veined White resting on flower">
 </Section>
 
 <Divider/>
@@ -406,7 +406,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<section data-id="map01">
 		<div class="col-medium">
 			<p>
-				This map shows <strong>occurence</strong> of the Black-veined white, <strong>prior</strong> to its extirpation in <strong>1925</strong> by 
+				This map shows <strong>occurence</strong> of the Black-veined White, <strong>prior</strong> to its extirpation in <strong>1925</strong> by 
 				district. The map shows <strong>recordings</strong> of the butterfly, from <Em color={mapcolors.seq5[1]}>least</Em> to 
 				<Em color={mapcolors.seq5[4]}>most</Em>. You can hover to see the district name and density. </p>
 				<p>
@@ -419,7 +419,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<div class="col-medium">
 			<p>
 				This data comes from information on preserved museum specimens (some as old as <strong>1738</strong>!) and occasional human recordings of the butterfly but is 
-				incomplete and suffers from bias in recording. <br/><br/> However, the map does show that the Black-veined white could be found in southern England 
+				incomplete and suffers from bias in recording. <br/><br/> However, the map does show that the Black-veined White could be found in southern England 
 				and eastern Wales.
 			</p>
 		</div>
@@ -428,7 +428,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<div class="col-medium">
 			<!-- This zooms into Centerrbury, Herne Bay was the location of the last collected specimen of A.craetgi -->
 			<p>
-				 The last known recording of a Black-veined white, before its extirpation, came from <strong>Herne Bay</strong>, in the 
+				 The last known recording of a Black-veined White, before its extirpation, came from <strong>Herne Bay</strong>, in the 
 				 north of <strong>Canterbury</strong>. 
 			</p>	
 		</div>
@@ -436,8 +436,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<div class="col-medium">
 			<p>
 				Since 1925 there have been occasional sightings of the butterfly
-				in Britain but all are thought to be from unplanned introductions from European stock (see <a href="https://www.bbc.co.uk/news/uk-65804939">here</a> 
-				for a recent case), a practise that was already common by mid to late nineteenth century. But none of the introductions have persisted.
+				in Britain but all are thought to be from unplanned introductions from European stock (read this <a href="https://www.bbc.co.uk/news/uk-65804939">recent case</a>), a practise that was already common by mid to late nineteenth century. But none of the introductions have persisted.
 			</p>	
 		</div>
 	</section>
@@ -464,7 +463,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<img class="image" width="95%" src="./img/museum.jpg" alt="Drawers of museum specimens">
 	<br>
 	<p>
-		For the first time, we sequenced whole genomes from Black-veined white museum specimens, some caught as early as 1854.
+		For the first time, we sequenced whole genomes from Black-veined White museum specimens, some caught as early as 1854.
 		We analyzed these genomes to provide a molecular persepctive on the disappearance of this species in UK by addressing the 
 		following questions:
 	</p>
@@ -485,7 +484,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 <Divider/>
 
 <Section>
-	<h2>Reconstructing the historical demography of the Black-veined white</h2>
+	<h2>Reconstructing the historical demography of the Black-veined White</h2>
 
 	<p>
 	The current insect fauna of Great Britain is thought to have started arriving sometime around the <a href="https://www.antarcticglaciers.org/glacial-geology/british-irish-ice-sheet/last-glacial-maximum/the-british-irish-ice-sheet-an-introduction/">
@@ -496,7 +495,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	</p>
 
 	<p><em>When did the Black-veined white arrive in Britian? Is there any evidence of a historical bottleneck and is there a subsequent recovery
-		post-colonisation?</em> To answer these questions we reconstructed the historical demography from a single Black-veiend white
+		post-colonisation?</em> To answer these questions we reconstructed the historical demography from a single Black-veiend White
 		collected in 1858 in Herne Bay, Kent. For comparison, we present the same analysis from an individual caught in 
 		France in 1921.
 	</p>
@@ -565,11 +564,11 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<section data-id="chart04">
 			<div class="col-medium">
 				<p>
-					These demographic recontructions tell us two important things: <p> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined white have a 
-					distinct demographic history compared to <Em color='#ffa600'>Europe</Em>. Hence, the British black-veined white were long
+					These demographic recontructions tell us two important things: <p> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined White have a 
+					distinct demographic history compared to <Em color='#ffa600'>Europe</Em>. Hence, the British Black-veined White were long
 					term residents in the UK, rather than recent migrants. </p>
 					<p>
-				<strong>(ii)</strong> Black-veined white colonizing <Em color='#003f5c'>Britain</Em>, showed reduced genetic diversity,
+				<strong>(ii)</strong> Black-veined White colonizing <Em color='#003f5c'>Britain</Em>, showed reduced genetic diversity,
 						 presumably as a result of colonization by a small number of indviduals. </p>
 
 			</div>
@@ -583,7 +582,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 <Section>
 	<h2>Were there more recent reductions in population size?</h2>
 	<p>The method from the previous section is good at reconstructing signals of past bottlenecks or expansions but is poor for more 
-		recent times (last 10,000 years). Nineteenth century records suggest a spasmodic decline in Black-veined white occurence
+		recent times (last 10,000 years). Nineteenth century records suggest a spasmodic decline in Black-veined White occurence
 		across Britain. Could our genomic data be used to corroborate such records?
 	</p>
 	<p>
@@ -626,7 +625,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 					<p>
 						The plot on right shows a comparison of the proportion of the genome in <strong>short</strong> RoHs, on the vertical axis, between genomes of museums sample of
 						 <Em color='#003f5c'>British</Em> and <Em color='#ffa600'>European</Em> origin. Prior to their extinction, <Em color='#003f5c'>British</Em> Black-veined
-						 white had consistently larger proportions of their genome in RoH. However, this pattern only corroborates ancestral reductions in population size,
+						 White had consistently larger proportions of their genome in RoH. However, this pattern only corroborates ancestral reductions in population size,
 						 for example, the bottleneck during the post-glacial colonisation.
 					</p>
 				</div>
@@ -635,8 +634,8 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 				<div class="col-medium">
 					<p>
 						To determine if there were more recent reductions we need to look of the proportion of the genome in <strong>long</strong> RoHs. We
-						find <Em color='#003f5c'>British</Em> Black-veined white consistently exhibit larger proportions of their genome in large RoHs as well.
-						This suggests that the <Em color='#003f5c'>British</Em> Black-veined white underwent additional population reductions or bottlenecks beyond the initial 
+						find <Em color='#003f5c'>British</Em> Black-veined White consistently exhibit larger proportions of their genome in large RoHs as well.
+						This suggests that the <Em color='#003f5c'>British</Em> Black-veined White underwent additional population reductions or bottlenecks beyond the initial 
 						post-glacial event, potentially as late as the nineteenth century.
 					</p>
 				</div>
@@ -727,7 +726,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 <Section>
 	<h2>Where do we go from here?</h2>
 		<p>
-			Our genomic analysis on the decline of the Black-viened provides a more nuanced perspective. We suggest that the Black-veined white
+			Our genomic analysis on the decline of the Black-viened provides a more nuanced perspective. We suggest that the Black-veined White
 			colonized Great Britain around the end of the last glacial period (~12-15000 years ago). It experienced an expected bottleneck during the colonisation
 			event but never fully recovered from this. In addition it likely suffered from additional bottlnecks or reductions in population size, some potentially as 
 			late at the nineteenth century. Finally, it is possible that accumulation of mildy deleterious variants in homozygous state could have added to its woes prior
@@ -738,7 +737,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			of such signals in extant insects could provide a viable tool for their conservation.
 		</p>
 		<p>
-			On a brighter note, there are now murmurs of a planned reintroduction of the Black-veined white in Britain. A <a href="https://doi.org/10.1101/2024.05.21.595182">systematic and well-planned</a>
+			On a brighter note, there are now murmurs of a planned reintroduction of the Black-veined White in Britain. A <a href="https://doi.org/10.1101/2024.05.21.595182">systematic and well-planned</a>
 			reintroduction could very well see the return of this species to our gardens and meadows.
 		</p>
 		<br>
@@ -749,13 +748,16 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			Pratt, C., 1983. A modern review of the demise of <em>Aporia crataegi</em> L.: 
 			The black veined white. The entomologist’s record and journal of variation 95, 161–166
 			 <br/><br/>
-			 <strong>Developed and edited by:</strong><br/>
-			 Saad Arif, Rebecca Whitla, Casper Breuker & Korneel Hens
+			 <strong>Developed by:</strong><br/>
+			 Saad Arif
 			 <br/><br/> 
 			 <strong>Cover Illustration by:</strong><br/>
 			 Lizzie Harper
 			 <br/><br/> 
-			 <strong>Published:</strong><br/>
+			 <strong>Additional images and editing by:</strong><br/>
+			 Rebecca Whitla, Casper Breuker and Korneel Hens
+			 <br/><br/> 
+			 <strong>First Published:</strong><br/>
 			 20th September, 2024</p>
 		</small>
 		</blockquote>
