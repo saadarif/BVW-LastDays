@@ -458,17 +458,17 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		a lack of genetic diversity can make species more vulnerable. The genetic role in
 		 the butterfly’s extinction has never been studied before, but with new DNA sequencing 
 		 technology, we can now interrogate <strong>museum specimens</strong>, collected when the butterfly
-		 still flew in Britian, to provide a new perspetive on its demise.
+		 still flew in Britian, to provide a new perspective on its demise.
 	</p><br>
 	<img class="image" width="95%" src="./img/museum.jpg" alt="Drawers of museum specimens">
 	<br>
 	<p>
 		For the first time, we sequenced whole genomes from Black-veined White museum specimens, some caught as early as 1854.
-		We analyzed these genomes to provide a molecular persepctive on the disappearance of this species in UK by addressing the 
+		We analysed these genomes to provide a molecular perspective on the disappearance of this species in UK by addressing the 
 		following questions:
 	</p>
 	<ul>
-		<li>How did the population size of the Black-veined white changed after arriving in Britain?</li>
+		<li>How did the population size of the Black-veined white change after arriving in Britain?</li>
 		<li>Is there any evidence of inbreeding in the 19th century just prior to its demise?</li>
 		<li>Was there a decrease in the genetic fitness associated with its demise?</li>
 	</ul>
@@ -489,13 +489,13 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	<p>
 	The current insect fauna of Great Britain is thought to have started arriving sometime around the <a href="https://www.antarcticglaciers.org/glacial-geology/british-irish-ice-sheet/last-glacial-maximum/the-british-irish-ice-sheet-an-introduction/">
 	last glacial maximum</a> or the LGM. These insects would have arrived from the continent sometime between 12-15,000 years ago. Early colonisers
-	would represent a small sample of the populations found on the continent and would also harbor only a fraction of the continental
+	would represent a small sample of the populations found on the continent and would also harbour only a fraction of the continental
 	genetic diversity, a phenomenom referred to as a <strong><a href="https://en.wikipedia.org/wiki/Population_bottleneck">genetic bottleneck</a></strong>. Over many generations, these insects may recover
 	from this bottleneck due to subsequent expansion in population size or continued immigration from the continent.
 	</p>
 
 	<p><em>When did the Black-veined White arrive in Britian? Is there any evidence of a historical bottleneck and is there a subsequent recovery
-		post-colonisation?</em> To answer these questions we reconstructed the historical demography from a single Black-veiend White
+		post-colonisation?</em><p/><p>To answer these questions we reconstructed the historical demography from a single Black-veiend White
 		collected in 1858 in Herne Bay, Kent. For comparison, we present the same analysis from an individual caught in 
 		France in 1921.
 	</p>
@@ -554,7 +554,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			<div class="col-medium">
 				<p>
 					This <Em color=#999> highlighted line</Em> shows the population history of a butterfly from southeastern <strong>Britain</strong> 
-					collected in 1858. It mostly exhibit the same pattern seen in the French butterfly but shows a <strong>decline</strong> 
+					collected in 1858. It mostly exhibits the same pattern seen in the French butterfly but shows a <strong>decline</strong> 
 					at the end of the Last Glacial Maximum (LGM). This decline suggests that butterflies began colonizing the British Isles 
 					at that time, in relatively small numbers from the mainland. There is no sign of population growth after colonization, though the 
 					data from the last 10,000 years is not detailed enough to confirm or reject this.
@@ -564,12 +564,12 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<section data-id="chart04">
 			<div class="col-medium">
 				<p>
-					These demographic recontructions tell us two important things: <p> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined White have a 
-					distinct demographic history compared to <Em color='#ffa600'>Europe</Em>. Hence, the British Black-veined White were long
+					These demographic reconstructions tell us two important things: <p> <strong>(i)</strong> <Em color='#003f5c'>British</Em> Black-veined White have a 
+					distinct demographic history, around and after the LGM, compared to <Em color='#ffa600'>Europe</Em>. Hence, the British Black-veined White were long
 					term residents in the UK, rather than recent migrants. </p>
 					<p>
 				<strong>(ii)</strong> Black-veined White colonizing <Em color='#003f5c'>Britain</Em>, showed reduced genetic diversity,
-						 presumably as a result of colonization by a small number of indviduals. </p>
+						 presumably as a result of colonization by a small number of individuals. </p>
 
 			</div>
 		</section>
@@ -587,9 +587,9 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	</p>
 	<p>
 		The degree of inbreeding can be more useful in determining more recent declines in a population. We measured 
-		inbreeding as the proportion of the genome in homozygous state for each individual. Short streches or 
+		inbreeding as the proportion of the genome in homozygous state for each individual. Short stretches or 
 		<a href="https://en.wikipedia.org/wiki/Runs_of_homozygosity"><strong>runs of homozygosity</strong></a> (RoHs), a hundred thousand DNA bases long,
-		suggest historial inbreeding, whereas long RoHs of 1 million bases or more are indicative
+		suggest historical inbreeding, whereas long RoHs of 1 million bases or more are indicative
 		of more recent inbreeding that might be expected from a shrinking gene-pool. 
 
 	</p>
@@ -737,7 +737,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			of such signals in extant insects could provide a viable tool for their conservation.
 		</p>
 		<p>
-			On a brighter note, there are now murmurs of a planned reintroduction of the Black-veined White in Britain. A <a href="https://doi.org/10.1101/2024.05.21.595182">systematic and well-planned</a>
+			On a brighter note, there are now <a href="https://doi.org/10.1101/2024.05.21.595182">initiatives for a planned reintroduction of the Black-veined White in Britain</a>. A systematic and well-planned
 			reintroduction could very well see the return of this species to our gardens and meadows.
 		</p>
 		<br>
@@ -754,8 +754,11 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 			 <strong>Cover Illustration by:</strong><br/>
 			 Lizzie Harper
 			 <br/><br/> 
-			 <strong>Additional images and editing by:</strong><br/>
-			 Rebecca Whitla, Casper Breuker and Korneel Hens
+			 <strong>Additional images by:</strong><br/>
+			 Rebecca Whitla
+			 <br/><br/> 
+			 <strong>Edited by:</strong><br/>
+			 Maria Daniela Santos Nunes, Casper Breuker and Korneel Hens
 			 <br/><br/> 
 			 <strong>First Published:</strong><br/>
 			 20th September, 2024</p>
