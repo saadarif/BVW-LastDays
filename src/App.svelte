@@ -494,7 +494,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 	from this bottleneck due to subsequent expansion in population size or continued immigration from the continent.
 	</p>
 
-	<p><em>When did the Black-veined white arrive in Britian? Is there any evidence of a historical bottleneck and is there a subsequent recovery
+	<p><em>When did the Black-veined White arrive in Britian? Is there any evidence of a historical bottleneck and is there a subsequent recovery
 		post-colonisation?</em> To answer these questions we reconstructed the historical demography from a single Black-veiend White
 		collected in 1858 in Herne Bay, Kent. For comparison, we present the same analysis from an individual caught in 
 		France in 1921.
