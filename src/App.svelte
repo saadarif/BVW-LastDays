@@ -468,7 +468,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		following questions:
 	</p>
 	<ul>
-		<li>How did the population size of the Black-veined white change after arriving in Britain?</li>
+		<li>How did the population size of the Black-veined White change after arriving in Britain?</li>
 		<li>Is there any evidence of inbreeding in the 19th century just prior to its demise?</li>
 		<li>Was there a decrease in the genetic fitness associated with its demise?</li>
 	</ul>
