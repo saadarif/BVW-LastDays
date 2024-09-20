@@ -743,11 +743,7 @@ Rebecca Whitla, Korneel Hens, James Hogan, Geoff Martin, Casper Breuker, Timothy
 		<br>
 		<blockquote class="text-indent">
 		<small>
-			<p> 
-			<strong>Further Reading:</strong> <br/>
-			Pratt, C., 1983. A modern review of the demise of <em>Aporia crataegi</em> L.: 
-			The black veined white. The entomologist’s record and journal of variation 95, 161–166
-			 <br/><br/>
+			 <p>
 			 <strong>Developed by:</strong><br/>
 			 Saad Arif
 			 <br/><br/> 
