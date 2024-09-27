@@ -1,6 +1,6 @@
 {
   "name": "BVW-lastdayScrolly",
-  "homepage": "http://onsvisual.github.io/svelte-scrolly",
+  "homepage": "https://github.com/saadarif/BVW-LastDays",
   "version": "0.1.1",
   "scripts": {
     "build": "rollup -c",

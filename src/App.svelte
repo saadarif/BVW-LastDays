@@ -14,10 +14,11 @@
 	import Arrow from "./ui/Arrow.svelte";
 	import Em from "./ui/Em.svelte";
 
-	import OrientationPrompt from './ui/OrientationPrompt.svelte';	
+
+	//import OrientationPrompt from './ui/OrientationPrompt.svelte';	
 	//import StepLinePlot from "./plots/StepLinePlot.svelte";
 	//import * as d3 from 'd3';
-	import Comments from "disqus-svelte"; 
+	//import Comments from "disqus-svelte"; 
 	
 	//import PsmcPlot from "./plots/PsmcPlot.svelte";
 	// DEMO-SPECIFIC IMPORTS
@@ -308,8 +309,6 @@
 	
 </script>
 
-<!-- <OrientationPrompt /> -->
-<!-- <ObuHeader/> -->
 
 <Header bgfixed={false} theme="light" center={false} short={true}>
 	<h1 style="margin-top: -105px; margin-left: 0px"> A genomic view of the demise of <br/><em>Aporia crataegi</em> (L.): The Black-veined White</h1>
